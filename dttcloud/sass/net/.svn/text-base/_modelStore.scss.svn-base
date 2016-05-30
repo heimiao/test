@@ -1,0 +1,247 @@
+@charset "utf-8"; 
+@import "mui/mixins/layout";
+
+/*蓝信年*/
+ /*****************************组件列表*********************************/
+.com_baseFontS{
+    font-family: '宋体';
+    font-size: 12px;
+}
+.searchCont{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.kindsCont{
+    padding-left: 0px;
+}
+.kindsFont{
+    display: inline-block;
+    font-family: '宋体';
+    font-size: 12px;
+}
+.kindsInput{
+    text-align:center;
+    width:80px!important;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.setPad10{
+    padding:0px 10px;
+}
+.setPad5{
+    padding:0px 5px;
+}
+.setMarginL20{
+    margin-left: 20px;
+}
+.search_main{
+    position: relative;
+    border:1px solid #CCCCCC;
+    border-radius: 30px;
+    width:175px;
+    height: 25px;
+    overflow: hidden;
+}
+.search_logo{
+    position: absolute;
+    top:2px;
+    left: 8px;
+}
+.search_input{
+    font-size:12px;
+    border: 0px;
+    margin-left:25px;
+    height: 25px;
+    line-height: 25px;
+}
+.cont_box{
+    float: left;
+}
+.box_main{
+    padding:0px;
+}
+.boxM_logo{
+    width: 195px;
+    height: 185px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    cursor: pointer;
+}
+.box_main_title{
+    font-family: 'Arial';
+    font-size: 18px;
+    color: #333333;
+}
+.main_detail_pos{
+    margin:5px 0px;
+}
+.main_descri{
+    width: 170px;
+    font-family: '宋体';
+    font-size: 12px;
+    color: #808B8D;
+}
+.androidBtn{
+    background:#1EB778;
+    color:#fff;
+    width:60px;
+    height: 25px;
+    border: 0px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 12px;
+    font-family: '微软雅黑';
+}
+.androidBtn_add{
+    width: 46%;
+    display: inline-block;
+    float: left;
+}
+.androidBtn:hover{
+    filter:alpha(opacity=70);  /* ie 有效*/
+    -moz-opacity:0.7; /* Firefox  有效*/
+    opacity: 0.7; /* 通用，其他浏览器  有效*/
+}
+.IOSBtn{
+    background:#2B2532;
+    color:#fff;
+    width:50px;
+    height: 25px;
+    border: 0px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 12px;
+    font-family: '微软雅黑';
+}
+.IOSBtn_add{
+    width:46%;
+    display: inline-block;
+    float: right;
+}
+.IOSBtn:hover{
+    filter:alpha(opacity=70);  /* ie 有效*/
+    -moz-opacity:0.7; /* Firefox  有效*/
+    opacity: 0.7; /* 通用，其他浏览器  有效*/
+}
+.test{
+    padding:0; 
+    /*width:104%; 
+    margin-left:-1.976%;
+    margin-right:-1.976%;
+    margin-left:-19.3px\0\9;
+    margin-right:-19.3px\0\9;*/
+    width:107% !important;
+    margin-left:-48px;
+    margin-bottom:15px;
+}
+.text{
+    width:195px; 
+    /*margin:1.976%;
+    margin:19.3px\0\9;*/
+    margin-left:48px;
+    float:left; 
+}   
+.mui-select {
+  width: 100px;
+  height: 25px;
+  color: #fff;
+  background: url(../img/select_icon.jpg) 101% no-repeat;
+  position: relative;
+  cursor: pointer;
+  border-radius: 20px;
+  display: inline-block;
+}
+.mui-select input, .mui-select .inputSpan .pwd, .inputSpan .mui-select .pwd {
+  color: #fff;
+  width: 89%;
+  height: 100%;
+  padding: 0 5px;
+  background: #17181a;
+  border: 0;
+  outline: none;
+  font-size: 12px;
+}
+.mui-select ul {
+  background: #17181a;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 24px;
+  max-height: 120px;
+  overflow: hidden;
+  overflow-y: auto;
+  width: 100%;
+  z-index: 999999999999;
+  padding: 15px 0px;
+}
+.mui-select ul li {
+  color: #fff;
+  padding: 0 10px;
+  height: 24px;
+  font-size: 12px;
+  line-height: 24px;
+  list-style: none;
+  width: 98%;
+  margin: 0 auto;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.mui-select ul li:hover, .mui-select ul li:active {
+  background: grey;
+}
+.mui-select ul .checked {
+  background: grey;
+}
+.innerDistance{
+    padding-left: 0px;
+}
+.logo_fristDiv{
+    margin-top:30px;
+    margin-bottom: 30px;
+    padding-bottom:30px;
+    border-bottom: 1px solid #D6D6D6;
+}
+.com_fileBtn{
+    font-family: '宋体';
+    font-size: 12px;
+    color: #fff;
+    background: #484F63;    
+    width: 100%;
+    height: 25px;
+    border: 0px;
+    padding: 5px 0px;
+    border: 0px;
+    outline: none;
+}
+.integral_box{
+    overflow: hidden;
+    margin:5px 0px;
+    padding-bottom: 8px;
+}
+.left_con{
+    padding: 0px;
+}
+.right_con{
+    padding: 0px;
+}
+.initialize_padding{
+    padding: 0px;
+}
+.phoneSys_btn{
+    overflow: hidden;
+}
+.noteCont{
+    font-family: '宋体';
+    font-size: 12px;
+    color: #7F8C8D;
+}
+.picM{
+    padding-left: 0px;
+}
+.marg_bot{
+    margin-bottom: 10%;
+}
+.img-radius10{
+    border-radius: 10px;
+}  

@@ -1,0 +1,433 @@
+@charset "UTF-8"; //模糊度 0 6px 12px rgba(0, 0, 0, .175)
+.top_nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 74px;
+    height: 74px;
+    z-index: 100;
+    .nav_bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: $blue;
+    }
+    .nav_main {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        a {
+            // width:100%;
+            display: inline-block;
+            color: $white;
+            text-decoration: none;
+        }
+        
+        //手机端的手机菜单按钮
+        .p_btn {
+            margin-left: 5%;
+            display: none;
+            cursor: pointer;
+            .btn_imgSrc {
+                width: 50%;
+                width:30px;
+                height:30px;
+            }
+        }
+        .logo {
+            position: absolute;
+            width: 200px;
+            left: 20%;
+            margin-left: -75px;
+            .pcPad_logo {
+                display: inline-block;
+            }
+            .phone_logo {
+                display: none;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        @media only screen and (max-width:768px) {
+            .p_btn {
+                margin-left: 3%;
+                display: block;
+            }
+            .logo {
+                left: 50%;
+                width: 150px;
+                margin-left: -85px;
+                .pcPad_logo {
+                    display: none;
+                }
+                .phone_logo {
+                    display: inline-block;
+                }
+            }
+        }
+        //主菜单
+        .m-nav {
+            margin-right: 25%;
+            z-index: 2;
+            min-width: 300px;
+            >ul {
+                margin: 0;
+                padding: 0;
+                .phone {
+                    display: none;
+                }
+                .pc_pad {
+                    display: block;
+                }
+                .active{
+                     >a {
+                        color: $blue;
+                        background: $white_bg;
+                   }
+                }
+                >li {
+                    float: left;
+                    list-style-type: none;
+                    >a {
+                        padding: 0 11px;
+                        min-width: 60px;
+                        color: $white;
+                        text-align: center;
+                        font-size: 14px;
+                        >img {
+                            display: none;
+                        }
+                    } 
+                    &:hover {
+                        >a {
+                            color: $blue;
+                            background: $white_bg;
+                        }
+                        .dropdown-menu {
+                            display: block;
+                        }
+                    }
+                }
+                .dropdown-menu {
+                    border-top: 0;
+                    top: 96%;
+                    -moz-border-top-left-radius: 0;
+                    -moz-border-top-right-radius: 0;
+                    -webkit-border-top-left-radius: 0;
+                    -webkit-border-top-right-radius: 0;
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                    right: 0px;
+                    left: auto;
+                    min-width: 150px; 
+                    @include box-shadow(0 6px 12px rgba(0, 0, 0, .175));
+                    border:0px;
+                    padding: 0;
+                    >li {
+                        width: 100%;
+                        line-height:45px;
+                        text-align: center;
+                        >a {
+                            padding: 10px 15px;
+                            line-height:25px;
+                            width: 100%;
+                            white-space: inherit;
+                            color: $black;
+                            @include transition(all 1000ms);
+                            &:hover {
+                                background: rgba($blue,0.6);
+                                background: $blue \0;
+                                color: #fff;
+                                @include transition(all 1000ms);
+                            }
+                            >img {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .icon_dropdown {
+                    min-width: 230px;
+                    height: 276px;
+                    >li {
+                        text-align: left;
+                        min-height: 81px;
+                        >a {
+                            vertical-align: bottom;
+                            color: $blue;
+                            >img {
+                                min-width: 60px;
+                                max-width: 60px;
+                                width: 30%;
+                                margin-right: 5px;
+                                float: left;
+                            }
+                            .default_img {
+                                display: block;
+                            }
+                            .active_img {
+                                display: none;
+                            }
+                            >dl {
+                                width: 63%;
+                                padding-top: 5px;
+                                font-size: 14px;
+                                float: left;
+                                margin: 0;
+                                dt {
+                                    color: #333;
+                                    font-weight:100;
+                                    width: 100%;
+                                }
+                                dd {
+                                    color: #888;
+                                    width: 100%; //  word-break: break-all;
+                                    font-size:12px;
+                                }
+                            }
+                            &:hover {
+                                .default_img {
+                                    display: none;
+                                }
+                                .active_img {
+                                    display: block;
+                                }
+                                >dl {
+                                    dt,
+                                    dd {
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                        &:first-child {
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        @media only screen and (min-width:769px) and (max-width:1170px) {
+            .logo {
+                left: 10%;
+            }
+            .m-nav {
+                margin-right: 15%;
+            }
+        }
+        @media only screen and (max-width:768px) {
+            .m-nav {
+                display: none;
+                position: absolute;
+                line-height: 50px;
+                top: 74px;
+                left: 0;
+                margin: 0;
+                width: 100%;
+                background: $blue;
+                >ul {
+                    width:100%;
+                    margin-bottom:25px;
+                    overflow: hidden;
+                    .phone {
+                        display: block;
+                    }
+                    .pc_pad {
+                        display: none;
+                    }
+                    >li {
+                        width:100%;
+                        float:inherit;
+                        &:hover {
+                            .dropdown-menu {
+                                display:none;
+                            }
+                             >a {
+                                 color: $white;
+                                  background: $blue;
+                             }
+                        }
+                        >a {
+                            width:100%;
+                            padding: 0 2%;
+                            min-width: 60px;
+                            color: $white;
+                            text-align: left;
+                            border-bottom: 1px solid $lightblue;
+//                          &:hover,
+//                          &:focus,{
+//                              color: $blue;
+//                              background: $white_bg;
+//                              .btn-enter {
+//                                  display: none;
+//                              }
+//                              .btn_pre-enter {
+//                                  display: block;
+//                              }
+//                          }
+                            >img {
+                                width: 25px;
+                                margin-right:2%;
+                                margin-top:4%;
+                                float: right;
+                                display: block;
+                            }
+                        }
+                    }
+                    .dropdown-menu {
+                        position: relative;
+                        border: 0;
+                        @include box-shadow(0px 0px 0px 0px);
+                        @include radius(0px);
+                        left: 15%;
+                        margin-top: 0;
+                        width:85%;
+                        background: transparent;
+//                      display: block;
+                        >li {
+                            width:100%;
+                            text-align: left;
+//                          line-height: 0;
+                            height:50px;
+                            >a {
+                                padding:0px 2%;
+                                width: 100%; 
+                                line-height:49px;
+                                white-space: inherit;
+                                color: $white;
+                                border-bottom: 1px solid $lightblue;
+                                &:hover {
+                                    color: $white_bg;
+                                    background: $blue;
+                                    .btn-enter {
+                                        display: none;
+                                    }
+                                    .btn_pre-enter {
+                                        display: block;
+                                    }
+                                }
+                                >span {
+                                    float: left;
+                                }
+                                >img {
+                                    min-width: 25px;
+                                    max-width: 25px;
+                                    width: 25px;
+                                    margin-right: 5%;
+                                    margin-top: 4%;
+                                    float: right;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                    .icon_dropdown {
+                        min-width:180px;
+                        height:auto;
+                        >li {
+                            min-height: 0;
+                            .btn-enter{
+                                display:block;
+                            }
+                            .btn_pre-enter{
+                                display:none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media only screen and (min-width:768px) {
+            .m-nav {
+                display: block;
+            }
+        }
+        //登录菜单
+        .login_register {
+            position: absolute;
+            right: 10px;
+            z-index: 5;
+            width: 138px;
+            margin-right: 3%;
+            .login {
+                display: none;
+                text-align: center;
+            }
+            .user {
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                display: none;
+                &:hover,
+                &:hover a,
+                &:hover .mui-menulist {
+                    background: $white_bg;
+                    color: $blue;
+                    display: block;
+                }
+                >a {
+                    width: 100%;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    img {
+                        width: 25px;
+                        height: 25px;
+                        @include radius(50%);
+                        margin-left: 5px;
+                    }
+                }
+                .mui-menulist {
+                    display: none;
+                    margin: 0;
+                    padding: 0;
+                    line-height: 45px;
+                    background: $white_bg;
+                    @include box-shadow(0px 6px 12px rgba(0, 0, 0, .175));
+                    >li {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        a {
+                            width: 100%;
+                            color: $black;
+                            &:hover {
+                                // background: linen;
+                                color: #fff;
+                                background: #21a0e8;
+                                @include opacity(60);
+                                @include transition(all 800ms);
+                            }
+                            &:active {
+                                @include opacity(94);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media only screen and (max-width:1000px) {
+            .login_register {
+                margin-right: 0;
+                width: 100px;
+                .user {
+                    .mui-menulist {
+                        line-height: 30px;
+                    }
+                }
+            } 
+        }
+        @media only screen and (max-width:640px) {
+            .login_register {
+                width: 75px;
+            } 
+        }
+    }
+}

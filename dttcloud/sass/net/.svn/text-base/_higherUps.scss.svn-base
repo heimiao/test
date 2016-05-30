@@ -1,0 +1,167 @@
+@charset "utf-8"; 
+/*创业大咖秀*/
+ @font-face { 
+  font-family:my-font;  
+  src: url(../css/myfont.TTF);   
+} 
+.scroll-pic{
+    background:#34353f;
+    width:100%;
+    padding:30px;
+} 
+.trackModel {
+    position: relative;
+    width:100%;
+    margin:30px auto;
+    overflow: hidden; 
+    .verticalbtn{
+        position: relative;
+        margin:0 auto;
+        width:116px; 
+        background:#fff; 
+        -webkit-border-radius:5px;
+        -moz-border-radius:5px;
+        border-radius:5px;
+        font-size:20px; 
+        z-index:10000;
+        img{
+            width:100%;
+        }
+    }  
+    .verticalLine {
+        position: absolute;
+        width:2px;
+        background:#e0e0e0;
+        height:1000000px;
+        left:50%;
+        top:60px;    
+    }
+    ul {
+        margin:0px;
+        padding:0;
+        li {
+            position: relative;
+            list-style-type: none;
+            width: 100%;
+            min-height:30px; 
+            margin:40px auto;
+            vertical-align: middle; 
+        }
+        .half-width{
+              width:50%;
+              vertical-align:middle;
+              overflow: hidden; 
+              margin-top:-45px;
+          }
+         .cricle{
+               width:15px;
+               height:15px;
+               margin:0px auto;
+               text-align:center;
+               line-height:30px;
+          }
+          .tramodle{  
+              padding:10px 15px;
+          }   
+        .data-line{
+              color:#5b5b5b;  
+              text-align:left;
+         }
+        .odd{ 
+              .half-width{
+                   float:left;
+               } 
+              .tramodle{
+                  float:right;
+                  padding-right:30px;
+                  text-align:right;
+              } 
+        } 
+        .even{
+             .half-width{
+                   float:right;
+               } 
+              .tramodle{ 
+                   padding-left:30px;
+                   float:left;
+                   text-align:left; 
+              }  
+        }   
+       .odd:after,.even:after{display: table;content: "";clear: both;}
+       //字体样式
+        .trackTime{
+            font-family:my-font;
+            color:#dcb890;
+            font-size:16px;
+           >span:first-child{
+              font-size:48px;
+              margin-right:5px;
+           }
+           @media screen and(max-width:640px) {
+               >span:first-child+span{
+                display: block;
+              }
+          }  
+        } 
+    } 
+}  
+.ceo-head{
+    width:203px;
+    height:197px;
+    margin:50px auto 20px auto;
+    background:url(../img/ceo-headBg.png);
+}
+.ceo-intro{ 
+    font-size:24px;
+    text-align:center;
+    margin:0px auto;
+    dt{font-weight:500}
+}
+.ceo-decrition{
+   text-align: center;
+   font-size:16px;
+   max-width:800px;
+   color:#65666c;
+   margin:0 auto;
+   >div:first-child{
+       background:url(../img/left-yh.png) left no-repeat;
+       padding-left:80px;
+       padding-top:40px;
+   }
+   >div:first-child+div{
+       background:url(../img/right-yh.png) right no-repeat;
+       padding-right:80px;
+       padding-bottom:40px;
+   }
+   @media screen and(max-width:640px) 
+    {  
+        >div:first-child,>div:first-child+div{
+           background:url("");
+           padding:0px 15px;
+       } 
+    }  
+} 
+  @media screen and(max-width:640px) {
+      .ceo-decrition{
+          padding-bottom:30px;
+      }
+  }
+.poineeringSource{
+    background:#2c2f3b;
+    padding:30px 0;
+    margin-bottom:0px;
+    padding:5% 0;
+    h3{
+        color:#fff;
+        font-size:36px;
+        width:110px;
+        margin:0px auto 2% auto;
+    } 
+    p{
+        max-width:800px;
+        padding:0px 15px;
+        margin:0 auto;
+        color:#848e93;
+        font-size:16px; 
+    }
+}  

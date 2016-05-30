@@ -1,0 +1,511 @@
+@charset "UTF-8"; 
+.demo{  
+    .smr_container{
+         width:98%;
+         margin:10px; 
+         .cell{  
+             padding:0px;
+             .lef-panel{
+                 margin-right:5px;
+                 padding:20px;
+                  margin-bottom:10px;
+                 height:310px;
+                 .apply-description{
+                      height:auto;
+                      h4{
+                         font-size: 14px;
+                        font-weight: 600;
+                        margin: 0;
+                        color: #000;
+                      } 
+                    textarea{
+                       width:100%;
+                       background:#fff;
+                       border:#fff;
+                       height:80px;
+                       resize:none;
+                    }
+                 }
+             }
+             .right-panel{
+                 margin-left:5px;
+                 margin-bottom:10px;
+                 padding:10px 20px;
+                 height:150px;
+             }
+         } 
+         .apply-font {
+                font-size: 12px;
+                color: #7f8c8d;
+            }
+    }
+    
+    
+ .configflow{
+        padding:0px;
+        .unpdpanel{ 
+            border-radius:0px;
+            padding:0px;
+            padding-bottom:10px;
+            .configfont{
+                   padding:20px;
+                   h4{
+                        margin:0px;
+                        font-size:14px;
+                        padding-left:10px;
+                        border-left:3px solid #f3856c;
+                    } 
+                    >div{
+                           font-size:0px;
+                            dl{
+                               display:inline-block;
+                               width:25%; 
+                               vertical-align:middle;
+                               text-decoration:none;
+                               font-size:12px;
+                               text-align:center; 
+                                margin-top:-40px;
+                                dt{
+                                    margin-top:10px;
+                                }
+                            }
+                            hr{ 
+                               width:75%; 
+                               padding-top:50px; 
+                               margin:0px auto;
+                               border:0px;
+                               border-bottom:1px solid #E0E1E5;
+                            }
+                       }
+               }
+               .flowline{
+                   background:#e4e4e4;
+                   height:5px;
+                   text-align:left;
+                   .hr{ 
+                      width:25%;//37%,61%85%;
+                      background:#21a0e8;
+                      height:5px;
+                   }
+               } 
+         }
+    }
+    
+    
+    
+    .dev_container{
+        min-height:680px;
+        background:#e4e4e4;  
+        ul,li {
+                list-style: none;
+                margin: 0 auto;
+                padding: 0;
+            }
+            ul li {
+                float:left;
+                width:50%;
+                min-width:100px;
+                text-align: center;
+            }
+    } 
+    .dev_app_marl{
+        margin-left: 40px;
+     }
+    .dev_app_marl1{
+        margin-left: 20px;
+    }
+    .dev_application{
+        margin:10px;
+        padding:10px 20px; 
+        width:48.5%;
+        min-width: 440px;
+        overflow: hidden; 
+        background:#fff;
+        min-height:310px;
+        .dev_app_kaifa{
+            border-bottom: 1px solid #e2e2e2;
+            padding: 10px 0;
+            font-size: 12px;
+            color: #7a8687;
+            .dev_application_ying{
+                font-size: 18px;
+                color: #000;
+            }
+        } 
+        .applay-title{
+            font-size: 16px;
+            margin:0;
+            color: #000;
+            border:0;
+            outline: none;
+            background:#fff;
+            }
+        .editinput{ 
+             outline:auto;
+        }
+        textarea{
+            width:100%;
+            border: 0;
+            resize:none;
+            overflow: hidden;
+            background:#fff;
+        }
+        .dev_app_key{
+            font-size: 16px;
+            color: #000;
+        }
+        .dev_application_padd{
+            padding: 10px 0;
+            .dev_application_describe{
+                color: #7a8687;
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
+       .statistics{
+            margin:10px;
+            padding:10px 0px;
+            width:48.5%;
+            min-width: 450px;
+            overflow: hidden; 
+            background:#fff;
+            min-height:210px;
+        }
+    }
+    .dev_progress{
+        margin:10px;
+        padding:10px 0px; 
+        width:48.5%;
+        min-width: 450px;
+        overflow: hidden; 
+        background:#fff;
+        min-height:110px;
+        .dev_progress_four{
+            padding-left: 10px;
+            padding-right: 10px;
+            width: 100%;
+            >div{
+                float: left;
+                width: 24.999%;
+            };
+        }
+        .dev_liucheng{
+            background: #e4e4e4; 
+            height: 8px;
+            width: 100%;
+            margin-top: 10px;
+            .dev_liu{
+                width: 35%;background: #21a0e8;height: 8px;
+            }
+        }
+    }
+    .dev_data{
+        padding:0px 20px; 
+        width:100%;
+        overflow: hidden; 
+        background:#fff;
+        >h4{
+            display:inline-block;
+            padding-left:10px;
+            border-left:3px solid #f3856c;
+            font-size:14px;
+            color:#000;
+        }
+        >span a{
+            line-height: 36px;
+        }
+        >div{
+            padding: 4px 0px 3px;
+            font-size: 12px;
+            color:#7a8687; 
+        }
+        .dev_tong{
+            width: 100px;
+        }
+        .dev_application_statistical{
+            width: 30%;
+            height: 16px; 
+            background: #21a0e8;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+        }
+        .dev_tong_num{
+            padding-left: 5px;
+        }
+    }
+    .dev_new_version{
+       width:100%;
+        overflow: hidden; 
+        min-height:150px;
+        color: #7a8687;
+        >div{
+            margin:0px;
+            padding:0px;
+            h4{margin-left:0px;}
+        }
+        
+      .ie8show{
+          display:none;
+          width:50%;
+          margin-top:35px;
+      }   
+     .data-btn{
+         
+           @include data-btn(100px,30px);
+           margin:0px auto;
+           float: right;
+    }
+    .stored{
+        margin-left: 15%;
+    }
+    .data_stored{
+        text-align: left;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    .dev_yong{
+         padding:10px 30px;
+         font-size: 12px;
+         color:#7a8687; 
+    }
+    
+    .dev_app_mart{
+        margin-top: 20px;
+    }
+    .dev_app_state{
+        margin:10px;
+        padding:10px 0px; 
+        overflow: hidden; 
+        background:#fff;
+        min-height:150px;
+    }
+    .dev_application_user{
+        width: 25%; text-align: center;
+        padding-top: 20px;
+        .dev_application_btn{
+            @include data-btn(60px,25px,#cdb28f,#fff,5px);
+            vertical-align:bottom;
+        }
+        img{
+            -webkit-border-radius:50%;
+            -moz-border-radius:50%;
+             border-radius:50%;
+        }
+    }
+    .dev_application_uf{
+        font-size: 12px;padding-top: 4px;
+      }
+    }
+    .dev_application_log{
+        width: 100%;
+        margin: 0px auto;
+        min-height: 400px;
+        background: #fff;
+        padding: 10px 0;
+        .dev_application_time{
+            width: 100%;
+            background: #21a0e8;
+            height: 30px;
+            line-height: 30px;
+            color: #fff;
+            >div{
+                width: 20%; text-align: center;
+            }
+        }
+        .dev_application_re{
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            color: #7a8687;
+            >div{
+                width: 20%; text-align: center;
+            }
+        }
+        .dev_application_record{
+            width: 100%;
+            color: #7a8687;
+            font-size: 12px;
+            line-height: 20px;
+            .dev_application_timer{
+                width: 20%;
+                padding: 10px;
+                text-align: center;
+            }
+            .dev_application_bottom{
+                margin: 0 30px;
+                border-bottom: #d6d6d6 1px solid;
+            }
+        }
+    }
+    
+    .statistics-show {
+        background: #fff;
+        overflow: hidden;
+        margin:0px;
+        padding: 15px 0;
+    }
+    .statistics-show ul {
+        margin: 0;
+        padding: 0;
+    }
+    .statistics-show ul li {
+        list-style-type: none;
+        float: left; 
+        width:14.2%;
+         text-align: center;
+    }
+    .col-md-12-bbc{
+        background: #21A0E8;
+        height:35px;
+        margin: 0px;
+    }
+    .col-md-tdata{
+        padding-top: 10px;
+        color: #FFFFFF;
+        padding-left: 20px;
+    }
+    .col-md-1-today{
+        text-align: right;
+        color: #FFFFFF;
+        padding-top: 10px;
+        font-size: 12px;
+        font-family: '微软雅黑';
+        padding-right: 20px;
+    }
+    .big_num{
+        font-size: 30px;
+        font-family: "微软雅黑";
+    }
+    .dev_application_data{
+        width: 100%;
+        margin: 0px auto 10px;
+    }
+    .apply-intro{
+        min-height: 310px;
+//      background: #fff;
+    }
+    .apply-intro textarea{
+        width:100%;
+        border:0px;
+        border:0;
+        overflow: hidden;
+        background:#fff;
+        resize:none;
+    }
+    .one-pannel {
+        margin-right: 7.5px;
+        margin-bottom:0;
+        padding: 10px; 
+        -webkit-border-radius:0;
+        -moz-border-radius:0;
+         border-radius:0;
+        background: #fff;
+        min-height: 325px;         
+    }
+    .two-pannel{
+        padding: 10px;
+        background: #fff;
+        margin-bottom: 10px;
+    }
+    
+    .apply-icon { 
+        padding: 5px 0px; 
+        text-align:left;
+        min-width:70px;
+    }
+    .apply-info{
+        padding: 0px;
+    }
+    .applay-title,
+    .apply-info div h4,
+    .apply-icon h4,
+    .apply-intro h4 {
+        font-size: 14px;
+        font-weight: 600;
+        margin:0;
+        color: #000;
+    }
+    .applay-title{
+        border:0;
+        outline: none;
+        background:#fff;
+    }
+    .dev_wang{
+        padding: 5px 0px;
+    }
+    
+    //修改
+    .apply-panel-heading {
+        overflow: hidden; 
+        padding:3px 0px; 
+    }    
+    .apply-panel-heading>div h4{ 
+        margin-top:6px;
+        padding-left:10px;
+        border-left:3px solid #f3856c;
+        font-size:14px;
+    }   
+    .apply-panel-heading>div~div[class="right"] {
+        vertical-align: middle;
+    } 
+    .mui-radius-btn{
+         @include data-btn(100px,25px,transparent,#000,25px,1px solid grey);
+         -moz-outline: hidden;
+         outline:0px none;
+    } 
+    
+    .apply-v-table {
+        border-top: 1px solid #ddd;
+        margin-bottom: 10px;
+    }
+    .apply-v-table tbody tr td {
+        border:0;
+        vertical-align:middle;
+        color: #7a8687;
+        font-size: 12px;
+        padding:0px;
+    }
+    .apply-v-table tbody tr td:first-child {
+        text-align: left;
+        width: 20px;
+        padding:10px;
+    }
+    .apply-v-table tbody tr td:nth-child(2){
+        text-align: left;
+    }
+    .apply-v-table tbody tr td:nth-child(4),.apply-v-table tbody tr td:nth-child(5),.apply-v-table tbody tr td:nth-child(6){
+        text-align: right;
+    }
+    .apply-v-table tbody tr td:nth-child(5){
+     width: 10px;   
+    }
+    .apply-v-table tbody tr td:nth-child(6){
+     width: 10px;   
+    }
+    
+    .index-panel{ 
+         width:100%;
+         margin:0px auto;
+         overflow:hidden;   
+        .left-panel,.right-panel{  
+          min-height:150px;
+          padding:0px;
+          .pane{
+              margin-bottom: 10px;
+          }
+         .compileLog { 
+             padding:10px 20px; 
+             background: #fff;
+             min-height:170px;
+             margin:0px;
+            }   
+          }
+         .left-panel{
+             padding-right:5px;
+            }
+         .right-panel{
+              padding-left:5px;
+         }
+    } 
+}

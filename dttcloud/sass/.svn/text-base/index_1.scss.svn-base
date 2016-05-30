@@ -1,0 +1,1610 @@
+@charset "UTF-8"; 
+@charset "UTF-8"; 
+@import "reset";
+@import "mui/mixins"; 
+@import "mui/topLayout";
+@import "mui/bottomLayout"; 
+//1.基础文件导入例如reset Base初始化文件    
+//2.创建vendors/文件夹，主要用来包含来自外部的库和框架的CSS文件。
+//3.Helpers 初始化文件导入utils (包括全局变量和函数)  
+//4.layout/文件夹partials 每个文件主要用于布局方面的
+//5.对于一些小组件，都放在了components/文件夹（通常也称为modules/  
+//6.如果你需要针对一些页面写特定的样式，我想将他们放在page/(建议单独引入你自己的样式)
+/*内容部分*/   
+/*banner*/
+ @font-face { 
+     font-family:my-font; 
+     src: url(../css/abeatbyKaiRegular.otf);
+     src: url('../css/abeatbyKaiRegular.otf') format('opentype'), /* IE6-IE8 */
+         url('../css/abeatbyKaiRegular.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../css/abeatbyKaiRegular.svg#my-font') format('svg'); /* Legacy iOS */
+      }
+  @font-face { 
+      font-family:zzf; 
+       src: url(../css/myfont.TTF); 
+       src: url('../css/myfont.otf') format('opentype'), /* IE6-IE8 */
+         url('../css/myfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../css/myfont.svg#zzf') format('svg'); /* Legacy iOS */
+  }
+.bannerBg{
+     img{
+         width:100%;
+     }
+     .phone-bannerCont,.phone-banner{
+         display:none;
+     }
+     @media screen and(max-width:640px){
+         .phone-bannerCont,.phone-banner{
+           display:block;
+         };
+         .pc-bannerCont,.pc-banner{
+           display:none;
+         }
+     }
+}  
+.title{ 
+        width:610px;
+        height:70px;  
+        margin:0px auto;
+        dl{ 
+            margin-left:10px; 
+            dt{ 
+                font-size:16px; 
+                color:#111;
+                font-family:my-font;
+                font-weight:100;
+            }
+            dd{ 
+               h1{
+                   font-size:38px;
+                   margin:-5px auto;
+                   font-weight:100;
+                   color:#111;
+               }
+            }
+     }
+}   
+.alipayLabBg{
+    width:100%;
+    background:#fbfbfb;
+} 
+.alipayLabDescribe{
+         text-align:center;  
+         font-size:22px; 
+         color:#555;
+         margin-top:32px;
+ } 
+.alipay_section{
+//    border:1px solid red;
+     background:#fbfbfb;
+      position:relative;
+      overflow: hidden;
+      z-index:1;
+     .alipayLabBg{ 
+            @extend .alipayLabBg; 
+            .rd-cont{
+                position:relative;
+                z-index:2; 
+                overflow: hidden;
+                .rd-alipayLabTitle{ 
+                    @extend .title; 
+                    margin-top:162px;
+                 }
+                .rd-alipayLabDescribe{
+                     text-align:center;  
+                     font-size:22px; 
+                     color:#555;
+                     margin-top:32px;
+                 }
+                 @media screen and(max-width:640px){
+                          .rd-alipayLabTitle{
+                                width:300px;  
+                               .alipayLabIcon{
+                                    width:45px;
+                                    height:45px;
+                                } 
+                                dl{max-width:240px;dd{h1{font-size:24px;}}}
+                         }
+                         .rd-alipayLabDescribe{
+                             font-size:18px;
+                             text-align:center;
+                             padding:0 15px;
+                        } 
+                    } 
+            }
+            .rd-alipayanimation{
+              position:relative;
+              width:100%;  
+              z-index:1; 
+              .shortcut_phone{width:90%;max-width:700px;margin:30px auto;display:none;}
+              .c3_container{
+                    width:836px; 
+                    height:450px;
+                    margin:96px auto;
+                    position:relative;
+                    .ie8_9bg{
+                         position:absolute;
+                        width:385px;
+                        height:336px;
+                         z-index:1;   
+                         left:220px;
+                         top:58px;
+                    }
+                    .c3rotate{
+                                position:absolute;
+                                width:195px;
+                                height:195px;
+                                left:50%;
+                                top:30px;
+                                z-index:1;   
+                                background:-moz-linear-gradient(to left, #5bdaff #fbfbfb);
+                                background:-ms-linear-gradient(to left , #5bdaff #fbfbfb);
+                                background:-webkit-linear-gradient(to left, #5bdaff #fbfbfb);
+                                background:linear-gradient(to left ,#5bdaff,#fbfbfb);
+                                -webkit-transform-origin:bottom left;
+                                -moz-transform-origin:bottom left; 
+                                 transform-origin:bottom left; 
+                                -webkit-animation:rotatename 5s linear infinite;
+                                -moz-animation:rotatename 5s linear infinite;
+                                -o-animation:rotatename 5s linear infinite;
+                                animation:rotatename 5s linear infinite; 
+                            } 
+                            .rd-dmk{
+                                 position:absolute;
+                                 z-index:4;
+                                 width:150px;
+                                 height:30px;
+                                 color:#9c9da3;
+                                 font-size:14px;
+                                 top:8px;
+                                 left:58px;
+                            }
+                            .rd-yzs{
+                                 @extend .rd-dmk;
+                                 left:78%;
+                                 top:50px;
+                                 text-align:right;
+                            }
+                            .rd-zqd{
+                                @extend .rd-dmk;
+                                left:60px; 
+                                top:270px;
+                            }
+                            .rd-fwzc{
+                                @extend .rd-yzs;
+                                top:370px; 
+                            }
+                            .shield1{
+                                position:absolute;
+                                width:100%;
+                                height:200px;
+                                background:#fbfbfb;
+                                top:-141px;
+                                left:0px;
+                                z-index:2;
+                            }
+                            .shield2{
+                                position:absolute;
+                                width:400px;
+                                height:189px;
+                                background:#fbfbfb; 
+                                 -webkit-transform-origin:bottom left;
+                                -moz-transform-origin:bottom left; 
+                                transform-origin:bottom left;
+                                top:-185px;
+                                left:476px;
+                                z-index:2;
+                                -webkit-transform:rotate(60deg);
+                                -moz-transform:rotate(60deg);
+                                transform:rotate(60deg);
+                            }
+                            .shield3{
+                                 position:absolute;
+                                width:400px;
+                                height:189px;
+                                background:#fbfbfb; 
+                                 -webkit-transform-origin:bottom left;
+                                -moz-transform-origin:bottom left; 
+                                transform-origin:bottom left;
+                                top:35px;
+                                left:606px;
+                                z-index:2;
+                                -webkit-transform:rotate(120deg);
+                                -moz-transform:rotate(120deg);
+                                transform:rotate(120deg);
+                            }
+                            .shield4{
+                                position:absolute;
+                                width:100%;
+                                height:189px;
+                                background:#fbfbfb;  
+                                top:392px;
+                                left:0px;
+                                z-index:2; 
+                            }
+                            .shield5{
+                                position:absolute;
+                                width:300px;
+                                height:189px;
+                                background:#fbfbfb;  
+                                top:252px;
+                                left:32px;
+                                z-index:2; 
+                                -webkit-transform:rotate(-120deg);
+                                -moz-transform:rotate(-120deg);
+                                transform:rotate(-120deg);
+                            }
+                            .shield6{
+                                position:absolute;
+                                width:300px;
+                                height:189px;
+                                background:#fbfbfb;  
+                                top:0px;
+                                left:38px;
+                                z-index:2; 
+                                -webkit-transform:rotate(-60deg);
+                                -moz-transform:rotate(-60deg);
+                                transform:rotate(-60deg);
+                            }
+                            img{
+                                position:absolute;
+                                width:100%;
+                                left:0px;
+                                top:0px;
+                                z-index:3;
+                            }
+                      }
+                       @media only screen and (max-width:900px) {
+                        .c3_container{display:none; }             
+                        .shortcut_phone{display:block}                
+                       } 
+                 } 
+        }  
+} 
+
+.flexible_section{
+    position:relative;
+    z-index:2;
+    .flexibleBg{
+          @extend .alipayLabBg;  
+//        border:1px solid red;
+          background:url("../img_/flexibleBg.jpg") no-repeat;
+          padding-top:150px;
+          .flexibleTitle{
+               @extend .title;
+               width:470px;  
+                dl{  
+                    dt{ 
+                        color:#fff;
+                    }
+                    dd{ 
+                       h1{ 
+                           color:#fff;
+                           font-weight:100;
+                         }
+                    }
+                }
+          }  
+          .flexibleDescribe{
+             @extend .alipayLabDescribe;
+             dl{
+                 margin-top:40px;    
+                dt{ 
+                    h3{
+                         color:#efefef;
+                         font-size:20px;
+                         font-weight:500px;
+                         margin:3px auto; 
+                    }
+                }
+                dd{ 
+                    font-size:14px;
+                     color:#999999;
+                }
+            }
+        } 
+        @media screen and(max-width:640px){
+              .flexibleTitle{
+                    width:300px;  
+                   .alipayLabIcon{
+                        width:45px;
+                        height:45px;
+                    }  
+                    dl{dd{h1{font-size:24px;}}}
+             }
+             .flexibleDescribe{
+                 dl{ 
+                    dt{  h3{ font-size:18px; } }
+                    dd{  padding:0px 15px; }
+                }
+            } 
+        } 
+        .flexibleAnimation{
+             padding-bottom:30px; 
+            .outCircle{  
+                text-align:center;
+                width:320px;
+                height:320px;
+                margin:80px auto;
+                position:relative; 
+                padding-top:65px; 
+                img{ 
+                    position:absolute;
+                    left:0px;
+                    top:0px;  
+                    width:100%;
+                    height:100%;
+                     -webkit-animation:rotatename_f 5s linear infinite;
+                     -moz-animation:rotatename_f 5s linear infinite;
+                     -ms-animation:rotatename_f 5s linear infinite;
+                     animation:rotatename_f 5s linear infinite;
+                }
+                .circleContainer {  
+                    width: 250px; 
+                    text-align: center; 
+                    letter-spacing: -4px;
+                    word-spacing: -4px;
+                    font-size: 0;
+                    margin:0 auto;
+                    transition:all 15s 1s linear; 
+                    div{
+                       a:last-child{
+                           border-right:1px solid #fff;
+                       }
+                    }
+                    div:nth-of-type(2){
+                       a:last-child{
+                           border-top:1px solid #fff;
+                       }
+                       a:first-child{
+                           border-top:1px solid #fff;
+                       }
+                    }    
+                    div:nth-of-type(3){
+                       a:last-child{
+                           border-top:1px solid #fff;
+                       }
+                       a:first-child{
+                           border-top:1px solid #fff;
+                       }
+                    }      
+                    a {
+                        display: inline-block;
+                        margin: 0px;
+                        height: 0px;
+                        width: 22px;
+                        height: 22px;
+                        font-size: 0;
+                        letter-spacing: normal;
+                        word-spacing: normal;
+                        border-left: 1px solid #fff;
+                        border-bottom: 1px solid #fff;
+                        border-collapse:collapse;
+                        background: #0088cc;
+                     }
+                     .odd {
+//                      background: #0088cc;
+//                      -webkit-animation:changeColor 5s 2s ease infinite;
+//                      -moz-animation:changeColor 5s 2s ease infinite;
+//                      animation:changeColor 5s 2s ease infinite;
+                        }
+                      .even {
+//                      background: #056595;
+//                      -webkit-animation:changeColor 5s ease infinite;
+//                      -moz-animation:changeColor 5s ease infinite;
+//                      animation:changeColor 5s ease infinite;
+                        }
+                }   
+            }   
+            @media screen and (max-width:640px){
+                .outCircle{
+                    width:250px;
+                    height:250px;
+                    img{width:90%;height:90%;margin-left: 5%;}
+                    .circleContainer{
+                         margin:-20px auto;
+                        a{
+                            width:16px;
+                            height:16px;
+                        }
+                    }
+                }
+            }
+        } 
+    } 
+}
+.shortcut_section{
+    .shortcutBg{
+         padding-top:120px;
+        .shortcutTitle{
+             @extend .title;
+             width:420px;
+        }
+        .shortcutDescribe{
+             @extend .alipayLabDescribe; 
+             padding-top:0px;
+             dl{   
+                 margin-top:30px;
+                dt{ 
+                    h3{
+                         color:#00aaff;
+                         font-size:28px;
+                         font-weight:100;
+                         margin:0px auto;
+                    }
+                }
+                dd{ 
+                    font-size:16px;
+                    color:#848e93;
+                }
+            }
+        }
+        @media screen and(max-width:640px){
+              .shortcutTitle{
+                    width:275px;  
+                   .alipayLabIcon{
+                        width:45px;
+                        height:45px;
+                    }  
+                    dl{dd{h1{font-size:24px;}}}
+             }
+             .shortcutDescribe{
+                 dl{ 
+                    dt{  h3{ font-size:18px; } }
+                    dd{  padding:10px 15px;font-size:14px;}
+                }
+            } 
+        } 
+        .shortcutAnimation{ 
+            .shortcutcircle{ 
+                position:relative;
+                height:330px;
+                width:330px;  
+                margin:52px auto 100px auto; 
+                .inCircle{
+                    position:absolute;
+                    top:10%;
+                    left:10%;
+                    width:80%;
+                    height:80%; 
+                    -webkit-animation:rotatename 5s linear infinite;
+                    -moz-animation:rotatename 5s linear infinite;
+                    -ms-animation:rotatename 5s linear infinite;
+                    animation:rotatename 5s linear infinite;
+                } 
+                .outCircle{
+                    position:absolute;
+                    left:0px;
+                    top:0px;
+                    width:100%;
+                    height:100%;
+                } 
+                .marqueecontainer{ 
+                    position:absolute;
+                    left:28%;
+                    top:26%;
+                    width:45%;
+                    height:50%;
+                    opacity:0.5;
+                    filter:alpha(opacity=50); 
+                }
+            }
+            @media screen and(max-width:640px){
+                    .shortcutcircle{
+                        width:250px;
+                        height:250px;
+                    }
+                }
+        }
+    }
+}  
+.phone_section{
+    .phoneBg{
+         background:#2c2f3b;
+         padding-top:150px;
+         overflow:hidden;
+        .phoneTitle{
+            @extend .title; 
+            width:430px;
+            dl{  
+                dt{ 
+                    color:#fff;
+                }
+                dd{ 
+                   h1{ 
+                       color:#fff;
+                       font-weight:100;
+                     }
+                }
+              }
+        }
+        .phoneDescribe{
+          max-width:584px;
+          margin:38px auto 0px auto;
+          font-size:16px;
+          text-align:center;
+          color:#848e93; 
+        }
+        @media screen and(max-width:640px){
+              .phoneTitle{
+                    width:275px;  
+                   .alipayLabIcon{
+                        width:45px;
+                        height:45px;
+                    }  
+                    dl{dd{h1{font-size:24px;}}}
+             }
+             .phoneDescribe{
+                 padding:0px 10px;
+                 dl{ 
+                    dt{  h3{ font-size:18px; } }
+                    dd{  padding:10px 15px;font-size:14px;}
+                }
+            } 
+        } 
+        .phoneAnimation{  
+           /*手机内部样式开始*/
+          .phone_phone{max-width:700px;width:90%;margin:30px auto;display: none;} 
+         .phoneContainer{
+            max-width:780px;
+            margin:0px auto;  
+            text-align:center; 
+            .phone{ 
+                width:168px;
+                height:344px;  
+                margin:50px 40px 30px 40px;
+                display: inline-block;
+                vertical-align: middle;
+//              border:1px solid red;
+                background:url(../img_/phone.png) 0 no-repeat;
+                .ct { 
+                    position: relative; 
+                    overflow: hidden;
+                     width:134px; 
+                     height: 260px; 
+                     margin:35px 18px;  
+                     cursor: pointer; 
+                     background:url(../img_/ct1.jpg);
+                      img {   
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width:100%;
+                            height:100%;
+                          }
+                 } 
+                ul{
+                    width:134px; 
+                    height: 260px; 
+                    margin:35px  18px;  
+                    background: #229bdc;
+                    overflow: hidden;
+                    padding: 5px 0px;   
+                    li{
+                        list-style-type: none;
+                        width: 100%; 
+                        line-height:28px; 
+                        background: #229bdc; 
+                        color: #fff; font-family: "微软雅黑";
+                        cursor: pointer; 
+                        font-size: 12px;  
+                        span{
+                            display:inline-block; 
+                        }
+                        >span{
+                            width:8%;
+                        }
+                        >span~span{
+                            text-align:left;
+                            width:60%;
+                        }
+                        transition: all 1s ease;
+                        list-style-type:none; 
+                    }
+                } 
+                 .phoneLogo { margin-left: 10px; }
+                .phoneContent { margin-left: 20px; } 
+             }
+             .last_phone ul { 
+                background: #253e5d;
+                li { 
+                    background: #253e5d; 
+                    color: #6280a7;
+                    >span{width:100%;text-align:left;}
+                 } 
+                li[data="img"]{ 
+                     background: #21344c; 
+                     color: #6382a9; 
+                      >span{width:10%; }
+                      >span~span{width:60%;text-align:left; }
+                    }
+            } 
+            .downloadIDE{
+                margin-bottom:100px;
+                text-align: center;
+                a{
+                    display:inline-block;
+                }
+            } 
+         }    
+          @media screen and(max-width:780px){
+            .phoneContainer{display: none; }
+            .phone_phone{display:block; }
+          }
+        /*手机内部样式结束*/
+        }
+    }
+}
+.serverce_section{ 
+    .serversBg{
+         background:url(../img_/serverbg.jpg) no-repeat;
+         padding:96px 0 30px 0;
+        .serversTitle{
+            @extend .title;
+            h1{
+                font-weight:100;
+                margin:0px auto;
+            }
+            width:350px;  
+        }
+        .serversDescribe{
+            @extend .alipayLabDescribe;
+            dl{   
+                margin:32px auto;
+                dt{ 
+                    h3{
+                         color:#555555;
+                         font-size:20px;
+                         font-weight:500;
+                         margin:0px auto;
+                    }
+                }
+                dd{ 
+                    font-size:14px;
+                     color:#818587;
+                } 
+            }
+            >div{
+                font-family:zzf;
+                font-weight:100;
+                font-size:24px;
+                color:#0590db; 
+            }
+        }
+        @media screen and(max-width:640px){
+              .serversTitle{
+                    width:220px;  
+                    h1{font-size:24px;} 
+             }
+             .serversDescribe{
+                 dl{  
+                     margin:0px auto;
+                    dt{  h3{ font-size:18px; } }
+                    dd{  padding:10px 15px;font-size:14px;}
+                }
+            } 
+        } 
+        .serversAnimation{
+            .server_phone{width:90%;margin: 0px auto;margin:50px auto;display: none;}
+            .overturn{ 
+                margin-top:38px;
+                padding-bottom:50px;
+                ul{
+                    margin:0px;
+                    padding:0px; 
+                    text-align:center;
+                    width:100%;
+                    height:240px;
+                    position:relative;
+                    z-index:1;
+                    li{  
+                        margin:0px 28px;
+                        width:240px;
+                        height:240px;
+                        display: inline-block;
+                        list-style-type:none;
+                        position:relative;
+                        img{
+                             width:100%;
+                             height:100%;
+                        }
+                        div{
+                            display:none;
+                            background:url(../img_/blackbg.png) no-repeat;
+                            position:absolute;
+                            width:100%;
+                            height:100%;
+                            padding-top:42%;
+                            left:0;
+                            top:0px;
+                            font-size:28px;
+                            font-family:zzf;
+                            color:#fff;
+                        }
+                    } 
+                }
+                >ul~ul{
+                     height:240px;
+                     width:100%;
+                     margin-top:-100px;
+                     z-index:2;
+                }
+                 
+            }
+            @media screen and(max-width:920px){
+                   .overturn{display: none;}
+                   .server_phone{display:block;}
+                }
+        }
+    }    
+}  
+.statistics_section{
+//  border:1px solid red;
+    .statisticsBg{
+        background:url(../img_/statisticsbg.jpg) 50% no-repeat;
+        padding-top:130px; 
+        .statisticsTitle{
+            @extend .title;
+             h1{
+                color:#fff;
+                font-weight:100;
+                margin:0px;
+                font-family: "微软雅黑";
+            }
+            width:530px; 
+        }
+        .statisticsDescribe{
+            @extend .alipayLabDescribe;
+             >div{
+                font-family:zzf;
+                font-size:36px;
+                color:#fff;  
+                a{
+                    font-weight:100;
+                    color:#048fdc;
+                    line-height:70px;
+                    font-size:70px;
+                    text-decoration:none;
+                }
+            } 
+             dl{   
+                 margin:1% auto;
+                dt{ 
+                    .createrTitle_phone{max-width:370px;width:80%;margin:0 auto;display: none;}
+                    h3{
+                        font-family:zzf;
+                         color:#fff; 
+                         font-size:24px;
+                         font-weight:100; 
+                         margin:25px auto 15px auto;
+                    }
+                    @media screen and(max-width:640px){
+                        .createrTitle_phone{display:block;margin-bottom:25px;}
+                        h3{
+                            display:none;
+                        }
+                    }
+                }
+                dd{ 
+                    >div{
+                        display:inline-block;
+                        width:340px;
+                        ~div{
+                         text-align:right; 
+                       }
+                    } 
+                    
+                    @media screen and(max-width:640px){
+                        >div{ 
+                           width:300px; 
+                         } 
+                        }
+                    span{
+                        margin:0px 10px;
+                    }
+                    //font-family:zzf;
+                    margin:1% auto;
+                    font-size:14px;
+                   color:#fff; 
+                } 
+            } 
+        }
+        @media screen and(max-width:640px){
+              .statisticsTitle{ 
+                  width:100%;
+                  padding:0px 12px;
+                  h1{ font-size:24px;  text-align:center;}
+               }
+             .statisticsDescribe{
+                >div{
+                font-size:20px;
+                padding:15px; 
+                font-weight:100;
+                a{ line-height:50px; font-size:50px; }
+                } 
+             dl{   
+                 margin:2% auto;
+                dt{ h3{ font-size:18px; } }
+                dd{ font-size:12px;} 
+             } 
+            } 
+        } 
+         .statisticsAnimation{
+            .joninus{ 
+                margin:3% auto;
+                color:#b3b3b4; 
+                font-size:14px;
+                font-family:gfyh;
+                 text-align:center;
+            }
+            .register{  
+                 position:relative;
+                width:236px;
+                height:58px;
+                margin:10px auto;  
+                //旋转按钮
+                .btn-bg {
+                    position: absolute; 
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 45px;
+                    text-align: center;
+                    font-size: 0;
+                    z-index: 100; 
+                }
+                .btn-bg .bt-wrapper {
+                    width: 230px;
+                    height: 64px;
+                    margin: 0 auto;
+                    overflow: hidden;
+                    position: relative
+                }
+                
+                .createbtn {
+                    font-size: 24px;
+                    color:#fff;
+                    text-align: center;
+                    width: 212px;
+                    height: 48px;
+                    border: 1px solid #008ee9;
+                    box-shadow: 0 0 2px rgba(255, 255, 255, .3);
+                    border-radius: 25px;
+                    line-height: 46px;
+                    cursor: pointer;
+                    top: 8px;
+                    position: relative;
+                    display: block;
+                    margin: 0 auto
+                }
+                .bt-wrapper .l-c {
+                    height: 64px;
+                    width: 31px;
+                    overflow: hidden;
+                    position: absolute;
+                    left: 0;
+                    top: 0
+                }
+                .bt-wrapper:hover .l-c::after,.bt-wrapper:hover .r-c::after ,.bt-wrapper:hover .line-body::after {
+                    -webkit-animation-play-state:paused;
+                    -moz-animation-play-state:paused;
+                    -o-animation-play-state:paused;
+                    animation-play-state:paused;
+                }
+                .bt-wrapper .l-c::after {
+                    content: '\20';
+                    width: 63px;
+                    height: 63px;
+                    position: absolute;
+                    top: 1px;
+                    left: 0;
+                    background: url(../img_/guangbiao.png) no-repeat;
+                    -webkit-transform: rotate(-118deg);
+                    -moz-transform: rotate(-118deg);
+                    -o-transform: rotate(-118deg);
+                    transform: rotate(-118deg);
+                    -webkit-animation: routateL 6s linear infinite;
+                    -moz-animation: routateL 6s linear infinite;
+                    -o-animation: routateL 6s linear infinite;
+                    animation: routateL 6s linear infinite
+                }
+                .bt-wrapper .r-c {
+                    height: 64px;
+                    width: 31px;
+                    overflow: hidden;
+                    position: absolute;
+                    top: 0;
+                    right: 0
+                }
+                .bt-wrapper .r-c::after {
+                    content: '\20';
+                    width: 62px;
+                    height: 63px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background: url(../img_/guangbiao.png) no-repeat;
+                    -webkit-transform: rotate(62deg);
+                    -moz-transform: rotate(62deg);
+                    -o-transform: rotate(62deg);
+                    transform: rotate(62deg);
+                    -webkit-animation: routateR 6s linear infinite;
+                    -moz-animation: routateR 6s linear infinite;
+                    -o-animation: routateR 6s linear infinite;
+                    animation: routateR 6s linear infinite
+                }
+                .bt-wrapper .line-body {
+                    height: 64px;
+                    width: 168px;
+                    left: 31px;
+                    position: absolute;
+                    top: 0;
+                    overflow: hidden
+                }
+                .bt-wrapper .line-body::after {
+                    content: '\20';
+                    height: 64px;
+                    width: 64px;
+                    position: absolute;
+                    top: 0;
+                    left: -56px;
+                    background: url(../img_/guangbiao.png) 0 -63px no-repeat;
+                    -webkit-animation: lineFollow 6s linear infinite;
+                    -moz-animation: lineFollow 6s linear infinite;
+                    -o-animation: lineFollow 6s linear infinite;
+                    animation: lineFollow 6s linear infinite
+                }  
+                
+               } 
+            .ul{ 
+                   text-align:center;
+                   margin-top:50px;
+                   padding-bottom:50px; 
+                a{
+                    display:inline-block;
+                    list-style-type:none;
+                    width:96px;
+                    height:96px;
+                    margin:0px 20px;
+                    position:relative;
+                    img{
+                        width:100%;
+                        height:100%;
+                        left:0px;
+                        top:0px;
+                        position:absolute;
+                        z-index:1;
+                    }
+                    div{
+                        position:absolute;   
+                        height:0px;
+                        width:0px;
+                        display:none;
+                        z-index:2;
+                        left:50%;
+                        top:50%; 
+                        img{
+                            width:100%;
+                            height:100%;
+                            position:absolute;
+                            top:0px;
+                            left:0px;
+                            z-index:-1;
+                        }
+                        span{
+                            width:80%;
+                            height:100%; 
+                            display:inline-block;
+                            font-size:20px;
+                            color:#fff; 
+                            margin:50px auto;
+                        }
+                    }
+                } 
+            }
+            @media screen and(max-width:640px){
+                 .ul a{
+                     width:50px;
+                     margin:0px;
+                     height:50px; 
+                 }
+              }  
+        }
+    }
+}
+ 
+// .bottomContainer{  
+//  height:200px;
+//  max-width:1024px;
+//  margin:0px auto;
+//  background:#fff;
+//  .row{
+//      margin-right:0px;
+//  }
+//} 
+ 
+/*动画路径*/
+/*圆*/
+/*动画路径*/
+@-moz-keyframes rotatename {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            25% {
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+            50% {
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+            75% {
+                -webkit-transform: rotate(270deg);
+                -moz-transform: rotate(270deg);
+                transform: rotate(270deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+  }    
+  @-webkit-keyframes rotatename {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            25% {
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+            50% {
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+            75% {
+                -webkit-transform: rotate(270deg);
+                -moz-transform: rotate(270deg);
+                transform: rotate(270deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+     }     
+  @-o-keyframes rotatename {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            25% {
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+            50% {
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+            75% {
+                -webkit-transform: rotate(270deg);
+                -moz-transform: rotate(270deg);
+                transform: rotate(270deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+  }    
+  @-ms-keyframes rotatename {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            25% {
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+            50% {
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+            75% {
+                -webkit-transform: rotate(270deg);
+                -moz-transform: rotate(270deg);
+                transform: rotate(270deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+  }    
+  @keyframes rotatename {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            25% {
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+            50% {
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+            75% {
+                -webkit-transform: rotate(270deg);
+                -moz-transform: rotate(270deg);
+                transform: rotate(270deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+  }   
+  @-webkit-keyframes rotatename_f {
+             0% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                transform: rotate(360deg);
+             }
+             25% {
+                -webkit-transform: rotate(270deg);
+                -moz-transform: rotate(270deg);
+                transform: rotate(270deg);
+            }
+            50% {
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+           75% {
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+            100% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                transform: rotate(0deg);
+            } 
+  }     
+  @-moz-keyframes rotatename_f {
+             0% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                transform: rotate(360deg);
+             }
+             25% {
+                -webkit-transform: rotate(270deg);
+                -moz-transform: rotate(270deg);
+                transform: rotate(270deg);
+            }
+            50% {
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+           75% {
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+            100% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                transform: rotate(0deg);
+            } 
+  }    
+  @-o-keyframes rotatename_f {
+             0% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                transform: rotate(360deg);
+             }
+             25% {
+                -webkit-transform: rotate(270deg);
+                -moz-transform: rotate(270deg);
+                transform: rotate(270deg);
+            }
+            50% {
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+           75% {
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+            100% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                transform: rotate(0deg);
+            } 
+  }    
+  @keyframes rotatename_f {
+             0% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                transform: rotate(360deg);
+             }
+             25% {
+                -webkit-transform: rotate(270deg);
+                -moz-transform: rotate(270deg);
+                transform: rotate(270deg);
+            }
+            50% {
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+           75% {
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+            100% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                transform: rotate(0deg);
+            } 
+  }    
+  
+/*第二个动画*/
+@-webkit-keyframes changeColor{
+    0%{background: #056595;}
+    20%{background: #0a5980;}
+    40%{background: #0b6795;}
+    60%{background: #0d7db5;}
+    80%{background: #1194d6;}
+    100%{background: #11abf8;} 
+}
+@-moz-keyframes changeColor{
+    0%{background: #056595;}
+    20%{background: #0a5980;}
+    40%{background: #0b6795;}
+    60%{background: #0d7db5;}
+    80%{background: #1194d6;}
+    100%{background: #11abf8;} 
+}
+@keyframes changeColor{
+    0%{background: #056595;}
+    20%{background: #0a5980;}
+    40%{background: #0b6795;}
+    60%{background: #0d7db5;}
+    80%{background: #1194d6;}
+    100%{background: #11abf8;} 
+}
+@keyframes changeapacity{
+    0%{opacity:0; filter:alpha(opacity=0);   }
+    50%{opacity:0.5; filter:alpha(opacity=50);   } 
+    100%{opacity:1; filter:alpha(opacity=100);   } 
+}
+
+
+
+/*按钮*/
+@-webkit-keyframes routateL {
+    0%, 65% {
+        -webkit-transform: rotate(-118deg)
+    }
+    85% {
+        -webkit-transform: rotate(60deg)
+    }
+    100% {
+        -webkit-transform: rotate(242deg)
+    }
+}
+@-webkit-keyframes routateR {
+    0%, 15% {
+        -webkit-transform: rotate(62deg)
+    }
+    20% {
+        -webkit-transform: rotate(103deg)
+    }
+    35% {
+        -webkit-transform: rotate(245deg)
+    }
+    40% {
+        -webkit-transform: rotate(365deg)
+    }
+    100%,
+    85% {
+        -webkit-transform: rotate(422deg)
+    }
+}
+@-webkit-keyframes lineFollow {
+    0% {
+        left: 27px;
+        -webkit-transform: rotate(0)
+    }
+    15% {
+        left: 110px;
+        -webkit-transform: rotate(0)
+    }
+    20% {
+        left: 129px;
+        -webkit-transform: rotate(0)
+    }
+    23% {
+        left: 159px;
+        -webkit-transform: rotate(0)
+    }
+    25%,
+    35% {
+        left: 159px;
+        -webkit-transform: rotate(180deg)
+    }
+    65% {
+        left: -9px;
+        -webkit-transform: rotate(180deg)
+    }
+    70% {
+        left: -30px;
+        -webkit-transform: rotate(180deg)
+    }
+    72% {
+        left: -90px;
+        -webkit-transform: rotate(180deg)
+    }
+    75% {
+        left: -90px;
+        -webkit-transform: rotate(0)
+    }
+    85% {
+        left: -57px;
+        -webkit-transform: rotate(0)
+    }
+    100% {
+        left: 27px;
+        -webkit-transform: rotate(0)
+    }
+}
+@-moz-keyframes routateL {
+    0%, 65% {
+        -moz-transform: rotate(-118deg)
+    }
+    85% {
+        -moz-transform: rotate(60deg)
+    }
+    100% {
+        -moz-transform: rotate(242deg)
+    }
+}
+@-moz-keyframes routateR {
+    0%, 15% {
+        -moz-transform: rotate(62deg)
+    }
+    20% {
+        -moz-transform: rotate(103deg)
+    }
+    35% {
+        -moz-transform: rotate(245deg)
+    }
+    40% {
+        -moz-transform: rotate(365deg)
+    }
+    100%,
+    85% {
+        -moz-transform: rotate(422deg)
+    }
+}
+@-moz-keyframes lineFollow {
+    0% {
+        left: 27px;
+        -moz-transform: rotate(0)
+    }
+    15% {
+        left: 110px;
+        -moz-transform: rotate(0)
+    }
+    20% {
+        left: 129px;
+        -moz-transform: rotate(0)
+    }
+    23% {
+        left: 159px;
+        -moz-transform: rotate(0)
+    }
+    25%,
+    35% {
+        left: 159px;
+        -moz-transform: rotate(180deg)
+    }
+    65% {
+        left: -9px;
+        -moz-transform: rotate(180deg)
+    }
+    70% {
+        left: -30px;
+        -moz-transform: rotate(180deg)
+    }
+    72% {
+        left: -90px;
+        -moz-transform: rotate(180deg)
+    }
+    75% {
+        left: -90px;
+        -moz-transform: rotate(0)
+    }
+    85% {
+        left: -57px;
+        -moz-transform: rotate(0)
+    }
+    100% {
+        left: 27px;
+        -moz-transform: rotate(0)
+    }
+}
+@-o-keyframes routateL {
+    0%, 65% {
+        -o-transform: rotate(-118deg)
+    }
+    85% {
+        -o-transform: rotate(60deg)
+    }
+    100% {
+        -o-transform: rotate(242deg)
+    }
+}
+@-o-keyframes routateR {
+    0%, 15% {
+        -o-transform: rotate(62deg)
+    }
+    20% {
+        -o-transform: rotate(103deg)
+    }
+    35% {
+        -o-transform: rotate(245deg)
+    }
+    40% {
+        -o-transform: rotate(365deg)
+    }
+    100%,
+    85% {
+        -o-transform: rotate(422deg)
+    }
+}
+@-o-keyframes lineFollow {
+    0% {
+        left: 27px;
+        -o-transform: rotate(0)
+    }
+    15% {
+        left: 110px;
+        -o-transform: rotate(0)
+    }
+    20% {
+        left: 129px;
+        -o-transform: rotate(0)
+    }
+    23% {
+        left: 159px;
+        -o-transform: rotate(0)
+    }
+    25%,
+    35% {
+        left: 159px;
+        -o-transform: rotate(180deg)
+    }
+    65% {
+        left: -9px;
+        -o-transform: rotate(180deg)
+    }
+    70% {
+        left: -30px;
+        -o-transform: rotate(180deg)
+    }
+    72% {
+        left: -90px;
+        -o-transform: rotate(180deg)
+    }
+    75% {
+        left: -90px;
+        -o-transform: rotate(0)
+    }
+    85% {
+        left: -57px;
+        -o-transform: rotate(0)
+    }
+    100% {
+        left: 27px;
+        -o-transform: rotate(0)
+    }
+}
+@keyframes routateL {
+    0%, 65% {
+        transform: rotate(-118deg)
+    }
+    85% {
+        transform: rotate(60deg)
+    }
+    100% {
+        transform: rotate(242deg)
+    }
+}
+@keyframes routateR {
+    0%, 15% {
+        transform: rotate(62deg)
+    }
+    20% {
+        transform: rotate(103deg)
+    }
+    35% {
+        transform: rotate(245deg)
+    }
+    40% {
+        transform: rotate(365deg)
+    }
+    100%,
+    85% {
+        transform: rotate(422deg)
+    }
+}
+@keyframes lineFollow {
+    0% {
+        left: 27px;
+        transform: rotate(0)
+    }
+    15% {
+        left: 110px;
+        transform: rotate(0)
+    }
+    20% {
+        left: 129px;
+        transform: rotate(0)
+    }
+    23% {
+        left: 159px;
+        transform: rotate(0)
+    }
+    25%,
+    35% {
+        left: 159px;
+        transform: rotate(180deg)
+    }
+    65% {
+        left: -9px;
+        transform: rotate(180deg)
+    }
+    70% {
+        left: -30px;
+        transform: rotate(180deg)
+    }
+    72% {
+        left: -90px;
+        transform: rotate(180deg)
+    }
+    75% {
+        left: -90px;
+        transform: rotate(0)
+    }
+    85% {
+        left: -57px;
+        transform: rotate(0)
+    }
+    100% {
+        left: 27px;
+        transform: rotate(0)
+    }
+} 

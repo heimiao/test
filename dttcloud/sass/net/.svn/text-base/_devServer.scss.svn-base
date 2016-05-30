@@ -1,0 +1,206 @@
+@charset "utf-8"; 
+/*开发者服务*/
+.all-container{
+    width:100%;
+    overflow: hidden;
+}
+.dev-container{
+    max-width:1024px;
+    margin:0px auto;
+}
+.datang-container{
+    @extend .all-container;
+    background: url(../img/devServer-bg.jpg) repeat-x;
+    .left-logo,.right-exit{
+        margin:30px;
+    }
+    .center-container:before{
+        content: "";
+        display:table;
+        clear: both; 
+    }
+    .center-container{
+        width:100%;
+        text-align:center;
+    } 
+    padding-bottom:50px;
+} 
+.center-fabu{ 
+        padding:15px 0;
+        text-align:center;
+        background: url(../img/font-bg.jpg) repeat-x;
+    } 
+.datang-cont{
+     @extend .all-container;
+     background:#fff;
+     overflow: hidden;
+     padding:5% 0px;
+}
+.engine-cont{
+    background:#2c2f3b;
+     @extend .datang-cont; 
+}
+.ide-cont{
+     @extend .datang-cont;   
+     padding:80px 0px;  
+}
+.template-cont{
+     background:#2c2f3b;
+     @extend .datang-cont;   
+}
+.baas-cont{  
+     @extend .datang-cont;  
+} 
+.controInfo-cont{
+    background:#393b45;    
+    text-align: center;
+    .contro-style{ 
+        width:500px;
+        padding:25px 0px; 
+        color:#fff;
+        >div:first-child{
+            padding:0;
+            padding-left:80px;
+            text-align: left;
+            font-size:30px; 
+              background:url(../img/yinhao1.png) left no-repeat;
+        } 
+        >div:first-child+div{ 
+            padding:0;
+            padding-right:80px;
+            text-align: right;   
+            font-size:30px;
+            background:url(../img/yinhao2.png) right no-repeat;
+            big{
+                font-size:44px;
+            }
+        } 
+       // @extend .ceo-decrition;  
+    } 
+    @media screen and(max-width:640px){
+        .contro-style{ 
+            width:100%; 
+           
+            >div:first-child{ 
+              padding-left:80px;
+               font-size:24px; 
+           } 
+            >div:first-child+div{ 
+                  padding-right:80px;
+                  font-size:24px; 
+                  big{
+                     font-size:34px;
+                 }
+             }
+        }
+    }
+   button{
+        color:#fff;
+        font-size:20px;
+        border:1px solid #fff; 
+        margin-bottom:25px;
+        background:#2e3243;
+        padding:5px 20px;
+        outline:none;
+    }
+}
+
+
+.dev-pic{
+    text-align:center;  
+    img{
+        width:99%;
+    }
+}
+.dev-cont{ 
+    text-align:left; 
+    padding:0px 15px;
+    h3{ 
+        border-left:5px solid #e75037;
+        padding-left:20px;
+        font-size:26px;
+        color:#fff;
+    }
+    p{
+        font-size:16px;
+        color:#848e93;
+        padding-left:25px;
+    } 
+}
+.dev-ide-cont{
+    @extend .dev-cont;
+    h3{ 
+        border-left:5px solid #c69c6e; 
+        color:#161616;
+    } 
+} 
+.dev-template-cont{ 
+    @extend .dev-cont; 
+    h3{ 
+        border-left:5px solid #0088cc;  
+        color:#ffffff;
+    } 
+    
+}
+.dev-baas-cont{
+    @extend .dev-cont;
+    h3{ 
+        border-left:5px solid #e75037;  
+        color:#161616;
+    } 
+    
+}   
+.dev-address>div{
+    line-height:25px;
+    font-weight: 600;
+}
+.dev-vs{
+    text-align: center;
+    font-size:12px;
+    color:#6d6d6d;
+    margin-top:30px;
+} 
+.phone-small-font{
+    margin:10px auto;
+}
+ @media screen and(max-width:1000px)
+ {   
+    .dev-pic {
+         width:100%; 
+          img{width:70%;}
+      }  
+     .phone-img{
+         img{
+              width:90%;
+         } 
+     } 
+     .center-fabu{
+         img{
+              width:60%;
+         } 
+     }
+     .phone-center-369cloud{
+         img{
+              width:70%;
+         } 
+     }
+     .phone-small-font{
+            img{
+              width:30%;
+         } 
+        }
+     .phone-center-logo{
+         img{
+              width:60%;
+         } 
+     }  
+     .dev-address{
+         width:70%;
+    }
+    .weixin-code{
+        width:30%;
+        img{
+             width:100%;
+        }
+    }
+  }   

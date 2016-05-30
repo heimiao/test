@@ -1,0 +1,287 @@
+@charset "UTF-8"; 
+.set{
+	.dev_container{
+		width: 100%;
+		min-height: 680px;
+		background: #e4e4e4;
+		padding-bottom: 20px;
+	}
+	/**设置****/
+	.applaySet {
+		width:98%;
+		margin: 10px;
+		min-height: 680px;
+		background: #fff;
+		overflow: hidden;
+	}
+	.applaySet-left {
+		font-size: 12px;
+		color: #7f8c8d;
+	}
+	.applaySet-pannel {
+		margin: 25px auto;
+		overflow: hidden;
+	}
+	.applaySet-title {
+		padding-left: 15px;
+		border-left: 3px solid #f3856c;
+	}
+	.applaySet-title h4 {
+		margin: 5px auto;
+		font-size: 14px;
+		color: #000;
+		font-weight: 600;
+	}
+	.applaySet-cont {
+		padding: 5px 15px;
+		.uploadFile{
+            position:relative;
+            overflow: hidden;
+            width:100px;
+            height:25px; 
+        }
+        .uploadFile input[type="file"]{
+            position: absolute;
+            left:0;
+            top:0;
+            font-size:50px;
+            filter: alpha(opacity=0); 
+            -moz-opacity:0; 
+            opacity:0; 
+            font-size: 20px;
+            z-index:2;
+            outline: none;
+        }
+	}
+	.applaySet-cont .set_screen{
+	    margin:10px 20px 0px 0px;
+        width: 81px;
+        height: 61px; 
+        text-align: center;
+        position:relative;
+        border: 1px solid #cdcdcd;
+        border-radius: 10px;
+        padding: 10px 0;
+        .set_sc{
+            margin-top: 5px;
+        }
+	}
+	.set_active{
+	    width: 81px;
+        height: 61px;
+        border-radius: 10px;
+        background: #21a0e8;
+        border: 0px;
+        color: #fff;
+	}
+	.applaySet-img {
+		margin-right: 15px;
+		width: 80px;
+		height: 80px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+	}
+	.applaySet-img img {
+		width: 100%;
+		height: 100%;
+	}
+	.applaySet-cont ul {
+		margin: 10px 0;
+		padding: 0
+	}
+	.applaySet-cont ul li {
+		list-style-type: none;
+		float: left;
+		margin:30px 20px 20px 0px;
+		width: 81px;
+		height: 81px; 
+		text-align: center;
+		position:relative;
+		border: 1px solid #cdcdcd;
+		border-radius: 10px;
+		padding: 10px 0;
+	}
+	.applaySet-cont .iconTitle{
+		vertical-align: middle;
+		font-size: 10px !important;
+		height: 35px;
+		padding: 6px 0;
+	}
+	.androidIcon .iconTitle{
+		text-align: left;
+		padding-left: 10px;
+	}
+	.applaySet-cont .iconSize{
+		color: #000000;
+		font-size: 13px !important;
+	}
+	.applaySet-cont .icon-btn{
+		display: none;
+		margin-top: 5px;
+	}
+	.applaySet-cont .uploaded{
+		background-color: #ecf9ff;
+		border: 1px solid #bee1f4;
+	}
+	.applaySet-cont li:hover{
+		height: 95px;
+	}
+	.applaySet-cont li:hover .icon-btn{
+		display: block;
+		padding-right: 5px;
+	}
+	.applaySet-cont ul li input[type="file"]{
+		 font-size:500px;
+		 filter: alpha(opacity=0); 
+		 -moz-opacity: 0; 
+		 opacity: 0;
+		 position: absolute;
+		 right:0;
+		 top:0;  
+		 z-index: 200;	outline:none;
+	}
+	.applaySet-position {
+		margin: 5px auto;
+		padding: 5px 0px;
+	}
+	.applaySet-phone {
+		margin: 30px auto;
+		width: 243px;
+		height: 488px;
+		background: url(../../../images/dev/app/bgAll.png) 86% 55% no-repeat;
+		position: relative
+	}
+	.applaySet-phone .phone-stateBar {
+		position: absolute;
+		width: 205px;
+		height: 20px;
+		left: 16px;
+		top: 61px;
+		background: url(../../../images/dev/app/bgAll.png) 70% 35% no-repeat;
+	}
+	/*更新设置底部的上传方式*/
+	.applaySet-uldImg{
+		padding:10px;
+		overflow: hidden;
+		height:122px;
+	}
+	.applaySet-uldImg dl{
+		float: left;  
+		border: 1px solid #cdcdcd;
+		-moz-border-radius:10px;
+		-webkit-border-radius:10px;
+		border-radius: 10px; 
+		margin:0px;
+		margin-right:20px;
+	}
+	.applaySet-uldImg dl:hover dd{
+		 display:block;
+	}
+	.applaySet-uldImg dl dt{ 
+		text-align:center;
+		font-weight: 100;
+		padding:10px;
+		width:81px;  
+		height:81px;  
+	}
+	.applaySet-uldImg dl dd{ 
+		width:81px; 
+		height:25px;   
+		display: none;
+	}
+	.applaySet-uldImg dl dd .upload_btn{    
+		 width:18px;
+		 height:18px;
+		 position:relative; 
+		 overflow:hidden;
+		 float:right;
+		 margin:0px 3px;  
+	   cursor:pointer;
+	}
+	.applaySet-uldImg dl dd .upload_btn input[type="file"]{ 
+		 font-size:22px;
+		 position:absolute;
+		 filter: alpha(opacity=0); 
+		 -moz-opacity: 0; 
+		  opacity: 0; 
+	}
+	.upload_btn img{ 
+		 position:absolute;
+		 cursor: pointer;
+	}
+	.adduplad input[type="file"]{ 
+		 font-size:120px;
+		 position:absolute;
+		 top:-10px;
+		 right:-10px;
+		 filter: alpha(opacity=0); 
+		 -moz-opacity: 0; 
+		 opacity: 0;  
+	}
+	.mui-btn-radius {
+		background: #484f63;
+		border:0;
+		outline:none;
+		padding: 3px 15px;
+		-webkit-border-radius: 50px;
+		-moz-border-radius: 50px;
+		border-radius: 50px;
+		color: #fff;
+	}
+	.update-checkbox{
+    	position: absolute;
+    	width: 144px;
+    	height: 26px;
+    	line-height: 26px;
+    	background-color: #484f63;
+    	border-radius: 20px;
+    	vertical-align: middle;
+    	text-align: center;
+    	padding: 2px;
+    	font-family: "微软雅黑", "Arial";
+    	font-size: 12px;
+    }
+.update-checkbox .checkbox{
+	position: absolute;
+	left: 10px;
+	top: 0px;
+	z-index: 1;
+	width: 2px;
+	opacity: 0;
+	-webkit-opacity:0;
+	-moz-opacity: 0;
+	filter:Alpha(opacity=0)
+}
+.update-checkbox .check-btn{
+	width: 70px;
+	height: 22px;
+	line-height: 22px;
+	vertical-align: middle;
+	text-align: center;
+	border-radius: 20px;
+	color: #ffffff;
+}
+.update-checkbox .check-left{
+	position: absolute;
+	left: 2px;
+	top: 2px;
+	float: left;
+	cursor: pointer;
+	z-index: 9;
+	background-color: #484f63;
+}
+.update-checkbox .check-right{
+	position: absolute;
+	left: 72px;
+	top: 2px;
+	cursor: pointer;
+	z-index: 9;
+	background-color: #484f63;
+}
+.update-checkbox .checkd{
+	background-color: #ececec;
+	color: #a09984;
+}
+
+}

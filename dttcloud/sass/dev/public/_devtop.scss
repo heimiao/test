@@ -1,0 +1,88 @@
+@charset "UTF-8";  
+//必须级联一级创建出自己一个单独模块，防止自己的样式影响到其他的页面
+//控制台顶部导航
+.app_top_nav{
+    width:98%;
+    background:#fff; 
+    padding:0px 20px;
+    margin:0px 10px;
+    height:50px;
+    >img{
+        cursor: pointer;
+        float:left;
+        vertical-align:bottom;
+        line-height:50px;
+        margin-top:15px;
+    }
+    .dev_link{
+        height:100%;
+        a{
+            height:100%;
+            display: inline-block;
+            line-height:50px;
+            color:#000;
+            text-decoration:none;
+            margin:0px 10px;
+        }
+    }
+    /*导航用户信息下拉*/
+   .nav-right { 
+         margin-left:15px; 
+        .loginModle {
+          min-width: 120px;
+          text-align: center; 
+          padding:13px;
+          a {
+              font-size: 12px;
+              color:#333;
+              text-decoration: none;
+            }
+          .login {
+              width: 100%;
+              color: #333; 
+            }
+          .userInfo {
+              width: 100%;
+              position: relative;  
+              z-index:99999999; 
+              .urserconte {
+                  padding-top: 30px;
+                  width:120px; 
+                  background: #303030;
+                  overflow: hidden;
+                  position: absolute;
+                  top: -8px;
+                  left: -12px;
+                  left:0px\0\9;
+                  padding:8px 0px;
+                  border-radius: 5px;
+                  -moz-border-radius: 5px;
+                  -webkit-border-radius: 5px;
+                  >div{
+                        margin:3px auto;
+                    }
+                  >div:first-child{
+                        margin-bottom:10px;
+                        color:#fff;
+                        font-size:12px;
+                    }
+                  a{
+                      font-size: 12px;
+                      color: #fff;
+                      display: inline-block;
+                      width: 85%;
+                      line-height:22px;
+                      border-radius: 5px;
+                      -moz-border-radius: 5px;
+                      -webkit-border-radius: 5px;
+                      text-decoration: none;
+                      &:hover {
+                          color: #646464;
+                          background: #fff;
+                        }
+                    }
+                } 
+            } 
+        }
+    } 
+}

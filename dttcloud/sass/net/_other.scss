@@ -1,0 +1,100 @@
+@charset "utf-8";
+.other_page {
+    position: relative;
+    margin-top: 15px;
+    overflow: hidden;
+    min-height:700px;
+    aside {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 185px;
+        .left_menu {
+            li {
+                margin: 1px auto;
+                line-height: 25px;
+                border-left: 5px solid #21a0e8;
+                padding: 0;
+                a {
+                    display: block;
+                    padding: 10px 15px;
+                    line-height: 25px;
+                    width: 100%;
+                    color: #000;
+                    text-decoration: none;
+                    @include transition(all 500ms);
+                    &:hover {
+                        background: #21a0e8;
+                        color: #fff;
+                        @include transition(all 500ms);
+                    }
+                }
+                .active {
+                    background: #21a0e8;
+                    color: #fff;
+                }
+            }
+        }
+        .arrow {
+            width: 25px;
+            height: 25px;
+            background: #21a0e8;
+            position: absolute;
+            right: -25px;
+            top: 0;
+            display: none;
+        }
+    }
+    .article {
+        margin-left: 200px;
+        margin-bottom:100px;
+        padding:0px 10px;
+        article {
+            h1 {
+                margin: 0;
+                 font-size: 18px;
+            }
+            .pic {
+                text-align: left;
+                margin: 0;
+                >a {
+                    display: inline-block;
+                    min-width: 226px;
+                    max-width: 226px;
+                    width: 100%;
+                    height: 80px;
+                    margin-top:10px;
+                    line-height:80px;
+                    border:1px solid #f3f3f3;
+                    text-align:center;
+                    vertical-align: middle;
+                }
+            }
+            >div{
+                 position:relative;
+            }
+        }
+    }
+    @media screen and (max-width:768px) {
+        aside {
+            left: -185px;
+            .arrow {
+                display: block;
+            }
+        }
+        .article {
+            margin-left: 20px;
+        }
+    }
+    @media screen and (min-width:769px) {
+        aside {
+            left: 0;
+            .arrow {
+                display: none;
+            }
+        }
+        .article {
+            margin-left: 200px;
+        }
+    }
+}

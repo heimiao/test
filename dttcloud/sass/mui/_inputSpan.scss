@@ -1,0 +1,95 @@
+@charset "UTF-8";
+.inputSpan{
+    display:block;
+    border:1px solid black;
+    background:#17181a; 
+    overflow: hidden;  
+    input{
+        float:left;
+        border:0;
+        width:95%; 
+        padding:0 5px;
+        background:#17181a; 
+        color:#b1b1b1;
+        outline:none; 
+        font-size:12px; 
+         height:25px; 
+         line-height:25px;
+    } 
+    input[type="password"]{
+         position:relative;
+         z-index:660;
+         background-color:transparent; 
+    } 
+    .pwd{ 
+       position:absolute;
+       left:0px;
+       top:0px;
+       width:0px;
+       background: red;
+       z-index:10;
+       color:#b1b1b1;
+       white-space:nowrap;
+    }  
+}
+.mui-select{
+        width:200px;
+        height:25px; 
+        color:#fff;
+        background:url(../img/select_icon.jpg) 101% no-repeat;
+        position:relative;   
+        input{ 
+          color:#fff; 
+           width:89%;
+           height:100%; 
+           padding:0 5px; 
+           background:#17181a;
+           border:0;
+           outline:none;  
+           font-size:12px;
+        }
+        ul{ 
+            background:#17181a;
+            margin:0;
+            padding:0; 
+            position:absolute;
+            top:24px; 
+            max-height:120px;
+            overflow:hidden;
+            overflow-y:auto;
+            width:100%;  
+            z-index:999999999999;
+            padding:15px 0px;
+            li{ 
+                color:#fff;
+                padding:0 10px; 
+                height:24px;
+                font-size:12px;
+                line-height:24px;
+                list-style:none; 
+                width:98%;
+                margin:0 auto;
+                cursor:pointer;  
+                white-space:nowrap;
+                text-overflow:ellipsis;
+                &:hover,&:active,{
+                    background:grey;
+                }; 
+            } 
+            .checked{
+                     background:grey;
+                } 
+        }
+    }
+
+.inputSpan[data='verificationCode']{
+    padding:0 5px;
+    width:30%;
+    display:block;
+    input,.pwd{ 
+           color:#b1b1b1;
+        width:100%; 
+    } 
+}
+     
+    

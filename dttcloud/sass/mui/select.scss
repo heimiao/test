@@ -1,0 +1,53 @@
+@charset "UTF-8";  
+@import "mixins";
+/* 下拉框  LY*/ 
+.sel_wrap{
+  background:#fff url('../../common/self/img/leftMnue01.png') no-repeat right ;
+  color: #6f6f6f;
+  cursor:pointer;
+  position:relative; 
+  border-radius: 4px;
+  border: 1px solid #dcdcdc; 
+  width:100%;
+  >label,.select{
+       font-size:12px;
+       width:100%;
+       text-overflow: ellipsis;
+       overflow: hidden;
+       white-space: nowrap;
+       line-height:24px; 
+       height:26px; 
+       border:0px;
+       padding:0px;
+       margin:0px;
+       text-align:left; 
+  }
+  >label{
+      padding-left:5px;
+      z-index:2;  
+      display:block;  
+      padding-right:20px;
+    }
+    .select{
+      z-index:4;
+      position:absolute;
+      top:0;
+      left:0;
+      opacity:0;
+     *margin-top:12px;
+      filter:alpha(opacity=0);
+      cursor:pointer;
+    }  
+}  
+.sel_wrap_md{
+        >label,.select{
+           line-height:33px; 
+           height:33px; 
+      }
+    }
+ .sel_wrap-sm{
+        >label,.select{
+           line-height:24px; 
+           height:24px; 
+      }
+    }

@@ -1,0 +1,60 @@
+@charset "UTF-8";
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.clear {
+    float: none;
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+    height: 0;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+body {
+    font-family: "微软雅黑";
+    font-size: 14px;
+    a,
+    img {
+        outline: none;
+        blr: expression(this.onFocus=this.blur());
+    }
+    a:focus {
+        outline: none;
+    }
+}
+@media screen and(max-width:640px) {
+    .p_hide {
+        display: none!important;
+    }
+}
+@media screen and(max-width:1000px) {
+    .i_hide {
+        display: none!important;
+    }
+    
+}
+//
+//@media screen and(min-width:641)  {
+//  .phone {
+//      display:none!important;
+//  }
+//  .pc_pad {
+//      display:block!important;
+//  }
+//  
+//}
+//
+//@media screen and(max-width:640px)  {
+//  .phone {
+//      display:block!important;
+//  }
+//  .pc_pad {
+//      display:none!important;
+//  }
+//}

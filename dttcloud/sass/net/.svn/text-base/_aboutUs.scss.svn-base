@@ -1,0 +1,195 @@
+@charset "utf-8"; 
+/*网站相关文章，不如底部连接的页面*/
+/*******************************************************底部样式******************************************************/
+.row_fone{
+    margin:40px auto;
+}
+.left_guide{
+    width: 100%;
+    position:relative;
+}
+.left_guide ul{
+    padding-left: 0px;
+}
+.li_grey{
+    list-style: none;
+    height: 55px;
+    padding-left:40px;
+    line-height: 55px;
+    background: #F9F9F9;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    color: #333333;
+    border-left: 4px solid #fff;
+    cursor: pointer;
+}
+.li_red{
+    list-style: none;
+    height: 55px;
+    padding-left:40px;
+    line-height: 55px;
+    background: #FFECE5;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    color: #FC4902;
+    border-left: 4px solid #fff;
+    cursor: pointer;
+}
+.right_cont{
+    
+}
+.incloudDiv_black{
+    border-left:4px solid black;
+    
+}
+.incloudDiv_red{
+    border-left:4px solid #FC4902;
+    
+}
+.lineDiv{
+    border:1px #F2F2F2 solid;
+}
+/*右侧*/
+.con_usc{
+    font-family: "微软雅黑";
+    font-size: 14px;
+    float: left;
+}
+.con_usE{
+    font-family: 'Times New Roman';
+    font-size: 12px;
+    color: #cccccc;
+    float:right;
+}
+.pCont{
+    text-indent:35px;
+    font-family: '宋体';
+    font-size: 12px;
+    color: #666666;
+    padding: 20px 0px;
+}
+.arrowBoxL{
+    position: absolute;
+    top:0px;
+    right: -18px;
+    display: none;
+}
+.red_ml{
+    margin-left: 40px;
+}
+.left_btn{
+    height: 20px;
+}
+.aboutDiv{
+    border-bottom: 1px #ECECEC solid;
+    overflow: hidden;
+    padding:20px 0px;
+}
+li[id^='li_']:hover{
+    background: #FFECE5;
+    color: #FC4902;
+}
+div[id^='list_']:hover{
+    border-left: 4px solid #FC4902;
+}
+/***************************************************************合作伙伴***********************************************************************/
+.coorp{
+    width:101% !important;
+    margin-left:-60px;
+    margin-bottom:15px;
+    border: 1px red solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.coopCont{ 
+    float: left;    
+    margin: 10px 30px;
+}
+.partnerPic{
+    width: 120px;
+    height: 50px;
+}
+/***************************************************************友情链接***********************************************************************/
+.linkBox{
+    margin: 30px auto 160px auto;
+}
+.link_Font{
+    height: 60px;
+    font-family: '微软雅黑';
+    font-size: 14px;
+    color: #666666;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 5px auto;
+}
+a[class^='clearA']{
+    text-decoration: none;
+    outline: none;  
+}
+@media screen and (max-width: 485px){
+    .link_Font{
+        margin: 25px auto;
+    }
+}
+@media screen and (max-width: 639px) {
+    .test{
+        margin: auto;
+        width: 195px;
+    }
+    .innerDistance{
+        padding-left:20px;
+        margin-bottom: 10px;
+    }
+    .kindsCont{
+        padding-left:20px;
+        margin-bottom: 10px;
+    }
+    .media-right{
+        padding-left: 0px;
+    }
+    .media{
+        width: 100%;
+    }
+    .add_margin{
+        margin-top: 20px;
+    }
+    .left_con{
+        padding:0px 15px;
+    }
+    .right_con{
+        padding:0px 15px;
+    }
+    .picM{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .left_guideCont{
+        position: absolute;
+        top:90px;
+        left:-175px;
+        z-index: 2;
+        background:#fff;
+    } 
+    
+    .left_guideCont_show{
+        position: absolute;
+        top:90px;
+        left: 0px;
+        display: block;
+        z-index: 2;
+    } 
+    .arrowBoxL{
+        display: block;
+    }
+    .li_red,.li_grey{
+        padding-left:15px;
+        padding-right: 40px;    
+    }
+    
+} 
+@media screen and (max-width: 765px) { 
+    
+  .left_guideCont { position: absolute; top: 90px; left: -175px; z-index: 2; background: #fff; }
+  .left_guideCont_show { position: absolute; top: 90px; left: 0px; display: block; z-index: 2; }
+  .arrowBoxL { display: block; cursor: pointer;}
+  .li_red, .li_grey { padding-left: 15px; padding-right: 40px; } }

@@ -1,0 +1,295 @@
+@charset "UTF-8";  
+.header{ 
+    width:100%; 
+    height:74px; 
+    padding:0 10px; 
+    position:fixed; 
+    top:0px; 
+    left:0px;
+    z-index:101; 
+    .navBg{
+        position:absolute;
+        left:0px;
+        top:0px;
+        width:100%;
+        height:74px; 
+        background:black;  
+        z-index:0; 
+    }
+    .logo,.list-btn{  
+        position: relative;
+         height:74px; 
+         margin:0 10px;
+         cursor: pointer;  
+         margin-left:15%;
+         line-height:64px;
+         z-index:2;
+         a{
+             outline: none;
+             text-decoration: none;
+              
+         }
+          img{
+             outline: none;
+         } 
+    }
+    .list-btn{
+        display:none;
+        img{
+             width:20px;
+             height:20px;
+        }
+    }
+    .logo{  
+        img{
+             width:140px;
+             height:22px;
+        }
+      } 
+    nav{   
+        height:74px;
+        position:absolute;
+        line-height:74px;  
+        right:25%; 
+        margin:0px auto;   
+        width:auto;
+        ul{ 
+            padding:0;margin:0;
+            width:100%;
+            height:100%;  
+            li{
+                list-style-type:none; 
+                float:left;
+                padding:0 5px; 
+                margin-right:5px; 
+                height:100%;
+                a{
+                  color:#fff; 
+                  display:block;
+                  height:100%;
+                  outline: none;
+                  text-decoration: none;
+                  font-size:14px;
+                } 
+            } 
+        } 
+    }
+   .nav-right{   
+        .loginModle{
+            text-align:center;  
+            margin-top:24px;
+            height:34px;
+            margin-right:10px;
+            position:relative;
+            width:130px;
+            a{
+                font-size:12px;
+                color:#fff;
+                 outline: none;
+                 text-decoration: none; 
+                 font-size:14px;
+             }
+            .login{  
+                width:100%; 
+                color:#fff; 
+            }
+            .userInfo{
+                width:100%;
+                position:relative;  
+                z-index:105;  
+                text-align:center;  
+                .urserhead{
+                    img{ 
+                     width:25px;   
+                     height:25px;
+                     -webkit-border-radius:50%;
+                     -moz-border-radius:50%;
+                      border-radius:50%;
+                   } 
+                   >a{
+                     width:50%;     
+                     vertical-align: middle;
+                     display:inline-block;
+                     overflow: hidden;
+                     white-space: nowrap;  
+                     text-align:left;
+                     text-overflow: ellipsis; 
+                   }  
+                }
+                .urserconte{
+                    padding-top:40px; 
+                    padding-bottom:10px; 
+                    width:100%;
+                    background:#303030;
+                    overflow: hidden;
+                    position:absolute;
+                    z-index:-1;
+                    top:-10px;
+                    left:0px; 
+                    border-radius:5px;
+                    -moz-border-radius: 5px;
+                    -webkit-border-radius:5px;
+                    padding-bottom:30px;  
+                    >div{
+                        margin:3px auto;
+                        height:24px;   
+                    }
+                    a{
+                        font-size:12px;
+                        color:#fff;
+                        display: inline-block;
+                        width:85%;
+                        line-height:24px;
+                        border-radius:5px;
+                        -moz-border-radius: 5px;
+                        -webkit-border-radius:5px;
+                        outline: none;
+                        text-decoration: none;
+                        font-size:14px;
+                    }
+                    a:hover{
+                        color:#646464;
+                        background:#fff; 
+                    } 
+                    @media only screen and  (max-width:1000px) { 
+                          >div{
+                            display:none;
+                         }
+                         >div:last-child{
+                             display:block;
+                         }
+                  }
+                } 
+            } 
+        } 
+    }      
+    
+    @media only screen and  (max-width:1000px) { 
+          .logo,.list-btn{  
+             margin-left:3%;
+             line-height:64px; 
+             display:block;
+           }  
+           .logo{
+               img{
+                   width:120px;
+                   height:20px;
+               }
+           }
+           nav{  
+                    display:none;
+                    position: absolute;
+                    top:74px;
+                    left:0px;
+                    width:100%;
+                    padding:0 10px; 
+                    margin:0; 
+                    height:50px;
+                    line-height:50px;
+                    background:#322c38;
+                    z-index:999999999;
+                    @include opacity(80);
+                    ul{
+                        
+                        li{
+                            padding:0px 2px;
+                        }
+                    }
+                    .curBg{
+                        display:none;
+                    }
+                }    
+                .nav-right{
+                    float:right;
+                     .loginModle{
+                            margin-right:0px;
+                            width:100px;
+                     }
+                } 
+        }     
+}  
+header:before,header:after{
+    content: "";
+    clear:both;
+    display: table;
+}  
+.curBg {
+    background:#f3856c;
+    height:3px;
+    position:absolute;
+    bottom:0; 
+    left:0px;
+    width:100%;
+    margin-left:0px;
+}
+/*
+    作者：caoxuewei
+      时间：2016-04-08
+      描述：导航学习中心导航部分
+ * */
+
+.dropdown{
+    display:inline-block;
+    height:100%;
+    position: relative;
+    cursor: pointer;
+    .dropdown-nav{
+      display:none;
+      top:99%;
+      position:absolute;
+      width:105px;
+      left:-25px; 
+      height:auto;
+      text-align: center;
+      background:#fff;
+      @include radius(2px);
+      -webkit-box-shadow:1px 1px 1px 1px #e7e7e7;
+      -moz-box-shadow:1px 1px 1px 1px #e7e7e7;
+      box-shadow:1px 1px 1px 1px #e7e7e7;
+      
+//    border:1px solid #e7e7e7; 
+      img{
+          width:25px;
+          z-index:1;
+          height:15px;
+          position:absolute;
+          left:50%;
+          margin-left:-15px;
+          top:-14px;
+      } 
+      .dropdown-ul{
+          width:100%;
+          height:auto;
+          margin:0px;
+          padding:0px;
+          overflow: hidden;
+          text-align: center;
+          position:relative;
+          border-bottom:3px solid #f3856c;
+          li{
+                width: 100%;
+                height:40px;
+                padding:0px;
+                a{
+                    display:block;
+                    width:100%;
+                    line-height:40px; 
+                    color:#000000;
+                    font-size:15px;
+                    &:hover{
+                            color: #ffffff;
+                            text-decoration: none;
+                            background-color:#f2866c;
+                    }
+                }
+            }
+      } 
+    }
+    >a{height:100%;}
+    &:hover{
+        .dropdown-nav{
+            display:block;
+        }
+    }
+} 
+ 

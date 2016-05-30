@@ -1,0 +1,238 @@
+<<<<<<< .mine
+@charset "utf-8";
+/* 底部样式表 */
+.bottomContainer{
+    .bottom {
+    // border-top:1px solid  #ddd; 
+    max-width: 900px;
+    margin: 0 auto;
+    >div {
+        border-right: 1px solid #ddd;
+        padding: 0;
+        min-height: 136px;
+        margin-top: 50px;
+        ul {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            li {
+                list-style-type: none;
+                text-align: center;
+                line-height: 25px;
+                h3 {
+                    margin-top: 0;
+                    margin-bottom: 18px;
+                    font-size: 16px;
+                    color: #000;
+                    font-weight: 100;
+                }
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    font-family: "微软雅黑";
+                    font-size: 12px;
+                    color: #999;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                    img {
+                        margin-left: 5px;
+                        border: 0;
+                    }
+                }
+                .erweima {
+                    // width:180px;
+                    margin: 20px auto;
+                    >a {
+                        display: inline-block;
+                        width: 30%;
+                        position: relative;
+                        >img {
+                            // width: 100%;
+                        }
+                        .erwm_code {
+                            display: none;
+                        }
+                        &:hover .erwm_code {
+                            display: block;
+                            width: 98px;
+                            height: 98px;
+                            position: absolute;
+                            left: -20px;
+                            top: -100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.datang-vs {
+    margin-top: 27px;
+    .netvs {
+        a {
+            margin: 0 10px;
+            color: #21a0e8;
+        }
+        .d2 {
+            color: #d2d2d2;
+        }
+        margin-bottom: 5px;
+        color: #999;
+        font-size: 12px;
+        text-align: center;
+    }
+     .phone {
+            display: none;
+        }
+         .pcShow {
+            display: block;
+      }
+}
+@media screen and (max-width:768px) {
+    .bottom div.bdnone {
+        border-right: none;
+    }
+    .datang-vs {
+         .phone {
+                    display: block;
+                }
+                .pcShow {
+                    display: none;
+                }
+    }
+}
+}
+
+// .bottomContainer{  
+//  height:200px;
+//  max-width:1024px;
+//  margin:0px auto;
+//  background:#fff;
+//  .row{
+//      margin-right:0px;
+//  }
+//}=======
+@charset "utf-8";
+/* 底部样式表 */ 
+.bottom{ 
+     // border-top:1px solid  #ddd; 
+     max-width: 900px;
+     margin:0 auto;
+     >div{ 
+        border-right:1px solid #ddd;
+        padding:0;
+        min-height:136px;
+        margin-top:50px; 
+        ul{ 
+             margin:0;
+             padding:0;
+             width:100%;
+             li{ 
+                list-style-type:none;
+                text-align:center;  
+                line-height:25px;
+                h3{ 
+                        margin-top:0;
+                        margin-bottom: 18px;
+                        font-size: 16px;
+                        color: #000;
+                        font-weight:100;
+                   }
+                 a{ 
+                        display:block;
+                        width:100%;
+                        height:100%;
+                        font-family: "微软雅黑";
+                        font-size:12px;
+                        color: #999; 
+                        &:hover{
+                          text-decoration: none;
+                        }
+                        img{
+                            margin-left:5px;
+                            border:0;
+                        }
+                    }
+                  .phone{
+                    display: none;
+                  }
+                  .erweima{
+                      // width:180px;
+                      margin:20px auto;
+                      >a{
+                        display: inline-block;
+                        width: 30%;
+                        position: relative;
+                        >img{
+                          // width: 100%;
+                        }
+                        .erwm_code{
+                          display: none;
+                        }
+                        .hoverImg{
+                          display: none;
+                        }
+                        .smallImg{
+                          display: block;
+                        }
+                        &:hover .erwm_code{
+                          display: block;
+                          width:98px;
+                          height:98px;
+                          position: absolute;
+                          left:-20px;
+                          top:-100px;
+                        }
+                        &:hover .hoverImg{
+                          display: block;
+                        }
+                        &:hover .smallImg{
+                          display: none;
+                        }
+                      }
+                  }
+                }  
+          } 
+     } 
+}  
+.datang-vs{
+    margin-top:27px;
+    .netvs{
+        a{
+            margin:0 10px;
+            color:#21a0e8;
+        }  
+        .d2{
+          color: #d2d2d2;
+        }
+        margin-bottom:5px;
+        color:#999;
+        font-size:12px;
+        text-align:center;
+    }
+}
+
+@media screen and (max-width:768px){
+  .bottom div.bdnone{
+    border-right:none;
+  }
+  .phone{
+    display: block;
+  }
+  .pcShow{
+    display: none;
+  }
+}
+// .bottomContainer{  
+//  height:200px;
+//  max-width:1024px;
+//  margin:0px auto;
+//  background:#fff;
+//  .row{
+//      margin-right:0px;
+//  }
+//} 
+>>>>>>> .r30783

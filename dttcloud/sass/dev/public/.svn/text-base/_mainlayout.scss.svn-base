@@ -1,0 +1,201 @@
+@charset "UTF-8";  
+//必须级联一级创建出自己一个单独模块，防止自己的样式影响到其他的页面
+
+//导入滚动条样式
+@import "../../mui/scrollBall";
+.baseFrame{
+    //框架公共样式body必须引入app_body或者bass_body其中之一就能使用
+    height:100%;
+  .dev-main{
+      margin:0px;
+      padding:0px;
+      height:100%;
+      .leftMenu{
+          position:fixed;
+          background:#1d2029;  
+          width:150px;
+          height:100%;
+          left:0px;
+          top:0px;    
+           //menu默认样式
+          .menuTop{
+             background:#fff;  
+             text-align: center;
+             overflow: hidden;
+             height:110px;  
+             .min_logo{ display:none;}
+             .logo{
+                  display:block;
+                  margin:20px auto;
+             }
+             .sel_wrap{
+                 width:80%; 
+                 margin:10px auto;
+             }   
+          } 
+         .menu_info{ 
+             padding:20px 0px;
+             position:relative;
+             width:100%;  
+             .scrollmenu{
+                 width:100%;
+                 .menu_title{   
+                        padding-left:30px;
+                        cursor: pointer;
+                        margin:10px auto;
+                        overflow: hidden;
+                         h3{
+                             display:inline;
+                             color:#fff;
+                             font-size:16px; 
+                             margin:0px;  
+                             float:left;
+                         }  
+                         .min_h3_title{  display: none;} 
+                         .h3_title{display:inline-block;}
+                         img{
+                             display:inline-block;
+                             vertical-align:top;
+                             float:right;
+                             margin:5px;
+                             margin-right:10px;
+                         }
+                     } 
+                  ul{
+                     margin:0px;
+                     padding:0px;  
+                     li{
+                         height:40px;
+                         line-height:40px; 
+                         width:100%;
+                         display:inline-block; 
+                         position: relative;
+                         padding-left:30px;
+                         a{
+                             display: inline-block;
+                             height:100%; 
+                             width:100%; 
+                             img,span{ 
+                                 display:inline-block;
+                                 color:#fff;
+                                 vertical-align:middle;
+                                 font-family: "microsoft yahei";
+                                 font-size:14px;
+                             }
+                             span{
+                                 margin-left:10px;
+                             }
+                         }
+                        &:hover{
+                            background:#14161d;
+                        }
+                       &:hover:before{
+                            background:#fff; 
+                            width:3px;  
+                            position:absolute;
+                            left:0px;
+                            top:0px;
+                            display:inline-block; 
+                            height:40px; 
+                            content:"";
+                        } 
+                     }
+                     .checked{
+                         background:#14161d;
+                     }
+                     .checked :before{
+                            background:#fff; 
+                            width:3px;  
+                            position:absolute;
+                            left:0px;
+                            top:0px;
+                            display:inline-block; 
+                            height:40px; 
+                            content:"";
+                        } 
+                 }
+             }  
+         }  
+          
+      }
+       //滚动菜单部分____收起状态
+      .min_leftMenu{
+          width:50px;
+          //menu收起来的样式
+         .menuTop{ 
+            .logo{display:none;}
+            .min_logo{
+                  display:block;
+                  margin:20px auto;
+                  } 
+            .sel_wrap{
+                background-repeat: no-repeat;
+                background-position-x:center;
+                background-position-y:25px;
+                height:40px; 
+                .select{height:40px;} 
+                label{padding-right:0px;font-size:12px}
+            }
+         } 
+         .menu_info{  
+             .scrollmenu{
+                 .menu_title{
+                 padding:0px;
+                 padding-bottom:10px;
+                 text-align: center;
+                 h3{float:none}
+                 img{display:none;}
+                 .min_h3_title{display: block;} 
+                 .h3_title{display:none;}
+               }
+                 ul{
+                     li{
+                         padding:0px;
+                         text-align:center;
+                         a{
+                             span{
+                               display:none;
+                             }
+                         }
+                     }
+                 }
+             } 
+         } 
+      }
+      .rightCont{  
+          margin-left:150px; 
+          background:greenyellow;
+          overflow: hidden;
+          position:relative;
+      }
+  }     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+       
+       
+       
+       
+       
+       
+}

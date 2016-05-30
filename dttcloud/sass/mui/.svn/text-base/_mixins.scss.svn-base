@@ -1,0 +1,189 @@
+@charset "utf-8";
+///为了统一采用圆角效果
+@mixin radius($rd:5px) {
+    -webkit-border-radius: $rd;
+    -moz-border-radius: $rd;
+    border-radius: $rd;
+}
+@mixin shadow($sd...) {
+    -webkit-box-shadow: $sd;
+    -moz-box-shadow: $sd;
+    -ms-box-shadow: $sd;
+    box-shadow: $sd;
+}
+//统一浏览器的阴影效果
+@mixin text-shadow($sd...) {
+    -webkit-text-shadow: $sd;
+    -moz-text-shadow: $sd;
+    -ms-text-shadow: $sd;
+    text-shadow: $sd;
+}
+//统一浏览器的阴影效果
+@mixin box-shadow($sd...) {
+    -webkit-box-shadow: $sd;
+    -moz-box-shadow: $sd;
+    -ms-box-shadow: $sd;
+    box-shadow: $sd;
+}
+//统一浏览器的透明效果
+@mixin opacity($opacity:50) {
+    opacity: $opacity / 100;
+    filter:alpha(opacity=$opacity);
+};
+@mixin transition($sd...) {
+    -webkit-transition: $sd;
+    -moz-transition: $sd;
+    -o-transition: $sd;
+    transition: box-shadow $sd;
+};
+//线性渐变
+@mixin line-gradient($begin, $end) {
+    background: -webkit-gradient(linear, left top, left bottom, from($begin), to($end));
+    background: -moz-linear-gradient(left top, left bottom, from($begin),to($end));
+    background: -ms-linear-gradient( left top, left bottom, from($begin),to($end));
+    background: -moz-linear-gradient(left top, left bottom, from($begin),to($end));
+    background: linear-gradient(left top, left bottom, from($begin),to($end));
+}
+//偏移量
+@mixin translate($x, $y) {
+    -webkit-transform: translate($x,$y);
+    -moz-transform: translate($x,$y);
+    -ms-transform: translate($x,$y);
+    transform: translate($x,$y);
+}
+//旋转角度
+@mixin rotate($deg) {
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    transform: rotate($deg);
+}
+//倾斜度
+@mixin skew($x, $y) {
+    -webkit-transform: skew($x,$y);
+    -moz-transform: skew($x,$y);
+    -ms-transform: skew($x,$y);
+    transform: skew($x,$y);
+}
+//放大缩小
+@mixin scale($x, $y) {
+    -webkit-transform: scale($x,$y);
+    -moz-transform: scale($x,$y);
+    -ms-transform: scale($x,$y);
+    transform: scale($x,$y);
+}
+$width: auto !default; //写一个通用的按钮样式只需传入按钮大小背景色圆角 以及状态 以及放上去的效果
+@mixin data-btn($width:auto, $height:auto, $background:#484f63, $color:#FFFFFF, $radiu:auto, $border:auto) {
+    //如果不传参数就获取默认的值484f63
+    // @each $key,$value in $defaultBtn{
+    //     #{$key}:$value; 
+    // } 
+    @if $width=="auto" {
+        padding: 0 25px;
+    }
+    @else {
+        width: $width;
+    }
+    @if $height=="auto" {
+        line-height: 35px;
+    }
+    @else {
+        height: $height;
+        line-height: $height;
+    }
+    background: $background;
+    color: $color;
+    @if $radiu=="auto" {
+        @include radius(5px);
+    }
+    @else {
+        @include radius($radiu);
+    }
+    @if $border=="auto" {
+        border: 0;
+    }
+    @else {
+        border: $border;
+    }
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    @include line-gradient($background,darken($background,10%));
+    @include box-shadow(0 1px 2px rgba(0,0,0,.2));
+    &:hover {
+        background: darken($background,5%);
+        color: darken($color,5%);
+    }
+    &:active {
+        background: darken($background,15%);
+        color: darken($color,8%);
+        outline: none;
+        text-decoration: none;
+        text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+        @include line-gradient($background,darken($background,5%));
+        @include translate(-1px,1px);
+    }
+    &:disabled {
+        background: #C0C0C4;
+        color: #EFEFEF;
+    }
+}
+@mixin btn($width:auto, $height:auto, $background:#484f63, $color:#FFFFFF, $radiu:auto, $border:auto) {
+    //如果不传参数就获取默认的值484f63
+    // @each $key,$value in $defaultBtn{
+    //     #{$key}:$value; 
+    // } 
+    @if $width=="auto" {
+        padding: 0 25px;
+    }
+    @else {
+        width: $width;
+    }
+    @if $height=="auto" {
+        line-height: 35px;
+    }
+    @else {
+       // height: $height;
+        line-height: $height;
+    }
+    background: $background;
+    color: $color;
+    @if $radiu=="auto" {
+        @include radius(5px);
+    }
+    @else {
+        @include radius($radiu);
+    }
+    @if $border=="auto" {
+        border: 0;
+    }
+    @else {
+        border: $border;
+    }
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    @include box-shadow(0 1px 2px rgba(0,0,0,.2));
+    &:hover {
+        @if $background!="transparent" {
+            background: darken($background,5%);
+            color: darken($color,5%);
+        }
+        
+    }
+    &:active {
+         @if $background!="transparent" {
+            background: darken($background,15%);
+            color: darken($color,8%);
+         }
+        outline: none;
+        text-decoration: none;
+        text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    }
+    &:disabled {
+        background: #C0C0C4;
+        color: #EFEFEF;
+    }
+}

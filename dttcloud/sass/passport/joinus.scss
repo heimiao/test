@@ -1,0 +1,14 @@
+@charset "UTF-8"; 
+//初始化样式
+@import "../reset";  
+//登陆注册基础模块样式
+@import "joinus/base";   
+//登陆注册表单样式
+@import "joinus/form";  
+
+//活动过节的时候调用的css
+//@import "joinus/active";  
+
+//白色模态框样式
+@import "../mui/dialog/nullborder";  
+

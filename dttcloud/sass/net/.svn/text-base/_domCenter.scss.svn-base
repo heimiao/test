@@ -1,0 +1,616 @@
+@charset "utf-8";  
+@import "../mui/scrollBall"; 
+@import "../mui/scrollTop"; 
+/****文档中心****/ 
+.mui-container{
+   width:100%;
+   margin:0 auto; 
+   border:0px;
+}
+.leftAside{
+    position:fixed;
+    left:0px;
+    top:74px;
+    padding-bottom:50px;
+    width:288px;
+    min-height:400px;
+    background:#2f3540;  
+    height:100%; 
+    .left_icon{
+            display: none;
+            position:absolute;
+            right:-30px;
+            top:45%;
+            width:30px;
+            height:60px;
+            cursor:pointer;
+        }  
+     .menushow{
+         background:url("//g.369cloud.com/images/static/cloud_school/menushow.png")
+     }
+     .menuhide{
+         background:url("//g.369cloud.com/images/static/cloud_school/menuhide.png")
+     }
+}   
+.rightCont{ 
+    min-height:400px;
+    margin-left:288px;
+} 
+@media screen and(max-width:640px){
+    .leftAside{
+        width:228px; 
+        .left_icon{
+          display:block;
+        }
+      }   
+   .rightCont{
+       margin-left:0px;
+    }   
+}
+.content{
+    padding:25px 30px; 
+    img,table{max-width:95%;}
+    p{
+        text-align:Justify;
+        text-justify:inter-ideograph;
+    } 
+/*刘信辉*/
+    
+*{font-family:Microsoft YaHei}
+.intr{font-size:12px;font-family:Microsoft YaHei;color:#627589}
+.enlish{color:#01ab69;font-size:14px; font-family:Arial}
+.c68920{ color:#c68920}
+.col_008{ color:#0087e6; font-weight:800; }
+.param{ color:#01ab69;font-family:arial; font-style:italic}
+.param-type{font-family:arial Microsoft YaHei; font-size:14px; color:#c68920;}
+.function{font-family:Microsoft YaHei; font-size:30px; color:#0087e6;}
+.doc-style-height{ margin-left:10px;margin-top:-1px; }
+.param_about{font-family:Microsoft YaHei; font-size:14px;font-weight:bolder; color:#000;  }
+.mar-top{ margin-top:12px; }
+.doc-style .callback{font-family:Microsoft YaHei; font-size:30px; color:#0087e6; }
+.doc-style .desc{font-family:Microsoft YaHei; font-size:16px; color:#000;}
+.doc-style h1{font-family:Microsoft YaHei; font-size:30px;font-weight:bolder; color:#000}
+.doc-style h2{font-family:Microsoft YaHei; font-size:24px;font-weight:bolder; color:#000}
+.doc-style h3{font-family:Microsoft YaHei; font-size:20px;font-weight:bolder; color:#000}
+.doc-style h4{font-family:Microsoft YaHei; font-size:16px;font-weight:bolder; color:#000}
+.doc-style h5{font-family:Microsoft YaHei; font-size:14px;font-weight:bolder; color:#000}
+.doc-style h6{font-family:Microsoft YaHei; font-size:12px;font-weight:bolder; color:#000}
+
+}
+
+.leftSearch{
+     margin:32px 30px 26px 30px;  
+ } 
+.aside-menu{ 
+    padding:0px;
+    padding-bottom:25px;
+    width:100%; 
+   hr{
+       width:80%;
+       margin:15px auto; 
+       height:0px;
+       border:0px;
+       border-bottom:1px dashed #43495a;
+   }
+   
+   nav{   
+        .levelMenu_1{ 
+               margin-top:15px; 
+               margin-bottom:-4px; 
+               padding-left:0px;  
+               >h3{
+                 color:#fff;
+                 font-size:14px;
+                 font-weight:600; 
+                 margin:10px auto;;
+                 padding-left:30px;   
+               }
+               ul{
+                   margin:0px;
+                   padding:0px;  
+                   list-style-type:none; 
+                   li{   
+                       padding-left:30px; 
+                       line-height:36px;
+                       &:hover{background:#43495a;} 
+                       a{
+                           text-decoration:none;
+                           font-family: "Microsoft YaHei";
+                           -webkit-font-smoothing: antialiased;
+                           font-size:12px;
+                           color:#afb2bb;
+                           display:block;
+                       }
+                       .show_icon:before,.hide_icon:before{
+                            height:5px;
+                            width:5px;
+                            margin-right:8px;
+                            display:inline-block; 
+                            content:"";
+                            vertical-align:middle;
+                        } 
+                       .hide_icon:before{ 
+                            background: url("//g.369cloud.com/images/static/cloud_school/double_hide.png");
+                        }   
+                   }  
+                   .checked{
+                        background:#43495a;
+                     }
+               } 
+           }
+           .levelMenu_2{  
+                @extend .levelMenu_1; 
+                margin:0px;
+                >h3{
+                    font-size:12px;
+                    margin:0px auto;
+                    cursor:pointer; 
+                    color:#737c86;
+                    font-weight:600; 
+                    padding-left:30px; 
+                    line-height:36px; 
+                } 
+              .show_icon:before,.hide_icon:before{
+                    height:5px;
+                    width:5px;
+                    margin-right:8px;
+                    margin-bottom:2px;
+                    display: inline-block; 
+                    content: "";
+                }
+               .show_icon:before,{ 
+                    background: url("//g.369cloud.com/images/static/cloud_school/double_show.png");
+                }
+               .hide_icon:before{ 
+                    background: url("//g.369cloud.com/images/static/cloud_school/double_hide.png");
+                } 
+                ul{
+                    display:none;
+                    li{
+                      padding-left:40px; 
+                      .hide_icon:before{ 
+                            background: url("//g.369cloud.com/images/static/cloud_school/single_hide.png");
+                        } 
+                    } 
+                }
+                .checked{
+                   background:#43495a;  
+                 } 
+           }
+           .levelMenu_3{  
+                @extend .levelMenu_2;
+                display:none;
+                 >h3{padding-left:40px;}
+                 ul{li{
+                        padding-left:50px; 
+                    }}
+                .show_icon:before,{ 
+                    background: url("//g.369cloud.com/images/static/cloud_school/single_show.png");
+                 }
+               .hide_icon:before{ 
+                    background: url("//g.369cloud.com/images/static/cloud_school/single_hide.png");
+                }
+           }
+           .levelMenu_4{  
+               @extend .levelMenu_3;
+                >h3{padding-left:50px;}
+                 ul{li{
+                        padding-left:60px; 
+                    }}
+                 .show_icon:before,{ 
+                    background: url("//g.369cloud.com/images/static/cloud_school/single_show.png");
+                 }
+                .hide_icon:before{ 
+                    background: url("//g.369cloud.com/images/static/cloud_school/single_hide.png");
+                }
+           }  
+           .levelMenu_5{  
+               @extend .levelMenu_4;
+                >h3{padding-left:60px;}
+                 ul{li{
+                        padding-left:70px; 
+                  }}
+               .show_icon:before,{ 
+                    background: url("//g.369cloud.com/images/static/cloud_school/single_show.png");
+                 }
+               .hide_icon:before{ 
+                    background: url("//g.369cloud.com/images/static/cloud_school/single_hide.png");
+                }
+           }   
+   }  
+}   
+
+
+ /**文档中心banner***/
+.sc-banner{ 
+    >img{width:100%;
+     min-width:1024px;
+     min-height:450px;
+    }
+    position:relative; 
+    .bannerCont{
+        position:absolute;
+        left:0;
+        top:30%;
+        height:70%;
+        width:100%; 
+        min-width:1024px; 
+        ul{ 
+             margin:0;
+             padding:0;
+             li{
+                 list-style:none;
+             }
+         }
+         .load-create{
+            width:880px;   
+            height:187px;
+            margin:0 auto;
+             li{ 
+                 float:left; 
+                 width:48.2%;  
+                 height:187px;
+                 position:relative;
+                 img{
+                     position:absolute;
+                     left:30%;
+                     top:40%; 
+                 } 
+             }
+             li:first-child{
+                 margin-right:2%; 
+                 background: url("//g.369cloud.com/images/static/cloud_school/csDownload.png") no-repeat;  
+             }
+             li:first-child+li{ 
+                   background: url("//g.369cloud.com/images/static/cloud_school/csApplay.png") no-repeat;
+             }
+         }
+         .menu-icon{
+             width:550px;
+             margin:1% auto; 
+              li{
+                 float:left; 
+                 width:150px;
+                 height:95px;
+                 text-align: center; 
+                 img{width:50%}
+                  h4{
+                      font-size:14px;
+                      color:#e0f7ff;
+                      margin:0;
+                      font-weight: 100;
+                  }
+                  a{text-decoration: none;ourtline:none;}
+             }
+              li:first-child+li{ 
+                  margin:0 7%;
+             }
+         }
+    }
+} 
+
+
+/****lgz***/
+@charset "UTF-8";
+
+/*样式*/
+
+.v_mar-t1 {
+    margin-top: 30px;
+}
+.v_input1 {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 150px;
+    position: relative;
+    border: 0px;
+    padding: 3px;
+    background: rgba(255, 255, 255, 0.5);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4cffffff, endColorstr=#4cffffff);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+#v_input1 {
+    width: 85%\0;
+    height: 50px;
+    float: left;
+    padding-left: 35px;
+    padding-top: 8px\0;
+    border: 0px;
+    background: rgba(255, 255, 255, 0);
+}
+
+#v_button {
+    border: 0;
+    height: 50px;
+    background: rgba(255, 255, 255, 0);
+    color: #fff;
+    text-align: center;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 640px) {
+    .v_input1 {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 120px;
+    }
+}
+
+.input-group-addon {
+    border: 0px;
+}
+
+.v_search_logo1 {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 10;
+}
+
+.v_t-wh {
+    color: #fff;
+}
+
+.v_t-32 {
+    font-size: 32px;
+    color: #148ec8;
+}
+
+.v_t-12 {
+    font-size: 12px;
+    color: #777;
+    line-height: 22px;
+}
+
+.v_hei12 {
+    height: 80px;
+}
+
+.v_tool {
+    width:100%;
+    display: none;
+    padding-bottom: 30px;
+    text-align:center;
+}
+
+@media only screen and (min-width: 641px) and (max-width: 992px) {
+    .v_hei12 {
+        height: 70px;
+    }
+}
+.v_mar-tb { 
+    margin:30px auto 0px auto;
+    display: inline-block;
+    width:33%;
+    min-width:300px;
+    padding:0px;
+    min-height:300px;
+    vertical-align: middle;
+}
+.v_down {
+    width: 130px;
+    background: #0088CC;
+    color: #fff;
+    padding: 0px 20px;
+    border-radius: 7px;
+}
+.v_down img {
+    width: 130px;
+    margin-left: -20px;
+}
+.v_down1 {
+    width: 130px;
+    margin:0px auto;
+    background: #a1d2e9;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+}
+.v_c-a6c {
+    color: #a6cbe4;
+}
+
+.v_t-14 {
+    font-size: 14px;
+}
+
+.v_tx-c {
+    text-align: center;
+}
+
+.v_process {
+    display: none;
+    padding-top: 50px;
+    padding-bottom:30px;
+}
+
+.v_document {
+    min-height: 300px;
+    padding:30px 0px;
+    /*height: 350px;*/
+}
+.img2 {
+    background: url("//g.369cloud.com/images/static/cloud_school/369cloud-云学院1022_98.png");
+    /*background-size:100% 100%;*/
+}
+
+.v_phone {
+    display: none;
+    width: 100%;
+    background:#f5f5f5;
+}
+@media only screen and (max-width: 1024px) {
+    .v_phone {
+        display: block;
+    }
+    .v_phone img { 
+       width:60%;       
+    }
+    .v_process1 {
+        display: none;
+    }
+}
+@media only screen and (max-width:640px) {
+    .v_phone img { 
+       width:90%;       
+    }
+}
+.csMenu  {
+    text-align:left;
+}
+
+@media only screen and (max-width:770px) {
+   .csMenu  {
+      text-align:center;
+   }
+}
+.csMenu ul {
+    display: inline-block;
+    margin:15px auto;
+    padding: 0;
+     width:15%;
+    width: 16.2%\0;
+    min-width: 190px;  
+    min-height:110px;
+    vertical-align: top;
+} 
+.csMenu ul li {
+    list-style: none;
+    padding: 2px;
+    padding-left: 40px;
+    white-space:nowrap; 
+    overflow:hidden;
+    text-align:left;
+    text-overflow:ellipsis;
+}
+.csMenu ul li h3 {
+    font-size: 20px;
+    color: #000000;
+    margin: 0;
+    line-height: 20px;
+}
+
+.csMenu ul li a,
+.csMenu ul li span {
+    font-size: 12px;
+    color: #777777;
+}
+
+.csMenu ul li span {
+    display: block;
+    color: #a4a4a4;
+    line-height: 13px;
+}
+
+.csMenu ul li:first-child {
+    margin-bottom: 10px;
+}
+
+.csMenu ul li a:hover {
+    text-decoration: none;
+}
+
+.csMenu .cloud_icon {
+    background: url("//g.369cloud.com/images/static/cloud_school/369cloud-云学院1022_03.png") left no-repeat;
+}
+
+.csMenu .kfzn_icon {
+    background: url("//g.369cloud.com/images/static/cloud_school/369cloud-云学院1022_05.png") left no-repeat;
+}
+
+.csMenu .idekflc_icon {
+    background: url("//g.369cloud.com/images/static/cloud_school/369cloud-云学院1022_07.png") left no-repeat;
+}
+
+.csMenu .yyyq_icon {
+    background: url("//g.369cloud.com/images/static/cloud_school/369cloud-云学院1022_09.png") left no-repeat;
+}
+
+.csMenu .dsfsdk_icon {
+    background: url("//g.369cloud.com/images/static/cloud_school/369cloud-云学院1022_11.png") left no-repeat;
+}
+
+.csMenu .qt_icon {
+    background: url("//g.369cloud.com/images/static/cloud_school/369cloud-云学院1022_13.png") left no-repeat;
+}
+
+.sc-banner1 {
+    background: url("//g.369cloud.com/images/static/cloud_school/369cloud-云学院1022_010.png");
+}
+
+.input-group-addon,
+.input-group-btn {
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.input-group-addon {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    background-color: #eaa000;
+    &:hover{
+        color:#fff;
+    }
+}
+
+.input-group-addon.input-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+.data-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 25px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 2px solid #eaa000;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.data-control:focus {
+    border-color: #eaa000;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+.data-control::-moz-placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+.data-control:-ms-input-placeholder {
+    color: #999;
+}
+.data-control::-webkit-input-placeholder {
+    color: #999;
+}
+.v_san1 { 
+    visibility: visible;
+}
+.v_san2 {
+    visibility: hidden;
+}
+
+.v_san3 {
+    visibility: hidden;
+} 
+/*css样式结束*/

@@ -1,0 +1,258 @@
+@charset "UTF-8";
+.navBg1 {
+		  margin-top:68px;
+		  width: 100%; 
+		  height: 50px; 
+		  background: #fff; 
+		  border-bottom: #0088cc 2px solid;
+		  box-shadow: 2px 2px 5px #ccc;}	
+.navBg1 ul li{
+	float: left;
+	list-style-type: none;
+	line-height: 50px;
+	padding: 0 10px;
+}
+.navBg1 ul li a{
+	text-decoration: none;
+	color: #000;
+}
+@media only screen and (min-width: 100px) and (max-width: 640px) {
+	.navBg1 ul{
+		margin-left: 0%;
+		}
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+	.navBg1 ul{
+		margin-left: 12%;
+		}
+}	
+@media only screen and (min-width: 1025px){
+	.navBg1 ul{
+		margin-left: 12.5%;
+		}
+}
+.active a{
+	display: block;
+	padding: 0 10px;
+	background: #0088cc;
+	color:#fff !important;
+}
+.a_mar-tb{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+@media only screen and (max-width: 767px){
+	.media-bottom{
+		width: 109%;
+		}
+}
+.padd-tb{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.eys{
+	font-size: 12px;
+}
+.eys img{
+	width: 20px;
+}
+.eys .read{
+	padding-top: 10px;
+	color: #7F8C8D;
+}
+.mar-t{
+	margin-top: 20px;
+}
+.login_mar-t{
+	margin-top:15px;
+}
+.mar-b{
+	margin-bottom: 20px;
+}
+.t-7f8{
+	margin-left: 318px;
+	margin-right: 315px;
+	color: #7F8C8D;
+}
+.t-7f{
+	color: #7F8C8D;
+	font-size: 13px;
+}
+.mar-t1{
+	margin-top:30px;
+}
+.a_mar-t{
+	margin-top:10px;
+}
+.t-333{
+	color: #333333;
+	font-size: 12px;
+}
+.a_mar{
+	margin-top:10px;
+}
+.n_img{
+	width:100%;
+	min-height:200px;
+}
+.n_img1{
+	vertical-align:middle;
+	width:100%;
+	min-height:110px;
+	height:auto;
+	min-width: 100px;
+}
+.n_img2{
+	width:100%;
+	min-height:200px;
+}
+.n_head{
+	font-size:24px !important;
+	line-height:24px; 
+	margin-top: 15px;
+}
+@media only screen and (min-width: 570px) and (max-width: 640px){
+	.n_head{
+	width:100%;
+	white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+	}
+@media only screen and (min-width: 100px) and (max-width: 640px) {
+	.n_head{
+	font-size:14px !important;
+	margin-top: 15px;
+}
+.n_opacity{
+	font-size:16px !important;
+}
+.n_head{
+	-webkit-line-clamp: 1;
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	/*box-orient: vertical;*/
+	/*white-space:nowrap;*/
+	word-wrap: break-word;
+	height: 14px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.n_body{
+	font-size: 12px;
+}
+}
+.n_mar-t{
+	margin-top: 20px;
+}
+@media only screen and (min-width: 100px) and (max-width: 400px) {
+	.n_img3{
+		width: 20px;
+    height: 20px;
+}
+.n_mar-r3{
+	margin-right: 0px;
+}
+.n_mar-t{
+	margin-top: 0px;
+}
+}
+@media only screen and (min-width: 641px) and (max-width: 768px) {
+		.n_head{
+		font-size:18px !important;
+		margin-top: 15px;
+		}
+		.n_opacity{
+		font-size:18px !important;
+	}
+		.n_head{
+		-webkit-line-clamp: 1;
+		display: -webkit-box;
+		display: -moz-box;
+		display: box;
+		-webkit-box-orient: vertical;
+		-moz-box-orient: vertical;
+		box-orient: vertical;
+		word-wrap: break-word;
+		height: 18px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+}
+}
+.n_mar-r{
+	margin-right: 30px;
+}
+.n_mar-r1{
+	margin-right: 4px;
+}
+.n_mar-r2{
+	margin-right: 8px;
+}
+.n_read{
+	font-size: 12px;
+	color: #7f8c8d;
+	margin-top:13px;
+}
+.n_opacity{
+	width:100%;
+	padding:10px 10px;
+	background:rgba(0,0,0,0.6);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
+	position: absolute;
+	bottom:0px;
+	color: #fff;
+	font-size: 24px;
+}
+.n_relative{
+	position: relative;
+	overflow: hidden;
+}
+.bottom1{
+	 height: 1px;
+	 background:#ddd;
+	 margin-top: 10px;
+}
+.n_body{
+	height: 40px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color:#7f8c8d; 
+	line-height:20px;
+	max-height:80px;
+	margin-top: 12px;
+}
+div.example:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+div.box {
+	padding: 15px 20px 10px 20px;
+}
+.media-body a{
+	text-decoration: none;
+}
+.n_body a{
+	color: #7f8c8d;
+}
+.n_head a{
+	color:#333;
+}
+.n_mar-r3{
+	margin-right: 15px;
+}
+.n_head{
+	-webkit-line-clamp: 1;
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	word-wrap: break-word;
+	height: 24px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

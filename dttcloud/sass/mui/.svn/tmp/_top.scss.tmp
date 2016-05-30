@@ -1,0 +1,423 @@
+@charset "UTF-8"; //模糊度 0 6px 12px rgba(0, 0, 0, .175)
+.top_nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 50px;
+    height: 50px;
+    z-index:100;
+    .nav_bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: $blue;
+        opacity: 0.81;
+    }
+    .nav_main {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        a {
+            display: inline-block;
+            color: $white;
+            text-decoration: none;
+        }
+        //手机端的手机菜单按钮
+        .p_btn {
+            margin-left: 5%;
+            display: none;
+            cursor: pointer;
+            .btn_imgSrc {
+                width: 50%;
+            }
+        }
+        .logo {
+            position: absolute;
+            width: 150px;
+            left: 20%;
+            margin-left: -75px;
+            img {
+                width: 100%;
+            }
+        }
+        @media only screen and (max-width:640px) {
+            .p_btn {
+                margin-left: 3%;
+                display: block;
+            }
+            .logo {
+                left: 50%;
+            }
+        }
+        //主菜单
+        .m-nav {
+            margin-left: 38%;
+            z-index: 2;
+            min-width: 400px;
+            >ul {
+                margin: 0;
+                padding: 0;
+                >li {
+                    float: left;
+                    list-style-type: none;
+                    >a {
+                        padding: 0 10px;
+                        min-width: 60px;
+                        color: $white;
+                        text-align: center;
+                        &:hover,
+                        &:focus {
+                            color: $blue;
+                            background: $white_bg;
+                        }
+                        >img {
+                            display: none;
+                        }
+                    }
+                }
+                .dropdown-menu {
+                    border-top: 0;
+                    top:97%;
+                    right: 0;
+                    left: auto;
+                    min-width: 150px;
+                    line-height: 100%;
+                    padding: 0;
+                    >li {
+                        width: 100%;
+                        text-align: center;
+                        >a {
+                            padding: 10px 15px;
+                            width: 100%;
+                            white-space: inherit;
+                            color: $black;
+                            &:hover {
+                                // background: #e3e3e3;
+                            }
+                            >img {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .icon_dropdown {
+                    min-width: 280px;
+                    >li {
+                        text-align: left;
+                        min-height: 81px;
+                        >a {
+                            color: $blue;
+                            &:hover {
+                                background: $white_bg;
+                            }
+                            >img {
+                                min-width: 60px;
+                                max-width: 60px;
+                                width: 30%;
+                                margin-right: 5px;
+                                float: left;
+                                display: block;
+                            }
+                            >img.active_img{
+                                display: none;
+                            }
+                            >dl {
+                                width: 63%;
+                                padding-top: 5px;
+                                font-size: 14px;
+                                float: left;
+                                margin: 0;
+                                dt {
+                                    color: #131313;
+                                    width: 100%;
+                                }
+                                dd {
+                                    color: #888;
+                                    width: 100%; //  word-break: break-all;
+                                }
+                            }
+                        }
+                    }
+                    //以下为导航研发支持下二级菜单新增效果展示
+                    >li.firstLi{
+                        margin-top: 20px;
+                    }
+                    >li.effecttLi{
+                        >a:hover{
+                            background:none;
+                            >img.default_img{
+                                display: none;
+                            }
+                            >img.active_img{
+                                display: block;
+                            }
+                            >dl{
+                                dt {
+                                    color: #fff;
+                                }
+                                dd {
+                                    color: #fff;
+                                }
+                            }
+                        }
+                        &:hover{
+                            background-color:#21a0e8;
+                            @include transition(all 800ms);
+                            @include opacity(60);
+                        }
+                        &:active{
+                            background-color:#21a0e8;
+                            @include transition(all 800ms);
+                            @include opacity(94);
+                        }
+
+                    }
+                }
+                .active .btn-enter {
+                    display: none;
+                }
+                .active,
+                .open {
+                    >a {
+                        background: $white_bg;
+                        color: $blue;
+                        &:hover,
+                        &:focus {
+                            color: $blue;
+                            background: $white_bg;
+                        }
+                    }
+                }
+            }
+        }
+        @media only screen and (min-width:641px) and (max-width:1000px) {
+            .logo {
+                left: 15%;
+            }
+            .m-nav {
+                margin-left: 25%;
+            }
+        }
+        @media only screen and (max-width:640px) {
+            .m-nav {
+                display: none;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                margin-left: 0;
+                width: 100%;
+                background: $blue;
+                >ul {
+                    width: 100%;
+                    >li {
+                        width: 100%;
+                        >a {
+                            width: 100%;
+                            padding: 0 10px;
+                            min-width: 60px;
+                            color: $white;
+                            text-align: left;
+                            border-bottom: 1px solid $lightblue;
+                            &:hover,
+                            &:focus {
+                                color: $blue;
+                                background: $white_bg;
+                                .btn-enter {
+                                    display: none;
+                                }
+                                .btn_pre-enter {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                    .stair_nav img {
+                        min-width: 25px;
+                        max-width: 25px;
+                        width: 25px;
+                        margin-top: 3%;
+                        margin-right: 3%;
+                        float: right;
+                        display: block;
+                    }
+                    .dropdown-menu {
+                        position: relative;
+                        border: 0;
+                        @include box-shadow(0px 0px 0px 0px);
+                        @include radius(0px);
+                        left: 15%;
+                        margin-top: 0;
+                        width: 100%;
+                        background: transparent;
+                        >li {
+                            width: 100%;
+                            text-align: left;
+                            >a {
+                                padding: 10px 0;
+                                width: 100%;
+                                white-space: inherit;
+                                color: $white;
+                                border-bottom: 1px solid $lightblue;
+                                &:hover {
+                                    background: $white_bg;
+                                    color: $blue;
+                                    .btn-enter {
+                                        display: none;
+                                    }
+                                    .btn_pre-enter {
+                                        display: block;
+                                    }
+                                }
+                                >span {
+                                    float: left;
+                                }
+                                >img {
+                                    min-width: 25px;
+                                    max-width: 25px;
+                                    width: 25px;
+                                    margin-right: 20%;
+                                    float: right;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                    .icon_dropdown {
+                        min-width: 280px;
+                        >li {
+                            >a {
+                                color: $white;
+                                &:hover {
+                                    background: $white_bg;
+                                    color: $blue;
+                                    .btn-enter {
+                                        display: none;
+                                    }
+                                    .btn_pre-enter {
+                                        display: block;
+                                    }
+                                }
+                                >span {
+                                    float: left;
+                                }
+                                >img {
+                                    min-width: 25px;
+                                    max-width: 25px;
+                                    width: 25px;
+                                    margin-right: 20%;
+                                    float: right;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                    .active,
+                    .open {
+                        >a {
+                            background: $white_bg;
+                            color: $blue;
+                            &:hover,
+                            &:focus {
+                                color: $blue;
+                                background: $white_bg;
+                                .btn-enter {
+                                    display: none;
+                                }
+                                .btn_pre-enter {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media only screen and (min-width:641px) {
+            .m-nav {
+                display: block;
+            }
+        }
+        //登录菜单
+        .login_register {
+            position: absolute;
+            right: 0;
+            z-index: 5;
+            width: 100px;
+            margin-right: 3%;
+            .login {
+                display: none;
+            }
+            .user {
+                text-align: center;
+                width: 100%;
+                display: none;
+                &:hover,
+                &:hover a,
+                &:hover .mui-menulist {
+                    background: $white_bg;
+                    color: $blue;
+                    display: block;
+                }
+                >a {
+                    img {
+                        width: 25px;
+                        height: 25px;
+                        @include radius(50%);
+                        margin-left: 5px;
+                    }
+                }
+                .mui-menulist {
+                    display: none;
+                    margin: 0;
+                    padding: 0;
+                    // line-height: 30px;
+                    line-height:45px;
+                    background: $white_bg;
+                    @include box-shadow(0px 6px 12px rgba(0, 0, 0, .175));
+                    >li {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        a {
+                            width: 100%;
+                            color: $black;
+                            &:hover {
+                                // background: linen;
+                                color:#fff;
+                                background:#21a0e8;
+                                @include opacity(60);
+                                @include transition(all 800ms);
+                            }
+                            &:active{
+                               @include opacity(94); 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        @media only screen and (max-width:1000px) {
+            .login_register {
+                margin-right: 0;
+                .user {
+                    text-align: center;
+                    width: 100%;
+                    display: none;
+                    &:hover,
+                    &:hover a,
+                    &:hover .mui-menulist {
+                        background: $white_bg;
+                        color: $blue;
+                        display: none;
+                    } 
+                }
+            }
+        }
+    }
+}

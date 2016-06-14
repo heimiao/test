@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+			 var test=$("#bodys").html().replace(/<img[^>]+src=\"([^\"]+)\">/img, function(data) {
+				  var _a=data.replace(/src=\"([^\"]+)\"/,function(args){
+				  		var _url=args.split("=")[1].replace(/\"/img,"");
+				  		console.log(_url);
+						return "<img src="+'\"abc'+_url+"\"";
+					});
+					return _a;
+				})
+				console.log(test);
+				
+				
+				/*var test="aBcdse";
+				var result=test.replace(/B/img,function(data){
+					return "F"+data;
+				});
+				console.log(result);*/
+				
+			})
+		</script>
+	</head>
+
+	<body id="bodys">
+		<div class="modal-header">
+			<img src="test.jpg" />
+			<h4 class="modal-title" id="myModalLabel">Modal title<img src="test.jpg"/></h4>
+			<img src="test.jpg" />
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		var flag=false;
+			$(function() {
+				$.ajax({
+					type: 'get',
+					url: 'http://test-passport.369cloud.com/third/loginInfo',
+					dataType: 'jsonp',
+					async:false,
+					cache:false,
+					jsonp: "jsoncallback",
+					jsonpCallback:"loginInfoCallback",
+					success: function(data) {
+							flag=false
+					} 
+				});
+			})
+			
+			function loginInfoCallback(data){
+				console.log(data);
+					flag=true;
+			}
+			
+				alert(flag);
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

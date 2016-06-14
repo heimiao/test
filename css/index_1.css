@@ -1,0 +1,1532 @@
+@charset "UTF-8";
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.clear {
+  float: none;
+  clear: both;
+  font-size: 0px;
+  line-height: 0px;
+  height: 0px;
+  min-height: 0px;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden; }
+
+body {
+  font-family: "微软雅黑";
+  font-size: 14px; }
+  body a, body img {
+    outline: none;
+    blr: expression(this.onFocus=this.blur()); }
+  body a:focus {
+    outline: none; }
+
+@media screen and (max-width: 640px) {
+  .p_hide {
+    display: none; } }
+@media screen and (max-width: 1000px) {
+  .i_hide {
+    display: none; } }
+.header {
+  width: 100%;
+  height: 74px;
+  padding: 0 10px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 101; }
+  .header .navBg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 74px;
+    background: black;
+    z-index: 0; }
+  .header .logo, .header .list-btn {
+    position: relative;
+    height: 74px;
+    margin: 0 10px;
+    cursor: pointer;
+    margin-left: 15%;
+    line-height: 64px;
+    z-index: 2; }
+    .header .logo a, .header .list-btn a {
+      outline: none;
+      text-decoration: none; }
+    .header .logo img, .header .list-btn img {
+      outline: none; }
+  .header .list-btn {
+    display: none; }
+    .header .list-btn img {
+      width: 20px;
+      height: 20px; }
+  .header .logo img {
+    width: 140px;
+    height: 22px; }
+  .header nav {
+    height: 74px;
+    position: absolute;
+    line-height: 74px;
+    right: 25%;
+    margin: 0px auto; }
+    .header nav ul {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 100%; }
+      .header nav ul li {
+        list-style-type: none;
+        float: left;
+        padding: 0 10px;
+        margin-right: 5px; }
+        .header nav ul li a {
+          color: #fff;
+          outline: none;
+          text-decoration: none;
+          font-size: 14px; }
+  .header .nav-right .loginModle {
+    text-align: center;
+    margin-top: 24px;
+    height: 34px;
+    margin-right: 10px;
+    position: relative;
+    width: 130px; }
+    .header .nav-right .loginModle a {
+      font-size: 12px;
+      color: #fff;
+      outline: none;
+      text-decoration: none;
+      font-size: 14px; }
+    .header .nav-right .loginModle .login {
+      width: 100%;
+      color: #fff; }
+    .header .nav-right .loginModle .userInfo {
+      width: 100%;
+      position: relative;
+      z-index: 105;
+      text-align: center; }
+      .header .nav-right .loginModle .userInfo .urserhead img {
+        width: 25px;
+        height: 25px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%; }
+      .header .nav-right .loginModle .userInfo .urserhead > a {
+        width: 50%;
+        vertical-align: middle;
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-align: left;
+        text-overflow: ellipsis; }
+      .header .nav-right .loginModle .userInfo .urserconte {
+        padding-top: 40px;
+        padding-bottom: 10px;
+        width: 100%;
+        background: #303030;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+        top: -10px;
+        left: 0px;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        padding-bottom: 30px; }
+        .header .nav-right .loginModle .userInfo .urserconte > div {
+          margin: 3px auto;
+          height: 24px; }
+        .header .nav-right .loginModle .userInfo .urserconte a {
+          font-size: 12px;
+          color: #fff;
+          display: inline-block;
+          width: 85%;
+          line-height: 24px;
+          border-radius: 5px;
+          -moz-border-radius: 5px;
+          -webkit-border-radius: 5px;
+          outline: none;
+          text-decoration: none;
+          font-size: 14px; }
+        .header .nav-right .loginModle .userInfo .urserconte a:hover {
+          color: #646464;
+          background: #fff; }
+        @media only screen and (max-width: 1000px) {
+          .header .nav-right .loginModle .userInfo .urserconte > div {
+            display: none; }
+          .header .nav-right .loginModle .userInfo .urserconte > div:last-child {
+            display: block; } }
+  @media only screen and (max-width: 1000px) {
+    .header .logo, .header .list-btn {
+      margin-left: 3%;
+      line-height: 64px;
+      display: block; }
+    .header .logo img {
+      width: 120px;
+      height: 20px; }
+    .header nav {
+      display: none;
+      position: absolute;
+      top: 74px;
+      left: 0px;
+      width: 100%;
+      padding: 0 10px;
+      margin: 0;
+      height: 50px;
+      line-height: 50px;
+      background: #322c38;
+      z-index: 999999999;
+      opacity: 0.8;
+      filter: alpha(opacity=80); }
+      .header nav .curBg {
+        display: none; }
+    .header .nav-right {
+      float: right; }
+      .header .nav-right .loginModle {
+        margin-right: 0px;
+        width: 100px; } }
+
+header:before, header:after {
+  content: "";
+  clear: both;
+  display: table; }
+
+.curBg {
+  background: #f3856c;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  width: 100%;
+  margin-left: 0px; }
+
+/* 底部样式表 */
+.bottom {
+  border-top: 1px solid  #ddd; }
+  .bottom > div {
+    border-right: 1px solid #ddd;
+    padding: 0;
+    padding-bottom: 20px;
+    margin-top: 30px; }
+    .bottom > div ul {
+      margin: 0;
+      padding: 0;
+      width: 100%; }
+      .bottom > div ul li {
+        list-style-type: none;
+        text-align: center;
+        line-height: 25px; }
+        .bottom > div ul li input[type="button"] {
+          border: 0;
+          width: 98px;
+          line-height: 28px;
+          outline: none;
+          color: #fff;
+          background: url(../img/black_btn.jpg) no-repeat; }
+        .bottom > div ul li h3 {
+          margin-top: 0;
+          font-size: 18px;
+          font-weight: 100; }
+        .bottom > div ul li a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          font-family: "微软雅黑";
+          font-size: 12px;
+          color: #6d6d6d; }
+          .bottom > div ul li a img {
+            margin-left: 5px;
+            border: 0; }
+        .bottom > div ul li .erweima {
+          width: 180px;
+          overflow: hidden;
+          margin: 0 auto; }
+
+.datang-vs {
+  margin-top: 15px; }
+  .datang-vs .netvs {
+    margin-bottom: 5px;
+    color: #6d6d6d;
+    font-size: 12px;
+    text-align: center; }
+    .datang-vs .netvs a {
+      margin: 0 10px;
+      color: #0088cc; }
+
+/*内容部分*/
+/*banner*/
+@font-face {
+  font-family: my-font;
+  src: url(../css/abeatbyKaiRegular.otf);
+  src: url("../css/abeatbyKaiRegular.otf") format("opentype"), url("../css/abeatbyKaiRegular.ttf") format("truetype"), url("../css/abeatbyKaiRegular.svg#my-font") format("svg");
+  /* Legacy iOS */ }
+@font-face {
+  font-family: zzf;
+  src: url(../css/myfont.TTF);
+  src: url("../css/myfont.otf") format("opentype"), url("../css/myfont.ttf") format("truetype"), url("../css/myfont.svg#zzf") format("svg");
+  /* Legacy iOS */ }
+.bannerBg img {
+  width: 100%; }
+.bannerBg .phone-bannerCont, .bannerBg .phone-banner {
+  display: none; }
+@media screen and (max-width: 640px) {
+  .bannerBg .phone-bannerCont, .bannerBg .phone-banner {
+    display: block; }
+  .bannerBg .pc-bannerCont, .bannerBg .pc-banner {
+    display: none; } }
+
+.title, .alipay_section .alipayLabBg .rd-cont .rd-alipayLabTitle, .alipay_section .flexible_section .flexibleBg .rd-cont .rd-alipayLabTitle, .flexible_section .alipay_section .flexibleBg .rd-cont .rd-alipayLabTitle, .flexible_section .flexibleBg .flexibleTitle, .shortcut_section .shortcutBg .shortcutTitle, .phone_section .phoneBg .phoneTitle, .serverce_section .serversBg .serversTitle, .statistics_section .statisticsBg .statisticsTitle {
+  width: 610px;
+  height: 70px;
+  margin: 0px auto; }
+  .title dl, .alipay_section .alipayLabBg .rd-cont .rd-alipayLabTitle dl, .alipay_section .flexible_section .flexibleBg .rd-cont .rd-alipayLabTitle dl, .flexible_section .alipay_section .flexibleBg .rd-cont .rd-alipayLabTitle dl, .flexible_section .flexibleBg .flexibleTitle dl, .shortcut_section .shortcutBg .shortcutTitle dl, .phone_section .phoneBg .phoneTitle dl, .serverce_section .serversBg .serversTitle dl, .statistics_section .statisticsBg .statisticsTitle dl {
+    margin-left: 10px; }
+    .title dl dt, .alipay_section .alipayLabBg .rd-cont .rd-alipayLabTitle dl dt, .alipay_section .flexible_section .flexibleBg .rd-cont .rd-alipayLabTitle dl dt, .flexible_section .alipay_section .flexibleBg .rd-cont .rd-alipayLabTitle dl dt, .flexible_section .flexibleBg .flexibleTitle dl dt, .shortcut_section .shortcutBg .shortcutTitle dl dt, .phone_section .phoneBg .phoneTitle dl dt, .serverce_section .serversBg .serversTitle dl dt, .statistics_section .statisticsBg .statisticsTitle dl dt {
+      font-size: 16px;
+      color: #111;
+      font-family: my-font;
+      font-weight: 100; }
+    .title dl dd h1, .alipay_section .alipayLabBg .rd-cont .rd-alipayLabTitle dl dd h1, .alipay_section .flexible_section .flexibleBg .rd-cont .rd-alipayLabTitle dl dd h1, .flexible_section .alipay_section .flexibleBg .rd-cont .rd-alipayLabTitle dl dd h1, .flexible_section .flexibleBg .flexibleTitle dl dd h1, .shortcut_section .shortcutBg .shortcutTitle dl dd h1, .phone_section .phoneBg .phoneTitle dl dd h1, .serverce_section .serversBg .serversTitle dl dd h1, .statistics_section .statisticsBg .statisticsTitle dl dd h1 {
+      font-size: 38px;
+      margin: -5px auto;
+      font-weight: 100;
+      color: #111; }
+
+.alipayLabBg, .alipay_section .alipayLabBg, .flexible_section .flexibleBg {
+  width: 100%;
+  background: #fbfbfb; }
+
+.alipayLabDescribe, .flexible_section .flexibleBg .flexibleDescribe, .shortcut_section .shortcutBg .shortcutDescribe, .serverce_section .serversBg .serversDescribe, .statistics_section .statisticsBg .statisticsDescribe {
+  text-align: center;
+  font-size: 22px;
+  color: #555;
+  margin-top: 32px; }
+
+.alipay_section {
+  background: #fbfbfb;
+  position: relative;
+  overflow: hidden;
+  z-index: 1; }
+  .alipay_section .alipayLabBg .rd-cont, .alipay_section .flexible_section .flexibleBg .rd-cont, .flexible_section .alipay_section .flexibleBg .rd-cont {
+    position: relative;
+    z-index: 2;
+    overflow: hidden; }
+    .alipay_section .alipayLabBg .rd-cont .rd-alipayLabTitle, .alipay_section .flexible_section .flexibleBg .rd-cont .rd-alipayLabTitle, .flexible_section .alipay_section .flexibleBg .rd-cont .rd-alipayLabTitle {
+      margin-top: 162px; }
+    .alipay_section .alipayLabBg .rd-cont .rd-alipayLabDescribe, .alipay_section .flexible_section .flexibleBg .rd-cont .rd-alipayLabDescribe, .flexible_section .alipay_section .flexibleBg .rd-cont .rd-alipayLabDescribe {
+      text-align: center;
+      font-size: 22px;
+      color: #555;
+      margin-top: 32px; }
+    @media screen and (max-width: 640px) {
+      .alipay_section .alipayLabBg .rd-cont .rd-alipayLabTitle, .alipay_section .flexible_section .flexibleBg .rd-cont .rd-alipayLabTitle, .flexible_section .alipay_section .flexibleBg .rd-cont .rd-alipayLabTitle {
+        width: 300px; }
+        .alipay_section .alipayLabBg .rd-cont .rd-alipayLabTitle .alipayLabIcon, .alipay_section .flexible_section .flexibleBg .rd-cont .rd-alipayLabTitle .alipayLabIcon, .flexible_section .alipay_section .flexibleBg .rd-cont .rd-alipayLabTitle .alipayLabIcon {
+          width: 45px;
+          height: 45px; }
+        .alipay_section .alipayLabBg .rd-cont .rd-alipayLabTitle dl, .alipay_section .flexible_section .flexibleBg .rd-cont .rd-alipayLabTitle dl, .flexible_section .alipay_section .flexibleBg .rd-cont .rd-alipayLabTitle dl {
+          max-width: 240px; }
+          .alipay_section .alipayLabBg .rd-cont .rd-alipayLabTitle dl dd h1, .alipay_section .flexible_section .flexibleBg .rd-cont .rd-alipayLabTitle dl dd h1, .flexible_section .alipay_section .flexibleBg .rd-cont .rd-alipayLabTitle dl dd h1 {
+            font-size: 24px; }
+      .alipay_section .alipayLabBg .rd-cont .rd-alipayLabDescribe, .alipay_section .flexible_section .flexibleBg .rd-cont .rd-alipayLabDescribe, .flexible_section .alipay_section .flexibleBg .rd-cont .rd-alipayLabDescribe {
+        font-size: 18px;
+        text-align: center;
+        padding: 0 15px; } }
+  .alipay_section .alipayLabBg .rd-alipayanimation, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation {
+    position: relative;
+    width: 100%;
+    z-index: 1; }
+    .alipay_section .alipayLabBg .rd-alipayanimation .shortcut_phone, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation .shortcut_phone, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation .shortcut_phone {
+      width: 90%;
+      max-width: 700px;
+      margin: 30px auto;
+      display: none; }
+    .alipay_section .alipayLabBg .rd-alipayanimation .c3_container, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation .c3_container, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation .c3_container {
+      width: 836px;
+      height: 450px;
+      margin: 96px auto;
+      position: relative; }
+      .alipay_section .alipayLabBg .rd-alipayanimation .c3_container .ie8_9bg, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation .c3_container .ie8_9bg, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation .c3_container .ie8_9bg {
+        position: absolute;
+        width: 385px;
+        height: 336px;
+        z-index: 1;
+        left: 220px;
+        top: 58px; }
+      .alipay_section .alipayLabBg .rd-alipayanimation .c3_container .c3rotate, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation .c3_container .c3rotate, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation .c3_container .c3rotate {
+        position: absolute;
+        width: 195px;
+        height: 195px;
+        left: 50%;
+        top: 30px;
+        z-index: 1;
+        background: -moz-linear-gradient(to left, #5bdaff #fbfbfb);
+        background: -ms-linear-gradient(to left, #5bdaff #fbfbfb);
+        background: -webkit-linear-gradient(to left, #5bdaff #fbfbfb);
+        background: linear-gradient(to left, #5bdaff, #fbfbfb);
+        -webkit-transform-origin: bottom left;
+        -moz-transform-origin: bottom left;
+        transform-origin: bottom left;
+        -webkit-animation: rotatename 5s linear infinite;
+        -moz-animation: rotatename 5s linear infinite;
+        -o-animation: rotatename 5s linear infinite;
+        animation: rotatename 5s linear infinite; }
+      .alipay_section .alipayLabBg .rd-alipayanimation .c3_container .rd-dmk, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation .c3_container .rd-dmk, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation .c3_container .rd-dmk, .alipay_section .alipayLabBg .rd-alipayanimation .c3_container .rd-yzs, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation .c3_container .rd-yzs, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation .c3_container .rd-yzs, .alipay_section .alipayLabBg .rd-alipayanimation .c3_container .rd-fwzc, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation .c3_container .rd-fwzc, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation .c3_container .rd-fwzc, .alipay_section .alipayLabBg .rd-alipayanimation .c3_container .rd-zqd, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation .c3_container .rd-zqd, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation .c3_container .rd-zqd {
+        position: absolute;
+        z-index: 4;
+        width: 150px;
+        height: 30px;
+        color: #9c9da3;
+        font-size: 14px;
+        top: 8px;
+        left: 58px; }
+      .alipay_section .alipayLabBg .rd-alipayanimation .c3_container .rd-yzs, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation .c3_container .rd-yzs, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation .c3_container .rd-yzs, .alipay_section .alipayLabBg .rd-alipayanimation .c3_container .rd-fwzc, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation .c3_container .rd-fwzc, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation .c3_container .rd-fwzc {
+        left: 78%;
+        top: 50px;
+        text-align: right; }
+      .alipay_section .alipayLabBg .rd-alipayanimation .c3_container .rd-zqd, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation .c3_container .rd-zqd, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation .c3_container .rd-zqd {
+        left: 60px;
+        top: 270px; }
+      .alipay_section .alipayLabBg .rd-alipayanimation .c3_container .rd-fwzc, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation .c3_container .rd-fwzc, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation .c3_container .rd-fwzc {
+        top: 370px; }
+      .alipay_section .alipayLabBg .rd-alipayanimation .c3_container .shield1, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation .c3_container .shield1, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation .c3_container .shield1 {
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        background: #fbfbfb;
+        top: -141px;
+        left: 0px;
+        z-index: 2; }
+      .alipay_section .alipayLabBg .rd-alipayanimation .c3_container .shield2, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation .c3_container .shield2, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation .c3_container .shield2 {
+        position: absolute;
+        width: 400px;
+        height: 189px;
+        background: #fbfbfb;
+        -webkit-transform-origin: bottom left;
+        -moz-transform-origin: bottom left;
+        transform-origin: bottom left;
+        top: -185px;
+        left: 476px;
+        z-index: 2;
+        -webkit-transform: rotate(60deg);
+        -moz-transform: rotate(60deg);
+        transform: rotate(60deg); }
+      .alipay_section .alipayLabBg .rd-alipayanimation .c3_container .shield3, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation .c3_container .shield3, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation .c3_container .shield3 {
+        position: absolute;
+        width: 400px;
+        height: 189px;
+        background: #fbfbfb;
+        -webkit-transform-origin: bottom left;
+        -moz-transform-origin: bottom left;
+        transform-origin: bottom left;
+        top: 35px;
+        left: 606px;
+        z-index: 2;
+        -webkit-transform: rotate(120deg);
+        -moz-transform: rotate(120deg);
+        transform: rotate(120deg); }
+      .alipay_section .alipayLabBg .rd-alipayanimation .c3_container .shield4, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation .c3_container .shield4, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation .c3_container .shield4 {
+        position: absolute;
+        width: 100%;
+        height: 189px;
+        background: #fbfbfb;
+        top: 392px;
+        left: 0px;
+        z-index: 2; }
+      .alipay_section .alipayLabBg .rd-alipayanimation .c3_container .shield5, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation .c3_container .shield5, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation .c3_container .shield5 {
+        position: absolute;
+        width: 300px;
+        height: 189px;
+        background: #fbfbfb;
+        top: 252px;
+        left: 32px;
+        z-index: 2;
+        -webkit-transform: rotate(-120deg);
+        -moz-transform: rotate(-120deg);
+        transform: rotate(-120deg); }
+      .alipay_section .alipayLabBg .rd-alipayanimation .c3_container .shield6, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation .c3_container .shield6, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation .c3_container .shield6 {
+        position: absolute;
+        width: 300px;
+        height: 189px;
+        background: #fbfbfb;
+        top: 0px;
+        left: 38px;
+        z-index: 2;
+        -webkit-transform: rotate(-60deg);
+        -moz-transform: rotate(-60deg);
+        transform: rotate(-60deg); }
+      .alipay_section .alipayLabBg .rd-alipayanimation .c3_container img, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation .c3_container img, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation .c3_container img {
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+        z-index: 3; }
+    @media only screen and (max-width: 900px) {
+      .alipay_section .alipayLabBg .rd-alipayanimation .c3_container, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation .c3_container, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation .c3_container {
+        display: none; }
+      .alipay_section .alipayLabBg .rd-alipayanimation .shortcut_phone, .alipay_section .flexible_section .flexibleBg .rd-alipayanimation .shortcut_phone, .flexible_section .alipay_section .flexibleBg .rd-alipayanimation .shortcut_phone {
+        display: block; } }
+
+.flexible_section {
+  position: relative;
+  z-index: 2; }
+  .flexible_section .flexibleBg {
+    background: url("../img_/flexibleBg.jpg") no-repeat;
+    padding-top: 150px; }
+    .flexible_section .flexibleBg .flexibleTitle {
+      width: 470px; }
+      .flexible_section .flexibleBg .flexibleTitle dl dt {
+        color: #fff; }
+      .flexible_section .flexibleBg .flexibleTitle dl dd h1 {
+        color: #fff;
+        font-weight: 100; }
+    .flexible_section .flexibleBg .flexibleDescribe dl {
+      margin-top: 40px; }
+      .flexible_section .flexibleBg .flexibleDescribe dl dt h3 {
+        color: #efefef;
+        font-size: 20px;
+        font-weight: 500px;
+        margin: 3px auto; }
+      .flexible_section .flexibleBg .flexibleDescribe dl dd {
+        font-size: 14px;
+        color: #999999; }
+    @media screen and (max-width: 640px) {
+      .flexible_section .flexibleBg .flexibleTitle {
+        width: 300px; }
+        .flexible_section .flexibleBg .flexibleTitle .alipayLabIcon {
+          width: 45px;
+          height: 45px; }
+        .flexible_section .flexibleBg .flexibleTitle dl dd h1 {
+          font-size: 24px; }
+      .flexible_section .flexibleBg .flexibleDescribe dl dt h3 {
+        font-size: 18px; }
+      .flexible_section .flexibleBg .flexibleDescribe dl dd {
+        padding: 0px 15px; } }
+    .flexible_section .flexibleBg .flexibleAnimation {
+      padding-bottom: 30px; }
+      .flexible_section .flexibleBg .flexibleAnimation .outCircle {
+        text-align: center;
+        width: 320px;
+        height: 320px;
+        margin: 80px auto;
+        position: relative;
+        padding-top: 65px; }
+        .flexible_section .flexibleBg .flexibleAnimation .outCircle img {
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          width: 100%;
+          height: 100%;
+          -webkit-animation: rotatename_f 5s linear infinite;
+          -moz-animation: rotatename_f 5s linear infinite;
+          -ms-animation: rotatename_f 5s linear infinite;
+          animation: rotatename_f 5s linear infinite; }
+        .flexible_section .flexibleBg .flexibleAnimation .outCircle .circleContainer {
+          width: 250px;
+          text-align: center;
+          letter-spacing: -4px;
+          word-spacing: -4px;
+          font-size: 0;
+          margin: 0 auto;
+          transition: all 15s 1s linear; }
+          .flexible_section .flexibleBg .flexibleAnimation .outCircle .circleContainer div a:last-child {
+            border-right: 1px solid #fff; }
+          .flexible_section .flexibleBg .flexibleAnimation .outCircle .circleContainer div:nth-of-type(2) a:last-child {
+            border-top: 1px solid #fff; }
+          .flexible_section .flexibleBg .flexibleAnimation .outCircle .circleContainer div:nth-of-type(2) a:first-child {
+            border-top: 1px solid #fff; }
+          .flexible_section .flexibleBg .flexibleAnimation .outCircle .circleContainer div:nth-of-type(3) a:last-child {
+            border-top: 1px solid #fff; }
+          .flexible_section .flexibleBg .flexibleAnimation .outCircle .circleContainer div:nth-of-type(3) a:first-child {
+            border-top: 1px solid #fff; }
+          .flexible_section .flexibleBg .flexibleAnimation .outCircle .circleContainer a {
+            display: inline-block;
+            margin: 0px;
+            height: 0px;
+            width: 22px;
+            height: 22px;
+            font-size: 0;
+            letter-spacing: normal;
+            word-spacing: normal;
+            border-left: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            border-collapse: collapse;
+            background: #0088cc; }
+      @media screen and (max-width: 640px) {
+        .flexible_section .flexibleBg .flexibleAnimation .outCircle {
+          width: 250px;
+          height: 250px; }
+          .flexible_section .flexibleBg .flexibleAnimation .outCircle img {
+            width: 90%;
+            height: 90%;
+            margin-left: 5%; }
+          .flexible_section .flexibleBg .flexibleAnimation .outCircle .circleContainer {
+            margin: -20px auto; }
+            .flexible_section .flexibleBg .flexibleAnimation .outCircle .circleContainer a {
+              width: 16px;
+              height: 16px; } }
+
+.shortcut_section .shortcutBg {
+  padding-top: 120px; }
+  .shortcut_section .shortcutBg .shortcutTitle {
+    width: 420px; }
+  .shortcut_section .shortcutBg .shortcutDescribe {
+    padding-top: 0px; }
+    .shortcut_section .shortcutBg .shortcutDescribe dl {
+      margin-top: 30px; }
+      .shortcut_section .shortcutBg .shortcutDescribe dl dt h3 {
+        color: #00aaff;
+        font-size: 28px;
+        font-weight: 100;
+        margin: 0px auto; }
+      .shortcut_section .shortcutBg .shortcutDescribe dl dd {
+        font-size: 16px;
+        color: #848e93; }
+  @media screen and (max-width: 640px) {
+    .shortcut_section .shortcutBg .shortcutTitle {
+      width: 275px; }
+      .shortcut_section .shortcutBg .shortcutTitle .alipayLabIcon {
+        width: 45px;
+        height: 45px; }
+      .shortcut_section .shortcutBg .shortcutTitle dl dd h1 {
+        font-size: 24px; }
+    .shortcut_section .shortcutBg .shortcutDescribe dl dt h3 {
+      font-size: 18px; }
+    .shortcut_section .shortcutBg .shortcutDescribe dl dd {
+      padding: 10px 15px;
+      font-size: 14px; } }
+  .shortcut_section .shortcutBg .shortcutAnimation .shortcutcircle {
+    position: relative;
+    height: 330px;
+    width: 330px;
+    margin: 52px auto 100px auto; }
+    .shortcut_section .shortcutBg .shortcutAnimation .shortcutcircle .inCircle {
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      width: 80%;
+      height: 80%;
+      -webkit-animation: rotatename 5s linear infinite;
+      -moz-animation: rotatename 5s linear infinite;
+      -ms-animation: rotatename 5s linear infinite;
+      animation: rotatename 5s linear infinite; }
+    .shortcut_section .shortcutBg .shortcutAnimation .shortcutcircle .outCircle {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%; }
+    .shortcut_section .shortcutBg .shortcutAnimation .shortcutcircle .marqueecontainer {
+      position: absolute;
+      left: 28%;
+      top: 26%;
+      width: 45%;
+      height: 50%;
+      opacity: 0.5;
+      filter: alpha(opacity=50); }
+  @media screen and (max-width: 640px) {
+    .shortcut_section .shortcutBg .shortcutAnimation .shortcutcircle {
+      width: 250px;
+      height: 250px; } }
+
+.phone_section .phoneBg {
+  background: #2c2f3b;
+  padding-top: 150px;
+  overflow: hidden; }
+  .phone_section .phoneBg .phoneTitle {
+    width: 430px; }
+    .phone_section .phoneBg .phoneTitle dl dt {
+      color: #fff; }
+    .phone_section .phoneBg .phoneTitle dl dd h1 {
+      color: #fff;
+      font-weight: 100; }
+  .phone_section .phoneBg .phoneDescribe {
+    max-width: 584px;
+    margin: 38px auto 0px auto;
+    font-size: 16px;
+    text-align: center;
+    color: #848e93; }
+  @media screen and (max-width: 640px) {
+    .phone_section .phoneBg .phoneTitle {
+      width: 275px; }
+      .phone_section .phoneBg .phoneTitle .alipayLabIcon {
+        width: 45px;
+        height: 45px; }
+      .phone_section .phoneBg .phoneTitle dl dd h1 {
+        font-size: 24px; }
+    .phone_section .phoneBg .phoneDescribe {
+      padding: 0px 10px; }
+      .phone_section .phoneBg .phoneDescribe dl dt h3 {
+        font-size: 18px; }
+      .phone_section .phoneBg .phoneDescribe dl dd {
+        padding: 10px 15px;
+        font-size: 14px; } }
+  .phone_section .phoneBg .phoneAnimation {
+    /*手机内部样式开始*/
+    /*手机内部样式结束*/ }
+    .phone_section .phoneBg .phoneAnimation .phone_phone {
+      max-width: 700px;
+      width: 90%;
+      margin: 30px auto;
+      display: none; }
+    .phone_section .phoneBg .phoneAnimation .phoneContainer {
+      max-width: 780px;
+      margin: 0px auto;
+      text-align: center; }
+      .phone_section .phoneBg .phoneAnimation .phoneContainer .phone {
+        width: 168px;
+        height: 344px;
+        margin: 50px 40px 30px 40px;
+        display: inline-block;
+        vertical-align: middle;
+        background: url(../img_/phone.png) 0 no-repeat; }
+        .phone_section .phoneBg .phoneAnimation .phoneContainer .phone .ct {
+          position: relative;
+          overflow: hidden;
+          width: 134px;
+          height: 260px;
+          margin: 35px 18px;
+          cursor: pointer;
+          background: url(../img_/ct1.jpg); }
+          .phone_section .phoneBg .phoneAnimation .phoneContainer .phone .ct img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%; }
+        .phone_section .phoneBg .phoneAnimation .phoneContainer .phone ul {
+          width: 134px;
+          height: 260px;
+          margin: 35px  18px;
+          background: #229bdc;
+          overflow: hidden;
+          padding: 5px 0px; }
+          .phone_section .phoneBg .phoneAnimation .phoneContainer .phone ul li {
+            list-style-type: none;
+            width: 100%;
+            line-height: 28px;
+            background: #229bdc;
+            color: #fff;
+            font-family: "微软雅黑";
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 1s ease;
+            list-style-type: none; }
+            .phone_section .phoneBg .phoneAnimation .phoneContainer .phone ul li span {
+              display: inline-block; }
+            .phone_section .phoneBg .phoneAnimation .phoneContainer .phone ul li > span {
+              width: 8%; }
+            .phone_section .phoneBg .phoneAnimation .phoneContainer .phone ul li > span ~ span {
+              text-align: left;
+              width: 60%; }
+        .phone_section .phoneBg .phoneAnimation .phoneContainer .phone .phoneLogo {
+          margin-left: 10px; }
+        .phone_section .phoneBg .phoneAnimation .phoneContainer .phone .phoneContent {
+          margin-left: 20px; }
+      .phone_section .phoneBg .phoneAnimation .phoneContainer .last_phone ul {
+        background: #253e5d; }
+        .phone_section .phoneBg .phoneAnimation .phoneContainer .last_phone ul li {
+          background: #253e5d;
+          color: #6280a7; }
+          .phone_section .phoneBg .phoneAnimation .phoneContainer .last_phone ul li > span {
+            width: 100%;
+            text-align: left; }
+        .phone_section .phoneBg .phoneAnimation .phoneContainer .last_phone ul li[data="img"] {
+          background: #21344c;
+          color: #6382a9; }
+          .phone_section .phoneBg .phoneAnimation .phoneContainer .last_phone ul li[data="img"] > span {
+            width: 10%; }
+          .phone_section .phoneBg .phoneAnimation .phoneContainer .last_phone ul li[data="img"] > span ~ span {
+            width: 60%;
+            text-align: left; }
+      .phone_section .phoneBg .phoneAnimation .phoneContainer .downloadIDE {
+        margin-bottom: 100px;
+        text-align: center; }
+        .phone_section .phoneBg .phoneAnimation .phoneContainer .downloadIDE a {
+          display: inline-block; }
+    @media screen and (max-width: 780px) {
+      .phone_section .phoneBg .phoneAnimation .phoneContainer {
+        display: none; }
+      .phone_section .phoneBg .phoneAnimation .phone_phone {
+        display: block; } }
+
+.serverce_section .serversBg {
+  background: url(../img_/serverbg.jpg) no-repeat;
+  padding: 96px 0 30px 0; }
+  .serverce_section .serversBg .serversTitle {
+    width: 350px; }
+    .serverce_section .serversBg .serversTitle h1 {
+      font-weight: 100;
+      margin: 0px auto; }
+  .serverce_section .serversBg .serversDescribe dl {
+    margin: 32px auto; }
+    .serverce_section .serversBg .serversDescribe dl dt h3 {
+      color: #555555;
+      font-size: 20px;
+      font-weight: 500;
+      margin: 0px auto; }
+    .serverce_section .serversBg .serversDescribe dl dd {
+      font-size: 14px;
+      color: #818587; }
+  .serverce_section .serversBg .serversDescribe > div {
+    font-family: zzf;
+    font-weight: 100;
+    font-size: 24px;
+    color: #0590db; }
+  @media screen and (max-width: 640px) {
+    .serverce_section .serversBg .serversTitle {
+      width: 220px; }
+      .serverce_section .serversBg .serversTitle h1 {
+        font-size: 24px; }
+    .serverce_section .serversBg .serversDescribe dl {
+      margin: 0px auto; }
+      .serverce_section .serversBg .serversDescribe dl dt h3 {
+        font-size: 18px; }
+      .serverce_section .serversBg .serversDescribe dl dd {
+        padding: 10px 15px;
+        font-size: 14px; } }
+  .serverce_section .serversBg .serversAnimation .server_phone {
+    width: 90%;
+    margin: 0px auto;
+    margin: 50px auto;
+    display: none; }
+  .serverce_section .serversBg .serversAnimation .overturn {
+    margin-top: 38px;
+    padding-bottom: 50px; }
+    .serverce_section .serversBg .serversAnimation .overturn ul {
+      margin: 0px;
+      padding: 0px;
+      text-align: center;
+      width: 100%;
+      height: 240px;
+      position: relative;
+      z-index: 1; }
+      .serverce_section .serversBg .serversAnimation .overturn ul li {
+        margin: 0px 28px;
+        width: 240px;
+        height: 240px;
+        display: inline-block;
+        list-style-type: none;
+        position: relative; }
+        .serverce_section .serversBg .serversAnimation .overturn ul li img {
+          width: 100%;
+          height: 100%; }
+        .serverce_section .serversBg .serversAnimation .overturn ul li div {
+          display: none;
+          background: url(../img_/blackbg.png) no-repeat;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          padding-top: 42%;
+          left: 0;
+          top: 0px;
+          font-size: 28px;
+          font-family: zzf;
+          color: #fff; }
+    .serverce_section .serversBg .serversAnimation .overturn > ul ~ ul {
+      height: 240px;
+      width: 100%;
+      margin-top: -100px;
+      z-index: 2; }
+  @media screen and (max-width: 920px) {
+    .serverce_section .serversBg .serversAnimation .overturn {
+      display: none; }
+    .serverce_section .serversBg .serversAnimation .server_phone {
+      display: block; } }
+
+.statistics_section .statisticsBg {
+  background: url(../img_/statisticsbg.jpg) 50% no-repeat;
+  padding-top: 130px; }
+  .statistics_section .statisticsBg .statisticsTitle {
+    width: 530px; }
+    .statistics_section .statisticsBg .statisticsTitle h1 {
+      color: #fff;
+      font-weight: 100;
+      margin: 0px;
+      font-family: "微软雅黑"; }
+  .statistics_section .statisticsBg .statisticsDescribe > div {
+    font-family: zzf;
+    font-size: 36px;
+    color: #fff; }
+    .statistics_section .statisticsBg .statisticsDescribe > div a {
+      font-weight: 100;
+      color: #048fdc;
+      line-height: 70px;
+      font-size: 70px;
+      text-decoration: none; }
+  .statistics_section .statisticsBg .statisticsDescribe dl {
+    margin: 1% auto; }
+    .statistics_section .statisticsBg .statisticsDescribe dl dt .createrTitle_phone {
+      max-width: 370px;
+      width: 80%;
+      margin: 0 auto;
+      display: none; }
+    .statistics_section .statisticsBg .statisticsDescribe dl dt h3 {
+      font-family: zzf;
+      color: #fff;
+      font-size: 24px;
+      font-weight: 100;
+      margin: 25px auto 15px auto; }
+    @media screen and (max-width: 640px) {
+      .statistics_section .statisticsBg .statisticsDescribe dl dt .createrTitle_phone {
+        display: block;
+        margin-bottom: 25px; }
+      .statistics_section .statisticsBg .statisticsDescribe dl dt h3 {
+        display: none; } }
+    .statistics_section .statisticsBg .statisticsDescribe dl dd {
+      margin: 1% auto;
+      font-size: 14px;
+      color: #fff; }
+      .statistics_section .statisticsBg .statisticsDescribe dl dd > div {
+        display: inline-block;
+        width: 340px; }
+        .statistics_section .statisticsBg .statisticsDescribe dl dd > div ~ div {
+          text-align: right; }
+      @media screen and (max-width: 640px) {
+        .statistics_section .statisticsBg .statisticsDescribe dl dd > div {
+          width: 300px; } }
+      .statistics_section .statisticsBg .statisticsDescribe dl dd span {
+        margin: 0px 10px; }
+  @media screen and (max-width: 640px) {
+    .statistics_section .statisticsBg .statisticsTitle {
+      width: 100%;
+      padding: 0px 12px; }
+      .statistics_section .statisticsBg .statisticsTitle h1 {
+        font-size: 24px;
+        text-align: center; }
+    .statistics_section .statisticsBg .statisticsDescribe > div {
+      font-size: 20px;
+      padding: 15px;
+      font-weight: 100; }
+      .statistics_section .statisticsBg .statisticsDescribe > div a {
+        line-height: 50px;
+        font-size: 50px; }
+    .statistics_section .statisticsBg .statisticsDescribe dl {
+      margin: 2% auto; }
+      .statistics_section .statisticsBg .statisticsDescribe dl dt h3 {
+        font-size: 18px; }
+      .statistics_section .statisticsBg .statisticsDescribe dl dd {
+        font-size: 12px; } }
+  .statistics_section .statisticsBg .statisticsAnimation .joninus {
+    margin: 3% auto;
+    color: #b3b3b4;
+    font-size: 14px;
+    font-family: gfyh;
+    text-align: center; }
+  .statistics_section .statisticsBg .statisticsAnimation .register {
+    position: relative;
+    width: 236px;
+    height: 58px;
+    margin: 10px auto; }
+    .statistics_section .statisticsBg .statisticsAnimation .register .btn-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 45px;
+      text-align: center;
+      font-size: 0;
+      z-index: 100; }
+    .statistics_section .statisticsBg .statisticsAnimation .register .btn-bg .bt-wrapper {
+      width: 230px;
+      height: 64px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative; }
+    .statistics_section .statisticsBg .statisticsAnimation .register .createbtn {
+      font-size: 24px;
+      color: #fff;
+      text-align: center;
+      width: 212px;
+      height: 48px;
+      border: 1px solid #008ee9;
+      box-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
+      border-radius: 25px;
+      line-height: 46px;
+      cursor: pointer;
+      top: 8px;
+      position: relative;
+      display: block;
+      margin: 0 auto; }
+    .statistics_section .statisticsBg .statisticsAnimation .register .bt-wrapper .l-c {
+      height: 64px;
+      width: 31px;
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      top: 0; }
+    .statistics_section .statisticsBg .statisticsAnimation .register .bt-wrapper:hover .l-c::after, .statistics_section .statisticsBg .statisticsAnimation .register .bt-wrapper:hover .r-c::after, .statistics_section .statisticsBg .statisticsAnimation .register .bt-wrapper:hover .line-body::after {
+      -webkit-animation-play-state: paused;
+      -moz-animation-play-state: paused;
+      -o-animation-play-state: paused;
+      animation-play-state: paused; }
+    .statistics_section .statisticsBg .statisticsAnimation .register .bt-wrapper .l-c::after {
+      content: '\20';
+      width: 63px;
+      height: 63px;
+      position: absolute;
+      top: 1px;
+      left: 0;
+      background: url(../img_/guangbiao.png) no-repeat;
+      -webkit-transform: rotate(-118deg);
+      -moz-transform: rotate(-118deg);
+      -o-transform: rotate(-118deg);
+      transform: rotate(-118deg);
+      -webkit-animation: routateL 6s linear infinite;
+      -moz-animation: routateL 6s linear infinite;
+      -o-animation: routateL 6s linear infinite;
+      animation: routateL 6s linear infinite; }
+    .statistics_section .statisticsBg .statisticsAnimation .register .bt-wrapper .r-c {
+      height: 64px;
+      width: 31px;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      right: 0; }
+    .statistics_section .statisticsBg .statisticsAnimation .register .bt-wrapper .r-c::after {
+      content: '\20';
+      width: 62px;
+      height: 63px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: url(../img_/guangbiao.png) no-repeat;
+      -webkit-transform: rotate(62deg);
+      -moz-transform: rotate(62deg);
+      -o-transform: rotate(62deg);
+      transform: rotate(62deg);
+      -webkit-animation: routateR 6s linear infinite;
+      -moz-animation: routateR 6s linear infinite;
+      -o-animation: routateR 6s linear infinite;
+      animation: routateR 6s linear infinite; }
+    .statistics_section .statisticsBg .statisticsAnimation .register .bt-wrapper .line-body {
+      height: 64px;
+      width: 168px;
+      left: 31px;
+      position: absolute;
+      top: 0;
+      overflow: hidden; }
+    .statistics_section .statisticsBg .statisticsAnimation .register .bt-wrapper .line-body::after {
+      content: '\20';
+      height: 64px;
+      width: 64px;
+      position: absolute;
+      top: 0;
+      left: -56px;
+      background: url(../img_/guangbiao.png) 0 -63px no-repeat;
+      -webkit-animation: lineFollow 6s linear infinite;
+      -moz-animation: lineFollow 6s linear infinite;
+      -o-animation: lineFollow 6s linear infinite;
+      animation: lineFollow 6s linear infinite; }
+  .statistics_section .statisticsBg .statisticsAnimation .ul {
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 50px; }
+    .statistics_section .statisticsBg .statisticsAnimation .ul a {
+      display: inline-block;
+      list-style-type: none;
+      width: 96px;
+      height: 96px;
+      margin: 0px 20px;
+      position: relative; }
+      .statistics_section .statisticsBg .statisticsAnimation .ul a img {
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        position: absolute;
+        z-index: 1; }
+      .statistics_section .statisticsBg .statisticsAnimation .ul a div {
+        position: absolute;
+        height: 0px;
+        width: 0px;
+        display: none;
+        z-index: 2;
+        left: 50%;
+        top: 50%; }
+        .statistics_section .statisticsBg .statisticsAnimation .ul a div img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          z-index: -1; }
+        .statistics_section .statisticsBg .statisticsAnimation .ul a div span {
+          width: 80%;
+          height: 100%;
+          display: inline-block;
+          font-size: 20px;
+          color: #fff;
+          margin: 50px auto; }
+  @media screen and (max-width: 640px) {
+    .statistics_section .statisticsBg .statisticsAnimation .ul a {
+      width: 50px;
+      margin: 0px;
+      height: 50px; } }
+
+/*动画路径*/
+/*圆*/
+/*动画路径*/
+@-moz-keyframes rotatename {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  25% {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  50% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  75% {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    transform: rotate(270deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-webkit-keyframes rotatename {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  25% {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  50% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  75% {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    transform: rotate(270deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-o-keyframes rotatename {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  25% {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  50% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  75% {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    transform: rotate(270deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-ms-keyframes rotatename {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  25% {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  50% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  75% {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    transform: rotate(270deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes rotatename {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  25% {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  50% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  75% {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    transform: rotate(270deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-webkit-keyframes rotatename_f {
+  0% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg); }
+  25% {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    transform: rotate(270deg); }
+  50% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  75% {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg); } }
+@-moz-keyframes rotatename_f {
+  0% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg); }
+  25% {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    transform: rotate(270deg); }
+  50% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  75% {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg); } }
+@-o-keyframes rotatename_f {
+  0% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg); }
+  25% {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    transform: rotate(270deg); }
+  50% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  75% {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg); } }
+@keyframes rotatename_f {
+  0% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg); }
+  25% {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    transform: rotate(270deg); }
+  50% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  75% {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg); } }
+/*第二个动画*/
+@-webkit-keyframes changeColor {
+  0% {
+    background: #056595; }
+  20% {
+    background: #0a5980; }
+  40% {
+    background: #0b6795; }
+  60% {
+    background: #0d7db5; }
+  80% {
+    background: #1194d6; }
+  100% {
+    background: #11abf8; } }
+@-moz-keyframes changeColor {
+  0% {
+    background: #056595; }
+  20% {
+    background: #0a5980; }
+  40% {
+    background: #0b6795; }
+  60% {
+    background: #0d7db5; }
+  80% {
+    background: #1194d6; }
+  100% {
+    background: #11abf8; } }
+@keyframes changeColor {
+  0% {
+    background: #056595; }
+  20% {
+    background: #0a5980; }
+  40% {
+    background: #0b6795; }
+  60% {
+    background: #0d7db5; }
+  80% {
+    background: #1194d6; }
+  100% {
+    background: #11abf8; } }
+@keyframes changeapacity {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  50% {
+    opacity: 0.5;
+    filter: alpha(opacity=50); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100); } }
+/*按钮*/
+@-webkit-keyframes routateL {
+  0%, 65% {
+    -webkit-transform: rotate(-118deg); }
+  85% {
+    -webkit-transform: rotate(60deg); }
+  100% {
+    -webkit-transform: rotate(242deg); } }
+@-webkit-keyframes routateR {
+  0%, 15% {
+    -webkit-transform: rotate(62deg); }
+  20% {
+    -webkit-transform: rotate(103deg); }
+  35% {
+    -webkit-transform: rotate(245deg); }
+  40% {
+    -webkit-transform: rotate(365deg); }
+  100%,
+    85% {
+    -webkit-transform: rotate(422deg); } }
+@-webkit-keyframes lineFollow {
+  0% {
+    left: 27px;
+    -webkit-transform: rotate(0); }
+  15% {
+    left: 110px;
+    -webkit-transform: rotate(0); }
+  20% {
+    left: 129px;
+    -webkit-transform: rotate(0); }
+  23% {
+    left: 159px;
+    -webkit-transform: rotate(0); }
+  25%,
+    35% {
+    left: 159px;
+    -webkit-transform: rotate(180deg); }
+  65% {
+    left: -9px;
+    -webkit-transform: rotate(180deg); }
+  70% {
+    left: -30px;
+    -webkit-transform: rotate(180deg); }
+  72% {
+    left: -90px;
+    -webkit-transform: rotate(180deg); }
+  75% {
+    left: -90px;
+    -webkit-transform: rotate(0); }
+  85% {
+    left: -57px;
+    -webkit-transform: rotate(0); }
+  100% {
+    left: 27px;
+    -webkit-transform: rotate(0); } }
+@-moz-keyframes routateL {
+  0%, 65% {
+    -moz-transform: rotate(-118deg); }
+  85% {
+    -moz-transform: rotate(60deg); }
+  100% {
+    -moz-transform: rotate(242deg); } }
+@-moz-keyframes routateR {
+  0%, 15% {
+    -moz-transform: rotate(62deg); }
+  20% {
+    -moz-transform: rotate(103deg); }
+  35% {
+    -moz-transform: rotate(245deg); }
+  40% {
+    -moz-transform: rotate(365deg); }
+  100%,
+    85% {
+    -moz-transform: rotate(422deg); } }
+@-moz-keyframes lineFollow {
+  0% {
+    left: 27px;
+    -moz-transform: rotate(0); }
+  15% {
+    left: 110px;
+    -moz-transform: rotate(0); }
+  20% {
+    left: 129px;
+    -moz-transform: rotate(0); }
+  23% {
+    left: 159px;
+    -moz-transform: rotate(0); }
+  25%,
+    35% {
+    left: 159px;
+    -moz-transform: rotate(180deg); }
+  65% {
+    left: -9px;
+    -moz-transform: rotate(180deg); }
+  70% {
+    left: -30px;
+    -moz-transform: rotate(180deg); }
+  72% {
+    left: -90px;
+    -moz-transform: rotate(180deg); }
+  75% {
+    left: -90px;
+    -moz-transform: rotate(0); }
+  85% {
+    left: -57px;
+    -moz-transform: rotate(0); }
+  100% {
+    left: 27px;
+    -moz-transform: rotate(0); } }
+@-o-keyframes routateL {
+  0%, 65% {
+    -o-transform: rotate(-118deg); }
+  85% {
+    -o-transform: rotate(60deg); }
+  100% {
+    -o-transform: rotate(242deg); } }
+@-o-keyframes routateR {
+  0%, 15% {
+    -o-transform: rotate(62deg); }
+  20% {
+    -o-transform: rotate(103deg); }
+  35% {
+    -o-transform: rotate(245deg); }
+  40% {
+    -o-transform: rotate(365deg); }
+  100%,
+    85% {
+    -o-transform: rotate(422deg); } }
+@-o-keyframes lineFollow {
+  0% {
+    left: 27px;
+    -o-transform: rotate(0); }
+  15% {
+    left: 110px;
+    -o-transform: rotate(0); }
+  20% {
+    left: 129px;
+    -o-transform: rotate(0); }
+  23% {
+    left: 159px;
+    -o-transform: rotate(0); }
+  25%,
+    35% {
+    left: 159px;
+    -o-transform: rotate(180deg); }
+  65% {
+    left: -9px;
+    -o-transform: rotate(180deg); }
+  70% {
+    left: -30px;
+    -o-transform: rotate(180deg); }
+  72% {
+    left: -90px;
+    -o-transform: rotate(180deg); }
+  75% {
+    left: -90px;
+    -o-transform: rotate(0); }
+  85% {
+    left: -57px;
+    -o-transform: rotate(0); }
+  100% {
+    left: 27px;
+    -o-transform: rotate(0); } }
+@keyframes routateL {
+  0%, 65% {
+    transform: rotate(-118deg); }
+  85% {
+    transform: rotate(60deg); }
+  100% {
+    transform: rotate(242deg); } }
+@keyframes routateR {
+  0%, 15% {
+    transform: rotate(62deg); }
+  20% {
+    transform: rotate(103deg); }
+  35% {
+    transform: rotate(245deg); }
+  40% {
+    transform: rotate(365deg); }
+  100%,
+    85% {
+    transform: rotate(422deg); } }
+@keyframes lineFollow {
+  0% {
+    left: 27px;
+    transform: rotate(0); }
+  15% {
+    left: 110px;
+    transform: rotate(0); }
+  20% {
+    left: 129px;
+    transform: rotate(0); }
+  23% {
+    left: 159px;
+    transform: rotate(0); }
+  25%,
+    35% {
+    left: 159px;
+    transform: rotate(180deg); }
+  65% {
+    left: -9px;
+    transform: rotate(180deg); }
+  70% {
+    left: -30px;
+    transform: rotate(180deg); }
+  72% {
+    left: -90px;
+    transform: rotate(180deg); }
+  75% {
+    left: -90px;
+    transform: rotate(0); }
+  85% {
+    left: -57px;
+    transform: rotate(0); }
+  100% {
+    left: 27px;
+    transform: rotate(0); } }
+
+/*# sourceMappingURL=index_1.css.map */

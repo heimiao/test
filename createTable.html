@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	 
+			 function BodyOnLoad() 
+				{ 
+				var textarea= document.getElementById("textarea"); 
+				$(textarea).height(textarea.scrollHeight)
+				} 
+ 
+
+		</script>
+		<style type="text/css">
+			 textarea {width:300px; min-height:60px; overflow:hidden;} 
+		</style>
+	</head>
+  
+	<body>
+		 
+		
+	  <button onclick="test()">确定按钮</button>
+	   
+	<title>文本域自适应高度</title> 
+       <textarea id="textarea" style="width:300px;overflow-y:visible" onchange="BodyOnLoad()">
+       	在这里输入一些字符看一下，当超出初设的文本域高度时，文本域自动伸缩变高。
+       	在这里输入一些字符看一下，当超出初设的文本域高度时，文本域自动伸缩变高
+       	在这里输入一些字符看一下，当超出初设的文本域高度时，文本域自动伸缩变高
+     </textarea>
+	</body>
+
+</html>

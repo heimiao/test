@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- 3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>layout</title>
+		<link href='../bootstrap/css/bootstrap.min.css' type='text/css' media='screen' rel='stylesheet' />
+		<link rel="stylesheet" href="css/form.css" />
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script src="../js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var formList = [{
+				name: '姓名',
+				type: 'text'
+			}, {
+				name: '密码',
+				type: 'password'
+			}, {
+				name: 'name',
+				type: 'textarea'
+			}, {
+				name: 'name',
+				type: 'time'
+			}, {
+				name: 'name',
+				type: 'select'
+			},{
+				name: 'name',
+				type: 'raido'
+			}, {
+				name: 'name',
+				type: 'checkbox'
+			}]
+			angular.module("myApp", []).controller("createFrm", function($scope) {
+				$scope.list=formList;
+				console.log();
+			})
+		</script>
+	</head>
+	
+	<body ng-app="myApp">
+		<div class="col-md-12" ng-controller="createFrm">
+			<div class="editer_Blc">
+				<form id="userForm" method="post" class="form-horizontal" action="javascript:void(0)">
+					<!--<div class="row" ng-repeat="item in list">
+						<div class="col-md-6" ng-if="item.type=='text'">
+							<div class="form-group">
+								<label class="col-md-3 control-label">
+									{{item.name}}
+									<span class="attionColor">*</span>
+								</label>
+								<div class="col-md-9" style="position: relative;">
+									<input type="text" class="form-control" name="firstname" />
+								</div>
+							</div>
+						</div> 
+						<div class="col-md-6" ng-if="item.type=='password'">
+							<div class="form-group">
+								<label class="col-md-3 control-label">
+									{{item.name}}
+									<span class="attionColor">*</span>
+								</label>
+								<div class="col-md-9" style="position: relative;">
+									<input type="password" class="form-control" name="pwd" />
+								</div>
+							</div>
+						</div>  
+						<div class="col-md-6" ng-if="item.type=='select'">
+							<div class="form-group">
+								<label class="col-md-3 control-label">
+									{{item.name}}
+								</label>
+								<div class="col-md-9">
+									<select class="form-control">
+										<option>男</option>
+										<option>女</option>
+										<option>不详</option>
+									</select>
+								</div>
+							</div>
+						</div>  
+						<div class="col-md-6" ng-if="item.type=='mostSelect'">
+							<div class="form-group">
+								<label class="control-label col-md-3">
+									{{item.name}}
+								</label>
+								<div class="role col-md-9 Two_select">
+									<select id="select" class="selectc" multiple="multiple" size="5">
+										<option>管理员</option>
+										<option>普通员工</option>
+										<option>普通员工222</option>
+									</select>
+									<span class="role_arrow">
+				    		        <img src="img/dou_arrows.jpg"/>
+					    		    <span id="left" class="left_arrow"></span>
+									<span id="right" class="right_arrow"></span>
+									</span>
+									<select id="select1" class="selectc" multiple="multiple" size="5">
+										<option>管理员</option>
+										<option>普通员工</option>
+										<option>普通员工222</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>-->
+					<div class="row" ng-repeat="item in list">
+						
+						<div class="col-md-6" ng-if="item.type=='text'">
+							<div class="form-group">
+								<label class="col-md-3 control-label">
+									{{item.name}}
+									<span class="attionColor">*</span>
+								</label>
+								<div class="col-md-9" style="position: relative;">
+									<input type="text" class="form-control" name="firstname" />
+								</div>
+							</div>
+						</div> 
+						<div class="col-md-6" ng-if="item.type=='password'">
+							<div class="form-group">
+								<label class="col-md-3 control-label">
+									{{item.name}}
+									<span class="attionColor">*</span>
+								</label>
+								<div class="col-md-9" style="position: relative;">
+									<input type="password" class="form-control" name="pwd" />
+								</div>
+							</div>
+						</div>  
+						<div class="col-md-6" ng-if="item.type=='select'">
+							<div class="form-group">
+								<label class="col-md-3 control-label">
+									{{item.name}}
+								</label>
+								<div class="col-md-9">
+									<select class="form-control">
+										<option>男</option>
+										<option>女</option>
+										<option>不详</option>
+									</select>
+								</div>
+							</div>
+						</div>  
+						<div class="col-md-6" ng-if="item.type=='mostSelect'">
+							<div class="form-group">
+								<label class="control-label col-md-3">
+									{{item.name}}
+								</label>
+								<div class="role col-md-9 Two_select">
+									<select id="select" class="selectc" multiple="multiple" size="5">
+										<option>管理员</option>
+										<option>普通员工</option>
+										<option>普通员工222</option>
+									</select>
+									<span class="role_arrow">
+				    		        <img src="img/dou_arrows.jpg"/>
+					    		    <span id="left" class="left_arrow"></span>
+									<span id="right" class="right_arrow"></span>
+									</span>
+									<select id="select1" class="selectc" multiple="multiple" size="5">
+										<option>管理员</option>
+										<option>普通员工</option>
+										<option>普通员工222</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label">
+								</label>
+								<div class="col-md-9">
+									<button class="editer_blueBtn " type="submit">确认</button>
+									<button class="editer_blackBtn qx_chuang" type="button">取消</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			$(function() {
+				//向左按钮
+				$("#left").click(function() {
+					//第一，点击向左按钮清空id:select中option的样式
+					$('#select option').removeAttr("selected");
+					//第二，删除id：select1中option
+					var $options = $('#select1 option:selected');
+					var $remove = $options.remove();
+					//第三，给select添加删除select1中的option
+					$remove.attr("selected", "selected").appendTo('#select');
+				});
+				//向右按钮
+				$("#right").click(function() {
+					//第一，点击向左按钮清空id:select中option的样式
+					$('#select1 option').removeAttr("selected");
+					//第二，删除id：select1中option
+					var $options = $('#select option:selected');
+					var $remove = $options.remove();
+					//第三，给select添加删除select1中的option
+					$remove.attr("selected1", "selected").appendTo('#select1');
+				});
+			});
+		</script>
+	</body>
+
+</html>

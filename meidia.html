@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>远程请求数据</title>
+	   <style type="text/css">
+		   .test{
+		   	width:400px;
+		   	height:400px;
+		   	background:red;
+		   	margin:0px auto;
+		   	color:#fff;
+		   }
+   		@media only screen and (min-width: 640px) and (max-width:1024px) {
+   			.test{
+			   	background:deepskyblue;
+			   }
+   		}
+   		@media only screen and (min-width: 1024px)  {
+   			.test{
+			   	background:green;
+			   }
+   		}
+   		@media only screen  and (max-width: 640px) {
+   			.test{
+			   	background:hotpink;
+			   }
+   		}
+	   </style>
+	</head>
+	
+	<body>
+		<div class="test">
+			<h2>我这个div是随着不通窗口的变化而变化的，不信你就拖拉窗口</h2>
+		</div> 
+	</body> 
+</html>

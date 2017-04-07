@@ -582,6 +582,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
   var old = $.fn.collapse
 
   $.fn.collapse = function (option) {
+  	 alert()
     return this.each(function () {
       var $this   = $(this)
       var data    = $this.data('bs.collapse')
@@ -624,7 +625,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
       $this[$target.hasClass('in') ? 'addClass' : 'removeClass']('collapsed')
     }
 
-    $target.collapse(option)
+     $target.collapse(option)
   })
 
 }(jQuery);

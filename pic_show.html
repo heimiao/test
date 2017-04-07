@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.container_screenshots {
+			height: 99%;
+			display: flex;
+			text-align: center;
+			flex-direction: column;
+			justify-content: space-around;
+			align-content: center;
+			/* padding: 5px; */
+		}
+		.screenshots {
+			margin:0px auto;
+			position: relative;
+			width: 400px;
+			height: 350px;
+			background: #f3f3f3;
+			border: darkgrey solid 1px;
+			text-align: center;
+		}
+		
+		.screenshots_pic {
+			width: calc(100% - 10px);
+			height: calc(100% - 60px);
+			display: -webkit-flex;
+			/* Safari */
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-content: center;
+			padding: 5px;
+		}
+		
+		.screenshots_pic img {
+			max-width: 100%;
+			vertical-align: middle;
+			margin: 0px;
+			width: auto;
+			max-height: 100%;
+		}
+		
+		.screenshots_btn {
+			height: 35px;
+		}
+		
+		.screenshots_btn button {
+			width: 120px;
+			text-align: center;
+			padding: 0 25px;
+			line-height: 35px;
+			background: #484f63;
+			color: #fff;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			border: 0;
+			display: inline-block;
+			cursor: pointer;
+			text-align: center;
+			text-decoration: none;
+			background: -webkit-gradient(linear, left top, left bottom, from(#484f63), to(#333745));
+			background: -moz-linear-gradient(left top, left bottom, from(#484f63), to(#333745));
+			background: -ms-linear-gradient(left top, left bottom, from(#484f63), to(#333745));
+			background: -moz-linear-gradient(left top, left bottom, from(#484f63), to(#333745));
+			background: linear-gradient(left top, left bottom, from(#484f63), to(#333745));
+			-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+			box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+		}
+		
+		.screenshots_btn button:hover {
+			background: #3d4354;
+			color: #f2f2f2;
+		}
+		
+		.screenshots_btn button:active {
+			background: #282c37;
+			color: #ebebeb;
+			outline: none;
+			text-decoration: none;
+			text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+			background: -webkit-gradient(linear, left top, left bottom, from(#484f63), to(#3d4354));
+			background: -moz-linear-gradient(left top, left bottom, from(#484f63), to(#3d4354));
+			background: -ms-linear-gradient(left top, left bottom, from(#484f63), to(#3d4354));
+			background: -moz-linear-gradient(left top, left bottom, from(#484f63), to(#3d4354));
+			background: linear-gradient(left top, left bottom, from(#484f63), to(#3d4354));
+			-webkit-transform: translate(-1px, 1px);
+			-ms-transform: translate(-1px, 1px);
+			-o-transform: translate(-1px, 1px);
+			transform: translate(-1px, 1px);
+		}
+	</style>
+
+	<body>
+		<div class="container_screenshots">
+			<div class="screenshots">
+				<div class="screenshots_pic"><img src="img/1.jpg" /></div>
+				<div class="screenshots_btn">
+					<button>取消</button>
+					<button>发送</button>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

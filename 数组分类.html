@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+	</head>
+	<script type="text/javascript">
+		var ary = [{
+			name: "小明",
+			address: "北京"
+		}, {
+			name: "小亮",
+			address: "河北"
+		}, {
+			name: "小红",
+			address: "山东"
+		}, {
+			name: "小刚",
+			address: "山西"
+		}, {
+			name: "小明",
+			phone: "123456"
+		}, {
+			name: "小亮",
+			phone: "456789"
+		}, {
+			name: "小红",
+			phone: "123789"
+		}, {
+			name: "小刚",
+			phone: "456123"
+		}, ]
+
+		var arys = [],
+			obj = {};
+		ary.forEach((m, n) => {
+			obj[m.name] || (obj[m.name] = {});
+			obj[m.name]["name"] || (obj[m.name]["name"] = m.name)
+			obj[m.name]["address"] || (obj[m.name]["address"] = m.address)
+			obj[m.name]["phone"] || (obj[m.name]["phone"] = m.phone)
+		});
+
+		console.log(JSON.stringify(obj));
+
+		var data = [{
+			"status": 1,
+			"sid": "sex8gdnk587ddbed0235c124",
+			"scode": "once",
+			"doctorId": "udx8gdnk587c42ea7ebfeab9",
+			"patientId": "upx8gdnk587c4328dc77e962",
+			"groupId": "5499680522244"
+		}, {
+			"status": 9,
+			"sid": "se5zy7hp58848927975f581a",
+			"scode": "freebynew",
+			"doctorId": "udx8gdnk587df5bbee656566",
+			"patientId": "upmqaghl587c5cbf92365f35",
+			"groupId": "5958502776833"
+		}, {
+			"status": 1,
+			"sid": "semqaghl5884935dc99e4ff9",
+			"scode": "freebynew",
+			"doctorId": "udx8gdnk587c42ea7ebfeab9",
+			"patientId": "udmqaghl588492c47de65a06",
+			"groupId": "5961244803073"
+		}]
+		
+		var result = {};
+		data.forEach((m, n) => {
+			result[m.doctorId]||(result[m.doctorId]=[])
+			result[m.doctorId].push(m);
+		})
+		
+		console.log(JSON.stringify(result));
+		/*group={};
+		ary.forEach((v,i)=>{
+		group[v.name]||(group[v.name]={});
+		group[v.name][v.name]||(group[v.name][v.name]=v.name);
+		group[v.name][v.address]||(group[v.name][v.address]=v.address);
+		group[v.name][v.phone]||(group[v.name][v.phone]=v.phone);
+		}) 
+		console.log(group);*/
+		
+		
+		var A=[1,2,3];
+		var B=[{name:"xiaoming"}]
+		console.log(A.concat(B));
+		
+		
+	</script>
+
+	<body>
+
+	</body>
+
+</html>

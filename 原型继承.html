@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>jquery的自定义事件通过on绑定trigger触发 </title>
+	</head>
+	<!--<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="bootstrap/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>-->
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+
+	<body style="padding: 30px;">
+
+		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingOne">
+					<h4 class="panel-title">
+			        	<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+			         	 Collapsible Group Item #1
+				        </a>
+				    </h4>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel">
+					<div class="panel-body">
+						Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<hr><br>
+		<a id="a">测试事件命名空间</a>
+		<hr><br>
+		<div id="b" data-target="collapse" href="#id" style="background:green;height:100px;width:200px;">测试data属性</div>
+
+		<script type="text/javascript">
+			/*
+			 * 初始化
+			 * */
+			$(function() {
+				/*$('#collapseTwo').collapse({
+					toggle: true
+				});
+				*/
+
+				/* $(document).on("hello.one.two","#a",function(){
+					alert();
+				})
+ 				_this.off(".two")
+ 				$(this).trigger("click.one.two");
+				
+				$("#a").click(function(){
+					$(this).trigger("hello.one.two");
+				})
+				*/
+
+				/*function A(name){
+					this.name=name;
+					this.say=function(){
+						console.log("我是"+this.name);
+					}
+					console.log("test");
+					this.a();
+				}
+				
+				A.prototype.a=function(){
+					console.log("a的原型");
+				}
+					var c
+				function B(name){
+					this.name=name
+				
+					console.log(c);
+					if(!c){
+						$("#b").data("data",new A("heimao")) 
+					}
+					 c=$("#b").data("data");
+					 console.log(c);
+				}
+				 $("#b").click(function(){
+				 	 B.call($(this),"heimao")
+				 })
+			  var actives = $("#b").parent() && $("#b").parent().children()
+			  console.log(actives);
+			    */
+			})
+
+			+function($) {
+				function testEvent() {
+					var hidden = $.Event("click.bs", {
+						user: "foo",
+						pass: "bar",
+						relatedTarget: $("#b")[0]
+					});
+					$("#b").trigger(hidden);
+				}
+				$("#b").click(testEvent);
+			}($);
+		 
+
+			$(function() {
+				$("#b").on("click.bs", function(event) {
+					alert(event.relatedTarget.tagName) //INPOUT
+					alert(event.user) //foo
+				})
+			})
+			
+			
+			function C(){
+				this.cSay=function(){
+					console.log("CCCCCCCCCC");
+				}
+			}
+			function D(){
+				this.DSay=function(){
+					console.log("DDDDDDDDDDDD");
+					return 1;
+				}
+			}
+			function E(){
+				this.ESay=function(){
+					console.log("EEEEEEEEEEEE");
+				}
+			}
+			 
+			var F=$.extend({},new C(),new D(),new E())
+			 console.log(F['DSay']());
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>对象常用开发模式_02</title>
+	</head>
+	<script type="text/javascript">
+		 //工厂模式
+		 //优点：相对于字面量对象这个方式省去了重复定义对象的繁琐。
+		 //缺点：没有解决对象识别问题，就是不知道这个对象是什么类型
+		 function createPet(name,job){
+		 	var obj=new Object();
+		 	obj.name=name,
+		 	obj.job=job,
+		 	obj.say=function(){
+		 		console.log("工厂模式的输出：my name is "+this.name+" and my job is "+this.job);
+		 	}
+		 	return obj;
+		 }
+		 var cat1=createPet("黄猫","抓老鼠");
+		 cat1.say();
+		 var cat2=createPet("小猫","吃老鼠");
+		 cat2.say();
+		 
+		 
+		 
+		 
+		 //构造函数模式
+		 //优点：
+		 //缺点：相对于字面量对象这个方式省去了重复定义对象的繁琐。 
+		 function Pet(name,job){
+		 	this.name=name;
+		 	this.job=job;
+		 	this.say=function(){
+		 		console.log("构造函数模式下输出：my name is "+this.name+" and my job is "+this.job);
+		 	}
+		 }
+		 
+		 var cat1=new Pet("黄猫","抓老鼠");
+		 cat1.say();
+		 var cat2=new Pet("小猫","吃老鼠");
+		 cat2.say();
+		 
+		 console.log(cat1.constructor==Pet);
+		 console.log(cat1 instanceof Pet);
+		 console.log(typeof cat1 ==Pet);
+		 
+		 
+		 var cat=new Object();
+		 Pet.call(cat,"黑猫","逮老鼠");
+		 cat.say();
+		 
+		 
+		 
+		 
+	</script>
+	<a class="dw-btn" onclick="javascript:location.href='http://cloud.pan.369cloud.com/cloud/compile/ios/艺术印记_707814071415865344_01.00.195_160718024540.ipa'">
+			<h1>		安装</h1>
+	 </a>
+	<br />
+	<a href="http://cloud.pan.369cloud.com/cloud/compile/ios/艺术印记_707814071415865344_01.00.195_160718024540.ipa"><h1>安装</h1></a>
+	<div class=""style="width:200px;height:100px;border:1px solid red;line-height:100px;">
+		<button>按钮组</button>
+		
+		<div id="" style="width:100px;height:30px;display:inline-block;border:1px solid blue;vertical-align: middle;">
+			按钮组
+		</div>
+	</div>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+		<script type="text/javascript" src="js-object/js/jquery-1.10.2.min.js"></script>
+<!--		<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+
+		<!-- Include the plugin's CSS and JS: -->
+		<link href="//cdn.bootcss.com/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" rel="stylesheet">
+		<script src="//cdn.bootcss.com/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.min.js"></script>
+		<!-- Build your select: -->
+		<select class="multiselect" multiple="multiple">
+			<option value="cheese">Cheese</option>
+			<option value="tomatoes">Tomatoes</option>
+			<option value="mozarella">Mozzarella</option>
+			<option value="mushrooms">Mushrooms</option>
+			<option value="pepperoni">Pepperoni</option>
+			<option value="onions">Onions</option>
+		</select>
+
+		<!-- Initialize the plugin: -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.multiselect').multiselect();
+			});
+		</script>
+	</body>
+
+</html>

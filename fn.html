@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+	<script type="text/javascript">
+		console.log(new Date().getTime());
+	</script>
+	<style type="text/css">
+		.container {
+			margin: 15px auto;
+		}
+	</style> 
+	<body>
+		<div class="container" style="display: none;">
+			<h1>模拟数据和dom结构模拟</h1>
+			<form>
+				<div id="a">
+					 <script  id="test" type="text/template">
+				<div class="form-group">
+					<label for="exampleInputEmail1" >帐号</label>
+					<input type="text" class="form-control" name="nm" value="<%=name %>">
+				</div>
+				</script>
+				</div>
+				
+				<div class="form-group">
+					<label for="exampleInputPassword1">密码</label>
+					<input type="password" class="form-control" name="pw" placeholder="Password">
+				</div>
+				<div class="form-group">
+					<label for="exampleInputFile">上传</label>
+					<input type="file" name="fl">
+				</div>
+				<div class="form-group">
+					<label for="exampleInputFile">爱好</label>
+					<div class="">
+						<label>
+				      <input type="checkbox" name="hl" value="1">游泳
+				    </label>&nbsp;&nbsp;<label>
+				      <input type="checkbox" name="hl" value="2">唱歌
+				    </label>
+						</label>&nbsp;&nbsp;<label>
+				      <input type="checkbox" name="hl" value="3">看电影
+				    </label>
+						</label>&nbsp;&nbsp;<label>
+				      <input type="checkbox" name="hl" value="4">打篮球
+				    </label>
+						</label>
+						</label>&nbsp;&nbsp;<label>
+				      <input type="checkbox" name="hl" value="5">玩电打
+				    </label>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="exampleInputFile">性别</label>
+					<div>
+						<label>
+				      <input type="radio" name="sx" value="1">男
+				    </label>&nbsp;&nbsp;<label>
+				      <input type="radio" name="sx" value="2">女
+				    </label>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-default" onclick="test()">Submit</button>
+				<button type="submit" class="btn btn-default" onclick="test1()">Submit</button>
+			</form>
+		</div>
+		<script type="text/javascript">
+			/*	function Search() { }*/ !(function($) {
+				var configObj = {},
+					sendData = [],
+					typeBindFn = {}, //对输出的绑定执行指定的事件
+					whereBindFn = {};
+
+				$.fn.dt = function Dt() {}
+
+				function parsing(args) {
+					//解析配置文件
+					configObj = $.extend(configObj, {
+						server: args.server
+					});
+					if(args.maps)
+						$.extend(configObj, {
+							attrConfig: args.maps
+						});
+					if(args.where)
+						$.extend(configObj, {
+							where: args.where
+						});
+					return configObj;
+				}
+
+				function isparsing(data) {
+					//是否解析配置文件如果解析了就用解析之后的对象否知从新解析
+					var newobj = {};
+					if(typeof data == "object") configObj = parsing(data);
+					if(typeof data == "string") configObj = parsing(JSON.parse(data));
+					return configObj;
+				}
+
+				function requestDate(setdata, args) {
+					console.log(configObj.server);
+					$.ajax({
+						type: configObj.server.method,
+						url: configObj.server.url,
+						data: setdata, //可能数据包括，查询条件，删除条件，表单提交数据，
+						dataType: "jsonp",
+						success: function(msg) {
+							output(msg, args);
+						},
+						error: function(e) {
+							console.log("错误的请求" + e.message);
+						}
+					})
+				}
+
+				function renderForm(data) {
+					var data = [{
+						nm: "name",
+						pw: "heimao",
+						fl: "file",
+						hl: [2, 3, 5],
+						sx: 0
+					}];
+					$.each(data, function() {
+						for(var key in this) {
+							var $ele = $("*[name=" + key + "]"),
+								value = data[0][key]
+								//判断类型做赋值操作
+							switch($ele[0].type) {
+								case "file":
+									break;
+								case "checkbox":
+									$ele.each(function(n, m) {
+										$.each(value, function(i, j) {
+											if(n == j)
+												$(m).prop("checked", true);
+										});
+									})
+									break;
+								case "radio":
+									$ele.each(function(i) {
+										if(i == value)
+											$(this).prop("checked", true);
+									})
+									break;
+								default:
+									$ele.val(value);
+									break;
+							}
+						}
+					});
+				}
+				$.where = function(args) {
+						//该方法就是解析where条件语句的
+						var newArray = [];
+						if(args.length > 0) {
+							$.each(args, function() {
+								this["dom"] = $("*[name=" + this['dom'] + "]").val();
+								newArray.push(this);
+							});
+						}
+						return newArray;
+					}
+					//////////////////////////////////////////////从页面获取值的方法、//////////
+				function Joining(args) {
+					//根据dom和配置信息完成字符串的拼接
+					var val = [],
+						$form = [];
+					if(!args.maps) return;
+					for(var _key in args.maps) {
+						if(args.maps[_key]) {
+							val.push(args.maps[_key]);
+						}
+					}
+					$form = $("*[name=" + val[0] + "]").closest("form");
+					return $form.serialize();
+				}
+
+				//////////////////////////////////////////////从页面获取值的方法end//////////
+				 
+
+				function create(args) {
+					//新增就是拼接后台的表属性结构
+					isparsing(args);
+					//整合数据调用合并之后的
+					Joining(args)
+					if(Joining(args))
+					//requestDate(Joining(args),args);
+						console.log(Joining(args));
+				}
+
+				function del(args) {
+					//判断是否解析配置文件
+					isparsing(args);
+					//获取dom结构内容
+					//if(configObj.where)
+					//requestDate($.where(configObj.where),args);
+				}
+
+				function search(args) {
+					isparsing(args);
+					//if(configObj.where)
+					//requestDate($.where(configObj.where),args);
+				}
+
+				function update(args) {
+					isparsing(args);
+					//获取dom结构内容
+					if(configObj.where) {};
+
+				}
+
+				function decomposition(option) {
+					var pars = {};
+					isparsing(option); //解析配置
+					switch(configObj.server.method) {
+						case "update":
+							update(option)
+							break;
+						case "delete":
+							//直接调用该方法
+							del(option);
+							break;
+						case "create":
+							create(option);
+							break;
+						case "search":
+							search(option);
+							break;
+						default:
+							console.log("不做任何动作");
+							break;
+					}
+				}
+
+				window.dt_delete = function(option) {
+
+					del(option);
+				}
+				window.dt_update = function(option) {
+					update(option)
+				};
+				window.dt_create = function(option) {
+					create(option)
+				};
+				window.dt_search = function(option) {
+					search(option)
+				};
+				window.dt = function(option) {
+					decomposition(option);
+				}
+
+			})($);
+
+			//配置请求的信息对象
+			var config = {
+				type: "form",
+				server: {
+					method: "create", //update|delete|create|search
+					url: "http://192.168.171.22:8080/myapp/deluserInfo",
+					type: "post",
+				},
+				maps: {
+					"name": "nm",
+					"password": "pw",
+					"file": "fl",
+					"holdy": "hl",
+					"sex": "sx"
+				},
+				where: [{
+					"entity ": "属性1 ",
+					"rOperation": " = ",
+					"dom ": "名称1 ",
+					"lOperation ": "	AND "
+				}]
+			}
+
+			var config2 = {
+					server: {
+						method: "create", //update|delete|create|search
+						url: "",
+						type: "post",
+					},
+					maps: {
+						"userName": "name",
+						"userAddress": "address",
+					},
+					where: [{
+						"entity": "属性2 ",
+						"rOperation": " = ",
+						"dom": "名称2 ",
+						"lOperation": "	AND "
+					}]
+				}
+				// dt(config2);
+				//配置查询条件对象
+			function　 test() {
+				dt(config);
+			}
+		</script>
+		<script src="js/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	/*	_.templateSettings = {
+			interpolate: /\{\{(.+?)\}\}/g
+		};
+		var data = _.template("<input type='text' value='{{ name }}'/>");
+		
+		console.log(data({name: "Mustache"}));
+		
+		
+		$(document).html(data({name: "Mustache"}));*/
+		
+		
+	</script>
+
+	</body>
+
+</html>

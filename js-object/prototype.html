@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>对象原型继承</title>
+	</head>
+	<script type="text/javascript">
+		 function A(name){
+		 	this.name=name;
+		 }
+		
+		
+		A.prototype.say=function(){
+		 	console.log(this.name);
+		 }
+		 A.prototype.address="hebei";
+		 function B(age){
+		 	// A.call(this,"heimao");//继承A的构造函数
+		 	this.age=age;
+		 	this.name="heimao";
+		 	console.log(this.age)
+		 }
+		 //不能直接把A赋值给B的原型属性这样我修改B的时候把A也修改了
+		 B.prototype=Object.create(A.prototype);
+		  //B.prototype=A.prototype;
+		  
+		 B.prototype.address="beijing";
+		 var a=new A("baimao");
+		 console.log(a.address);
+		 var b=new B();
+		 
+		 console.log(b.say());
+	</script>
+	<body>
+
+	</body>
+
+</html>

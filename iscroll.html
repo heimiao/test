@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>
+			iscroll demo
+		</title>
+		<script id="jquery_183" type="text/javascript" class="library" src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="http://sandbox.runjs.cn/uploads/rs/425/7ljulq1j/iscroll.js">
+		</script>
+		<style type="text/css">
+			#point1,
+			#point2 {
+				text-align: center;
+				line-height: 30px;
+				width: 30px;
+				height: 30px;
+				border-radius: 20px;
+				background: rgba(0, 0, 0, 0.3);
+				color: white;
+				position: absolute;
+				top: 8%;
+				right: 10px;
+				-webkit-transition: -webkit-transform 0.5s ease-in;
+			}
+			
+			#point1.active,
+			#point2.active {
+				-webkit-transform: rotateY(90deg);
+			}
+			.s_wrapper {
+				width: 100%;
+				height: 100%;
+				position: relative;
+				z-index: 1;
+			}
+			.s_scroller {
+				width:2000px;
+				height:100%;
+				float: left;
+				padding: 0;
+			}
+			.apps_container {
+				 width:200px;
+				 height:200px;
+				 background:green;
+				 float:left;
+			}
+			.apps_container:nth-child(1){
+				 background:red;
+			}
+			.apps_container:last-child {
+				 background:deepskyblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="s_wrapper" class="s_wrapper">
+			<div class="s_scroller">
+				<div class="apps_container">
+					 
+				</div>
+				<div class="apps_container">
+					 
+				</div>
+				<div class="apps_container">
+					 
+				</div>
+				<div class="apps_container">
+					 
+				</div>
+				<div class="apps_container">
+					 
+					 
+				</div>
+			</div>
+			<div id="point1">
+				1/2
+			</div>
+			<div id="point2" class="active">
+				2/2
+			</div>
+		</div>
+		<script type="text/javascript">
+			var iscroll2 = new iScroll($('#s_wrapper')[0], {
+				bounce: false,
+				snap: true,
+				momentum: false,
+				hScrollbar: false,
+				vScrollbar: true,
+				checkDOMChanges: true,
+				onScrollEnd: function() {
+					if(this.currPageX == 0) {
+						self.$("#point1").prop("class", "active");
+						self.$("#point2").prop("class", "");
+					} else {
+						self.$("#point2").prop("class", "active");
+						self.$("#point1").prop("class", "");
+					}
+				}
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>本地数据库</title>
+		<script src="js-object/js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<h1>indexed本地数据库</h1>
+		<button id="addSave">添加数据</button>
+		<script type="text/javascript">
+			//模拟聊天记录
+			var data = [{
+				groupId: "12283091681281",
+				data: [{
+					"_id": "317338128849306104",
+					"msg_id": "317338128849306104",
+					"timestamp": "1491450840819",
+					"direction": "outgoing",
+					"to": "12283091681281",
+					"from": "uarenly558e06b2779eac123",
+					"chat_type": "groupchat",
+					"payload": {
+						"from": "uarenly558e06b2779eac123",
+						"to": "12283091681281",
+						"bodies": [{
+							"type": "txt",
+							"msg": "retyuoi]["
+						}],
+						"ext": {
+							"weichat": {
+								"originType": "webim"
+							}
+						}
+					}
+				}],
+			}, {
+				groupId: "12285006381059",
+				data: [{
+					"_id": "317338106774684152",
+					"msg_id": "317338106774684152",
+					"timestamp": "1491450835676",
+					"direction": "outgoing",
+					"to": "12285006381059",
+					"from": "uarenly558e06b2779eac123",
+					"chat_type": "groupchat",
+					"payload": {
+						"from": "uarenly558e06b2779eac123",
+						"to": "12285006381059",
+						"bodies": [{
+							"type": "txt",
+							"msg": "wer5t6yo9p"
+						}],
+						"ext": {
+							"weichat": {
+								"originType": "webim"
+							}
+						}
+					}
+				}]
+			}];
+
+			(function() {
+				var db;
+				var indexedDB = window.indexedDB || window.msIndexedDB || window.mozIndexedDB || window.webkitIndexedDB;
+				function initDB() {
+					if(!indexedDB) {
+						alert("您当前浏览器不支持本次数据库，请更换谷歌及更新的浏览器")
+					} else {
+						var request = indexedDB.open("chatRecord", 1);
+						request.onsuccess = function(event) {
+							console.log(event.target.result);
+							db =  event.target.result;
+						};
+						request.onerror = function(event) {
+							alert("Why didn't you allow my web app to use IndexedDB?!");
+						};
+						request.onupgradeneeded = function(event) {
+							//打开的数据库的版本号和已经存在的数据库版本号不一致的时候调用
+							db = event.target.result;
+							// 创建一个对象存储空间来持有有关我们客户的信息。
+							// 我们将使用 "groupId" 作为我们的 key path 因为它保证是唯一的。
+							var store = db.createObjectStore("chatGroup", { keyPath: "groupId" });
+							// 创建一个索引来通过 groupId 搜索客户。
+							// 可能会有重复的，因此我们不能使用 unique 索引。
+							store.createIndex("groupId", "groupId", { unique: true });
+						};
+					}
+				}
+
+				//获取数据
+				function getData() {
+
+				}
+				
+				//添加数据
+				function saveData() {
+					console.log(db); 
+					//参数一：存储空间， 参数二：权限设置，只读或者写入，操作
+					if(!db) return; 
+					var tsact = db.transaction("chatGroup","readwrite");
+					var store = tsact.objectStore("chatGroup");
+		
+					for(var i in data) {
+						var request = store.add(data[i]);
+						request.onsuccess = function(event) {
+
+							console.log(event.target.result == data[i].groupId);
+
+							console.log(event);
+						}
+					}
+					
+					
+				}
+
+				$(document).on("click", "#addSave", function() {
+					saveData()
+				})
+				
+				initDB();
+			})()
+		</script>
+	</body>
+
+</html>

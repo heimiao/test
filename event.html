@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<script type="text/javascript">
+		document.addEventListener("click", function() {
+			console.log("监听整个网页的点击事件");
+		})
+		document.addEventListener("click", function() {
+			console.log("监听整个网页的点击事件第二次调用");
+		})
+		var Event = {
+			_listeners: {},
+			addEvent: function(evType, fn) {
+				if(typeof this._listeners[evType] === "undefined") {
+					this._listeners[evType] = [];
+				}
+				if(typeof fn === "function") {
+					this._listeners[evType].push(fn);
+				}
+				return this;
+			},
+			//触发
+			fireEvent: function(ev) {
+				var arrayEvent = this._listeners[ev];
+				if(arrayEvent instanceof Array) {
+					for(var i = 0; i < arrayEvent.length; i++) {
+						if(typeof arrayEvent[i] === "function") {
+							arrayEvent[i]();
+						}
+					}
+				}
+				return this;
+			},
+			//删除
+			removeEvent: function(type, fn) {
+				var arrayEvent = this._listeners[type];
+				if(typeof type === "string" && arrayEvent instanceof Array) {
+					if(typeof fn === "function") {
+						//清除当前type类型事件下对应fn方法
+						for(var i = 0; i < arrayEvent.length; i++) {
+							if(arrayEvent[i] === fn) {
+								this._listeners[type].splice(i, 1);
+								break;
+							}
+						}
+					} else {
+						delete this._listeners[type];
+					}
+				}
+				return this;
+			}
+		}
+
+		Event.addEvent("self", function() {
+				alert("弹出自定义事件");
+		})
+		
+	    //Event.fireEvent("self")
+
+		var EventTarget = function() {
+			this._listeners = {};
+		};
+		
+		EventTarget.prototype = {
+			constructor: this,
+			addEvent: function(evType, fn) {
+				if(typeof this._listeners[evType] === "undefined") {
+					this._listeners[evType] = [];
+				}
+				if(typeof fn === "function") {
+					this._listeners[evType].push(fn);
+				}
+				return this;
+			},
+			fireEvent: function(ev) {
+				var arrayEvent = this._listeners[ev];
+				if(arrayEvent instanceof Array) {
+					for(var i = 0; i < arrayEvent.length; i++) {
+						if(typeof arrayEvent[i] === "function") {
+							arrayEvent[i]();
+						}
+					}
+				}
+				return this;
+			},
+			
+			removeEvent: function(type, fn) {
+				var arrayEvent = this._listeners[type];
+				if(typeof type === "string" && arrayEvent instanceof Array) {
+					if(typeof fn === "function") {
+						//清除当前type类型事件下对应fn方法
+						for(var i = 0; i < arrayEvent.length; i++) {
+							if(arrayEvent[i] === fn) {
+								this._listeners[type].splice(i, 1);
+								break;
+							}
+						}
+					} else {
+						delete this._listeners[type];
+					}
+				}
+				return this;
+			},
+			
+			removeEvents: function(params) {
+				if(params instanceof Array) {
+					for(var i = 0, length = params.length; i < length; i += 1) {
+						this.removeEvent(params[i]);
+					}
+				} else if(typeof params === "object") {
+					for(var type in params) {
+						this.removeEvent(type, params[type]);
+					}
+				}
+				return this;
+			}
+			
+			
+		}
+		var myEvents = new EventTarget();
+		var yourEvents = new EventTarget();
+
+		/*		bootstrap事件机制*/
+		$(function() {
+			var e = $.Event("keydown", {
+				name: 65
+			});
+
+			$("#a").on("keydown", function(event) {
+				console.log(event.name); //初始化的时候输出 65 ，以后每次keydown都是undefined
+			})
+			$("#a").trigger(e);
+		})
+
+		+(function($){
+			function testEvents() {
+				var hidden = $.Event("hide.bs", {
+					user: "foo",
+					pass: "bar",
+					relatedTarget: $("#b")[0]
+				});
+				$("#test").trigger(hidden);
+			}
+		})(jQuery);
+		
+		$(function(){
+			$("#b").on("hide.bs",function(event){
+				  alert(event.relatedTarget.tagName)//INPOUT
+                  alert(event.user)//foo
+			})
+		})
+	</script>
+
+	<body>
+		<a href="" id="a">test</a>
+		<br><a href="" id="b">test</a>
+	</body>
+
+</html>

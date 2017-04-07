@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>transform应用效果</title>
+	</head>
+	<style type="text/css">
+		.warpper{
+			width:200px;
+			height:100px;
+			border:1px solid darkseagreen;
+			margin:150px auto;
+		}
+		.warpper >div{
+			width:200px;
+			height:100px;
+			background:green;
+			font-size:14px;
+			color:#fff;
+		}
+		h1{
+			display:inline;
+		}
+		.matrix{
+			/*这个函数的位移和放大缩小用到了矩阵算法,扭转和旋转用到了三角函数和矩阵算法 是scale ,skew ,translate,rotate的基础算法*/
+			 transform: matrix(1,-1,1,1,60,30); 
+		}
+		.translate{
+			transform:translate(10px,-30px);
+			/*transform:translateX(10px);
+			transform:translateY(-30px);*/
+		}
+		.rotate{
+			transform:rotate(45deg);
+		}
+		.scale{
+			transform:scale(.5,.5);
+			/*transform:scaleX(1);
+			transform:scaleY(1);*/
+		}
+		.skew{
+			transform:skew(45deg);
+			/*transform:skewX(1);
+			transform:skewY(1);*/
+		}
+		
+		.matrix3d{
+			transform:matrix3d(1, 0, 1, 0, 0, 1, 0, 0, 5, 0, 1, 0, 25, 24, 1, 1);
+		}
+		.translate3d{
+			transform:translate3d(-20px,-10px,40px);
+			/*transform: translatez(50px);*/
+		}
+		.rotate3d{
+			/*-webkit-transform: rotate3d(10px,20px,30px,45deg);*/
+			/*-webkit-transform: rotateY(45deg);*/
+			-webkit-transform: rotateZ(45deg);
+		}
+		.scale3d{
+			/*transform:scale3d();*/
+			transform:scalex(2);
+		}
+		.perspective{
+			perspective:500;
+		}
+	</style>
+	<body>
+		<h1>矩阵变化</h1>
+		
+		<div class="warpper">
+				<div class="matrix">
+					2D矩阵变化
+				</div>
+		</div>
+		<div class="warpper">
+				<div class="translate">
+					指定2D对象
+				</div>
+		</div>
+		<div class="warpper">
+				<div class="rotate">
+					2D旋转
+				</div>
+		</div>
+		
+		<div class="warpper">
+				<div class="scale">
+					2D缩放
+				</div>
+		</div>
+		<div class="warpper">
+				<div class="skew">
+					2D扭曲
+				</div>
+		</div>
+		<div class="warpper">
+				<div class="matrix3d">
+					<h1>3D</h1>矩阵变化
+				</div>
+		</div>
+		<div class="warpper">
+				<div class="translate3d">
+					<h1>3D</h1>位移
+				</div>
+		</div>
+		<div class="warpper">
+				<div class="rotate3d">
+					<h1>3D</h1>旋转
+				</div>
+		</div>
+		<div class="warpper">
+				<div class="scale3d">
+					<h1>3D</h1>缩放
+				</div>
+		</div>
+		<div class="warpper">
+				<div class="perspective">
+					<h1>3D</h1>缩放
+				</div>
+		</div>
+	</body>
+
+</html>

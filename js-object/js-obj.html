@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>扩展jquery插件的方法</title>
+	</head>
+	<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+
+	<body>
+		<div style="width:100px;height:50px;background:red;">
+			<a href="">测试字体颜色高亮</a>
+		</div>
+		<div style="width:200px;height:50px;background:orange;">
+			<a href="" class="heightlight">测试字体颜色高亮</a>
+		</div>
+		<div style="width:300px;height:50px;background:yellow;">
+			<a href="" class="heightlight">测试字体颜色高亮</a>
+		</div>
+		<div style="width:400px;height:50px;background:green;">
+			<a href="" class="heightlight">测试字体颜色高亮</a>
+		</div>
+		<div style="width:500px;height:50px;background:blue;">
+			<a href="" class="heightlight">测试字体颜色高亮</a>
+		</div>
+		<div style="width:600px;height:50px;background:indigo;">
+			<a href="" class="heightlight">测试字体颜色高亮</a>
+		</div>
+		<div style="width:700px;height:50px;background:purple;">
+			<a href="" id="test" class="heightlight">测试字体颜色高亮</a>
+		</div>
+
+		<script type="text/javascript">
+			(function($, window, undefined) {
+				//定义构造函数
+				var Plush = function(ele, opt) {
+						this.$element = ele;
+						this.defaults = {
+								'color': 'red',
+								'fontSize': '12px',
+								'textDecoration': 'none'
+							},
+							this.options = $.extend({}, this.defaults, opt);
+					}
+					//定义方法
+				Plush.prototype = {
+					beautify: function() {
+						return this.$element.css({
+							'color': this.options.color,
+							'fontSize': this.options.fontSize,
+							'textDecoration': this.options.textDecoration
+						});
+					}
+				}
+
+				$.fn.myplush = function(options) {
+					//创建实例
+					return beautifier = new Plush(this, options);
+					//调用其方法
+					//return beautifier.beautify();
+				}
+			})(jQuery, window);
+
+			$("a.heightlight").myplush({
+				color: "red",
+				fontSize: "14px"
+			}).beautify();
+			
+			
+			//字面量对象
+			var obj = {
+				name: "John",
+				test: function() {
+					console.log(this);
+					alert(this.name);
+					$("#test").unbind("click", obj.test);
+				}
+			};
+			//$("#test").click(jQuery.proxy(obj, "test"));
+			// 以下代码跟上面那句是等价的:
+			$("#test").click(jQuery.proxy(obj.test, obj));
+			// 可以与单独执行下面这句做个比较。
+			//$("#test").click(obj.test);
+		</script>
+	</body>
+
+</html>

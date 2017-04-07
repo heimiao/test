@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>transform应用效果</title>
+	</head>
+	<style type="text/css">
+		.warpper {
+			position: relative;
+			width: 2em;
+			margin: 1.5em auto;
+			transform-style: preserve-3d;
+			/* preserve-3d|flat 指定容器为三维容器*/
+			transform: rotateX(-30deg) rotateY(30deg) rotateZ(30deg);
+			font-size: 80px;
+			/*transform:rotateX(30deg) rotateZ(30deg);*/
+			perspective: 1000px;
+			 -webkit-perspective: 1000px;
+    		perspective: 1000px;
+		}
+		
+		.warpper>div {
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			background: rgba(0, 0, 0, .1);
+			border: 1px solid red;
+			text-align: center;
+			line-height: 200;
+			color: white;
+		}
+		
+		.one {
+			transform: translateZ(100px);
+		}
+		.two {
+			-webkit-transform: rotateX(90deg) translateZ(100px);
+		}
+		.three {
+			-webkit-transform: translateZ(-100px);
+		}
+		.fore {
+			transform: rotateX(90deg) translateZ(-100px);
+		}
+		.five {
+			transform: rotateY(90deg) translateZ(100px);
+		}
+		.six {
+			transform: rotateY(90deg) translateZ(-100px);
+		}
+	</style>
+
+	<body>
+		<h1>指定元素是三维容器或者平面</h1>
+
+		<div class="warpper">
+			<div class="one">
+				one
+			</div>
+			<div class="two">
+				two
+			</div>
+			<div class="three">
+				three
+			</div>
+			<div class="fore">
+				fore
+			</div>
+			<div class="five">
+				five
+			</div>
+			<div class="six">
+			six
+			</div>
+		</div>
+	</body>
+
+</html>

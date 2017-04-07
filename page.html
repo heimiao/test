@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Hello React</title>
+		<script src="js-object/js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="page/jqPaginator.js" type="text/javascript" charset="utf-8"></script>
+	<script src="bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+	</head>
+
+	<body>
+		<div style="position:absolute;width:100%;height:100%;background:skyblue;z-index: ;">
+			
+		</div>
+		<iframe style="position:absolute;width:30%;height:30%;background:skyblue;" width="" height="" src="http://www.taobao.com"></iframe>
+		
+		<ul class="pagination">
+
+		</ul>
+		<script type="text/javascript">
+			$.jqPaginator(".pagination", {
+				totalPages: 10,
+				visiblePages: 6,
+				currentPage: 1,
+				onPageChange: function(num,type){
+					
+				}
+			});
+		</script>
+	</body>
+
+</html>

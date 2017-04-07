@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/jquery.ui.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				var aa=$("#test").datepicker({
+//					defaultDate:"2032"
+					defaultDate:"06/12/2019"
+				});
+//				$.datepicker.formatDate( "yy-mm-dd", new Date( 2007, 1 - 1, 26 ) );
+//				$.datepicker.setDefaults({
+//				  showOn: "both",
+//				  buttonImageOnly: true,
+//				  buttonImage: "calendar.gif",
+//				  buttonText: "Calendar"
+//				});
+//				aa.datepicker( "setDate", "10/06/2012" );
+				var te=$( "#test" ).datepicker( "getDate" );
+				console.log(te);
+			})
+		</script>
+	</head>
+	<body>
+		<input type="" name="test" id="test" value="" />
+		
+	</body>
+</html>
